@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Startseite – Marketing mit Sven</title>
+<meta name="description" content="Marketing mit Sven – Persönliche Marke und Portfolio von Sven Preuß. KI, Marketing, Performance – klar, praxisnah, mit Haltung."/>
+<!-- NAV (shared snippet) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS"/>
+      <div>
+        <span class="nav-logo-text">Marketing mit Sven</span>
+        <span class="nav-logo-sub">MMS · KLAR. PRAXISNAH. MIT HALTUNG.</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="ueber-mich.html">Über mich</a></li>
+      <li><a href="geschichte.html">Meine Geschichte</a></li>
+      <li><a href="wofuer-mms.html">Wofür MMS steht</a></li>
+      <li><a href="zertifikate.html">Zertifikate</a></li>
+      <li><a href="vision.html">Vision & Mission</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
+    </ul>
+    <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="ueber-mich.html">Über mich</a>
+  <a href="geschichte.html">Meine Geschichte</a>
+  <a href="wofuer-mms.html">Wofür MMS steht</a>
+  <a href="zertifikate.html">Zertifikate</a>
+  <a href="vision.html">Vision & Mission</a>
+  <a href="blog.html">Blog</a>
+  <a href="kontakt.html">Kontakt →</a>
+</div>
+
+<!-- HERO -->
+<section style="min-height:100vh;display:flex;align-items:center;background:var(--dark);padding:0;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(124,58,237,0.15),transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(6,214,160,0.08),transparent 50%)"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.018) 1px,transparent 1px);background-size:55px 55px"></div>
+  <div style="max-width:1100px;margin:0 auto;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:center;position:relative;z-index:1;width:100%" class="hero-grid-main">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+        <div style="width:8px;height:8px;border-radius:50%;background:var(--grad)"></div>
+        <span style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.4)">Personal Brand · Portfolio · Sven Preuß</span>
+      </div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(38px,5.5vw,68px);font-weight:700;color:white;line-height:1.08;margin-bottom:16px">
+        Marketing<br/>mit Sven.<br/>
+        <span class="grad-text">Klar. Praxisnah.<br/>Mit Haltung.</span>
+      </h1>
+      <p style="font-size:15px;color:rgba(255,255,255,0.5);max-width:480px;line-height:1.85;margin-bottom:12px">
+        Kein Buzzword-Bingo, keine Guru-Show und kein glattgebügeltes Business-Gelaber. Sondern ehrliche Perspektiven, klare Learnings und moderne Gedanken zu KI, Marketing und Performance.
+      </p>
+      <p style="font-size:13px;color:rgba(255,255,255,0.28);margin-bottom:40px;font-style:italic">— weil gutes Marketing nicht laut sein muss, um zu wirken.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="ueber-mich.html" class="btn btn-primary">Mehr über mich</a>
+        <a href="geschichte.html" class="btn btn-dark" style="border:1px solid rgba(255,255,255,0.1)">Meine Geschichte</a>
+        <a href="blog.html" class="btn" style="background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.15)">Blog lesen</a>
+      </div>
+      <div style="display:flex;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.07)">
+        <div><p style="color:white;font-weight:900;font-size:22px;margin-bottom:2px">14+</p><span style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:1.5px;font-weight:600;text-transform:uppercase">Zertifikate</span></div>
+        <div><p style="color:white;font-weight:900;font-size:22px;margin-bottom:2px">KI & SEO</p><span style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:1.5px;font-weight:600;text-transform:uppercase">Schwerpunkte</span></div>
+        <div><p style="color:white;font-weight:900;font-size:22px;margin-bottom:2px">Jun '26</p><span style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:1.5px;font-weight:600;text-transform:uppercase">Abschluss MoD</span></div>
+      </div>
+    </div>
+    <div style="position:relative">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/cd81a8437_00167.jpg" alt="Sven Preuß" style="width:100%;display:block;filter:grayscale(8%)"/>
+      <div style="position:absolute;bottom:-16px;left:-16px;background:var(--dark);border:1px solid rgba(255,255,255,0.1);padding:14px 18px">
+        <p style="color:white;font-weight:700;font-size:13px;margin:0">Sven Preuß</p>
+        <span style="font-size:10px;color:rgba(6,214,160,0.9);letter-spacing:1px;font-weight:600">Marketing mit Sven · MMS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZERTIFIKATE KARUSSELL -->
+
+<div class="carousel-wrap">
+  <p class="carousel-label">Zertifikate & Weiterbildungen</p>
+  <div class="carousel-track">
+    <div class="carousel-item"><span>Google · Google Ads – Search</span></div>
+<div class="carousel-item"><span>Google · Google Ads – Display</span></div>
+<div class="carousel-item"><span>Google · Google Ads – Video</span></div>
+<div class="carousel-item"><span>Google · Google Analytics</span></div>
+<div class="carousel-item"><span>Google · Practical AI for Marketing</span></div>
+<div class="carousel-item"><span>BVDW · SEO Certified Professional</span></div>
+<div class="carousel-item"><span>SISTRIX · Keyword-Recherche</span></div>
+<div class="carousel-item"><span>SISTRIX · Wettbewerbsanalyse</span></div>
+<div class="carousel-item"><span>IBM / KI-Campus · Grundlagen der KI · 93%</span></div>
+<div class="carousel-item"><span>IBM / KI-Campus · Maschinelles Lernen · 100%</span></div>
+<div class="carousel-item"><span>IBM / KI-Campus · KI-Ethik · 100%</span></div>
+<div class="carousel-item"><span>Canva · Visual Suite & Design</span></div>
+<div class="carousel-item"><span>KI-Campus · Klickstarke Inhalte</span></div>
+<div class="carousel-item"><span>KI-Campus · Smarter arbeiten mit KI</span></div>
+<div class="carousel-item"><span>Google · Google Ads – Search</span></div>
+<div class="carousel-item"><span>Google · Google Ads – Display</span></div>
+<div class="carousel-item"><span>Google · Google Ads – Video</span></div>
+<div class="carousel-item"><span>Google · Google Analytics</span></div>
+<div class="carousel-item"><span>Google · Practical AI for Marketing</span></div>
+<div class="carousel-item"><span>BVDW · SEO Certified Professional</span></div>
+<div class="carousel-item"><span>SISTRIX · Keyword-Recherche</span></div>
+<div class="carousel-item"><span>SISTRIX · Wettbewerbsanalyse</span></div>
+<div class="carousel-item"><span>IBM / KI-Campus · Grundlagen der KI · 93%</span></div>
+<div class="carousel-item"><span>IBM / KI-Campus · Maschinelles Lernen · 100%</span></div>
+<div class="carousel-item"><span>IBM / KI-Campus · KI-Ethik · 100%</span></div>
+<div class="carousel-item"><span>Canva · Visual Suite & Design</span></div>
+<div class="carousel-item"><span>KI-Campus · Klickstarke Inhalte</span></div>
+<div class="carousel-item"><span>KI-Campus · Smarter arbeiten mit KI</span></div>
+
+  </div>
+</div>
+
+
+<!-- NAVIGATION CARDS -->
+<section style="background:var(--dark);padding:80px 24px">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px">
+      <span class="label" style="color:rgba(255,255,255,0.3);display:block;text-align:center">WAS DICH ERWARTET</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,38px);color:white">Kein glattgebügelter Auftritt.<br/><span class="grad-text">Sondern einer mit Handschrift.</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px" class="cards-3">
+      
+      <a href="ueber-mich.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
+        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">01</span>
+        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Über mich</h3>
+        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">Ich mag Marketing lieber klar und wirksam als laut und überladen.</p>
+        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
+      </a>
+      <a href="geschichte.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
+        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">02</span>
+        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Meine Geschichte</h3>
+        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">Nicht aus einem perfekten Plan — sondern aus echtem Leben und echten Brüchen.</p>
+        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
+      </a>
+      <a href="wofuer-mms.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
+        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">03</span>
+        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Wofür MMS steht</h3>
+        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">KI, Marketing und Performance – verständlich, praxisnah, mit Haltung.</p>
+        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
+      </a>
+      <a href="zertifikate.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
+        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">04</span>
+        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Zertifikate</h3>
+        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">14+ abgeschlossene Zertifizierungen in SEO, KI, Google Ads und mehr.</p>
+        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
+      </a>
+      <a href="vision.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
+        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">05</span>
+        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Vision & Mission</h3>
+        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">Eine Marke mit Klarheit und Substanz – nicht gebaut auf Lautstärke.</p>
+        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
+      </a>
+      <a href="blog.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
+        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">06</span>
+        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Blog</h3>
+        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">Meine Gedanken zu KI, Marketing, Performance und moderner Sichtbarkeit.</p>
+        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:32px;padding:24px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06)">
+      <p style="color:rgba(255,255,255,0.35);font-size:14px;font-style:italic;max-width:580px;margin:0 auto">"Marketing mit Sven ist kein Verkaufsfunnel und keine Show-Bühne. Sondern ein ehrlicher Raum für Substanz, Entwicklung und modernes Marketing mit Haltung."</p>
+    </div>
+  </div>
+</section>
+
+<style>
+@media(max-width:900px){.hero-grid-main{grid-template-columns:1fr}.cards-3{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cards-3{grid-template-columns:1fr}}
+</style>
+
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS" style="height:44px"/>
+        <p>Marketing mit Sven</p>
+        <span>KLAR · PRAXISNAH · MIT HALTUNG</span>
+        <p class="tagline">Persönliche Marke & Portfolio von Sven Preuß.<br/>Fokus auf KI, Marketing und Performance.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Seiten</h4>
+        <a href="index.html">Startseite</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="geschichte.html">Meine Geschichte</a>
+        <a href="wofuer-mms.html">Wofür MMS steht</a>
+        <a href="zertifikate.html">Zertifikate</a>
+        <a href="vision.html">Vision & Mission</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="footer-nav">
+        <h4>Kontakt</h4>
+        <a href="mailto:sven.preuss95@gmail.com">sven.preuss95@gmail.com</a>
+        <a href="https://linkedin.com/in/preussdigital/" target="_blank">LinkedIn · preussdigital</a>
+        <a href="#">Tettnang / Remote DACH</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sven Preuß · Marketing mit Sven</p>
+      <p style="color:rgba(255,255,255,0.25);font-style:italic">Klar. Praxisnah. Mit Haltung.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{e.preventDefault();var t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});});
+});
+</script>
+</body>
+</html>
