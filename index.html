@@ -3,222 +3,643 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Startseite – Marketing mit Sven</title>
-<meta name="description" content="Marketing mit Sven – Persönliche Marke und Portfolio von Sven Preuß. KI, Marketing, Performance – klar, praxisnah, mit Haltung."/>
-<!-- NAV (shared snippet) -->
+<title>Marketing mit Sven – KI · Performance · SEO</title>
+<meta name="description" content="Marketing mit Sven – Sven Preuß verbindet KI-Expertise mit strategischem Marketing-Denken. Ehrlich, direkt, messbar."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
+<style>
+/* ─── DARK THEME OVERRIDES ─── */
+:root{
+  --bg:#0a0a0a;
+  --bg2:#111;
+  --bg3:#1a1a1a;
+  --accent:#7c3aed;
+  --accent2:#10b981;
+  --text:#fff;
+  --muted:rgba(255,255,255,0.45);
+  --border:rgba(255,255,255,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
 
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo-wrap{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:1px}
+.nav-logo-wrap img{height:28px}
+.nav-links-dark{display:flex;gap:32px;list-style:none}
+.nav-links-dark a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links-dark a:hover{color:#fff}
+.nav-cta-dark{background:var(--accent);color:#fff!important;padding:10px 20px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:background .2s!important}
+.nav-cta-dark:hover{background:#6d28d9!important}
+.hamburger-dark{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger-dark span{width:22px;height:2px;background:#fff;display:block}
+.mobile-menu-dark{display:none;position:fixed;top:64px;left:0;right:0;background:#0a0a0a;border-bottom:1px solid var(--border);padding:24px 40px;flex-direction:column;gap:20px;z-index:99}
+.mobile-menu-dark a{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.mobile-menu-dark.open{display:flex}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 80px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(124,58,237,0.12) 0%,transparent 60%)}
+.hero-left{flex:1;z-index:2}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.3);padding:6px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#a78bfa;margin-bottom:40px}
+.hero-tag::before{content:'';width:6px;height:6px;background:#7c3aed;border-radius:50%;display:inline-block}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(64px,8vw,120px);line-height:0.95;font-weight:700;margin-bottom:32px}
+.hero-title .dim{color:rgba(255,255,255,0.2)}
+.hero-title .accent-purple{color:#7c3aed}
+.hero-sub{font-size:16px;line-height:1.7;color:var(--muted);max-width:420px;margin-bottom:40px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:#fff;padding:14px 28px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:background .2s}
+.btn-primary:hover{background:#6d28d9}
+.btn-ghost{border:1px solid var(--border);color:var(--muted);padding:14px 28px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:all .2s}
+.btn-ghost:hover{border-color:#fff;color:#fff}
+.hero-right{width:320px;flex-shrink:0;position:relative;z-index:2}
+.hero-img-wrap{position:relative;border:1px solid var(--border)}
+.hero-img-wrap img{width:100%;display:block;filter:grayscale(30%)}
+.hero-badge{position:absolute;bottom:16px;left:16px;background:rgba(0,0,0,0.85);border:1px solid var(--border);padding:10px 16px;backdrop-filter:blur(8px)}
+.hero-badge span{font-size:20px;font-weight:900;color:#10b981;display:block;line-height:1}
+.hero-badge small{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.scroll-hint{position:absolute;bottom:40px;left:80px;display:flex;align-items:center;gap:12px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+.scroll-line{width:40px;height:1px;background:var(--muted)}
+
+/* ABOUT / STATS */
+.about-section{padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.about-left{}
+.section-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.section-label::after{content:'';flex:1;max-width:60px;height:1px;background:var(--accent)}
+.about-title{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,56px);line-height:1.1;font-weight:700;margin-bottom:32px}
+.about-title .italic-dim{font-style:italic;color:rgba(255,255,255,0.3)}
+.about-title .green{color:#10b981}
+.about-title .purple{color:#7c3aed}
+.about-text{font-size:15px;line-height:1.8;color:var(--muted);margin-bottom:20px}
+.about-text strong{color:#fff}
+.tags-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+.tag-pill{border:1px solid var(--border);padding:6px 14px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);border-radius:2px}
+.about-right{}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px}
+.stat-card{background:var(--bg2);padding:32px 28px;border:1px solid var(--border)}
+.stat-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;line-height:1;margin-bottom:8px}
+.stat-num.purple{color:#7c3aed}
+.stat-num.green{color:#10b981}
+.stat-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.stat-sub{font-size:10px;color:rgba(255,255,255,0.25);margin-top:4px}
+.about-img{width:100%;display:block;filter:grayscale(20%)}
+.about-img img{width:100%;display:block;filter:grayscale(20%);aspect-ratio:16/9;object-fit:cover}
+.about-img-tag{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,0.8);padding:6px 12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+
+/* PROJEKTE */
+.projects-section{padding:100px 80px;border-top:1px solid var(--border)}
+.projects-header{margin-bottom:60px}
+.projects-header h2{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,70px);font-weight:700;line-height:1}
+.projects-header h2 em{font-style:italic;color:rgba(255,255,255,0.25)}
+.projects-header p{font-size:13px;color:var(--muted);margin-top:16px}
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.project-card{background:var(--bg2);border:1px solid var(--border);padding:40px;position:relative;overflow:hidden;transition:border-color .2s}
+.project-card:hover{border-color:rgba(124,58,237,0.4)}
+.project-tag-pill{display:inline-block;padding:4px 12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;border-radius:20px;margin-bottom:20px;font-weight:700}
+.tag-ki{background:rgba(16,185,129,0.15);color:#10b981;border:1px solid rgba(16,185,129,0.3)}
+.tag-ads{background:rgba(124,58,237,0.15);color:#a78bfa;border:1px solid rgba(124,58,237,0.3)}
+.tag-seo{background:rgba(59,130,246,0.15);color:#93c5fd;border:1px solid rgba(59,130,246,0.3)}
+.project-card h3{font-size:20px;font-weight:700;margin-bottom:12px}
+.project-card p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px}
+.project-metric{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#10b981;line-height:1}
+.project-metric-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.project-pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:20px}
+.project-pill{border:1px solid var(--border);padding:4px 10px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+
+/* CONTENT / BLOG */
+.content-section{padding:100px 80px;border-top:1px solid var(--border)}
+.content-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;flex-wrap:wrap;gap:24px}
+.content-header h2{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,60px);font-weight:700;line-height:1}
+.content-header h2 em{font-style:italic;color:rgba(255,255,255,0.3)}
+.content-header h2 .green{color:#10b981}
+.content-channels{display:flex;gap:8px}
+.channel-pill{border:1px solid var(--border);padding:6px 14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:all .2s}
+.channel-pill:hover{border-color:#7c3aed;color:#a78bfa}
+.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.content-featured{background:var(--bg2);border:1px solid var(--border);padding:40px;position:relative}
+.featured-label{display:inline-block;background:rgba(124,58,237,0.2);border:1px solid rgba(124,58,237,0.3);color:#a78bfa;padding:4px 12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+.content-featured h3{font-size:22px;font-weight:700;line-height:1.3;margin-bottom:16px}
+.content-featured p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px}
+.content-meta{font-size:10px;color:var(--muted);margin-bottom:4px}
+.read-more{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7c3aed;display:inline-flex;align-items:center;gap:8px}
+.content-sidebar{display:flex;flex-direction:column;gap:2px}
+.content-item{background:var(--bg2);border:1px solid var(--border);padding:24px;display:grid;grid-template-columns:80px 1fr;gap:16px;align-items:center;transition:border-color .2s}
+.content-item:hover{border-color:rgba(124,58,237,0.3)}
+.content-item-img{aspect-ratio:1;overflow:hidden;background:var(--bg3)}
+.content-item-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(40%)}
+.content-item-tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#10b981;font-weight:700;margin-bottom:6px}
+.content-item h4{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:4px}
+.content-item small{font-size:10px;color:var(--muted)}
+
+/* KONTAKT */
+.contact-section{padding:100px 80px;border-top:1px solid var(--border)}
+.contact-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:24px;display:flex;align-items:center;justify-content:center;gap:16px}
+.contact-label::before,.contact-label::after{content:'';width:40px;height:1px;background:var(--border)}
+.contact-title{font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,90px);font-weight:700;text-align:center;line-height:1;margin-bottom:16px}
+.contact-title .purple{color:#7c3aed}
+.contact-sub{text-align:center;font-size:15px;color:var(--muted);max-width:500px;margin:0 auto 60px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:900px;margin:0 auto}
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-field{display:flex;flex-direction:column;gap:8px}
+.form-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.form-input{background:var(--bg2);border:1px solid var(--border);padding:14px 16px;color:#fff;font-size:14px;font-family:'Inter',sans-serif;transition:border-color .2s;width:100%}
+.form-input:focus{outline:none;border-color:rgba(124,58,237,0.5)}
+.form-input::placeholder{color:rgba(255,255,255,0.2)}
+textarea.form-input{resize:vertical;min-height:120px}
+.btn-send{background:var(--accent);color:#fff;border:none;padding:16px 28px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:background .2s;width:fit-content}
+.btn-send:hover{background:#6d28d9}
+.contact-sidebar{display:flex;flex-direction:column;gap:24px}
+.contact-direct h4{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.contact-link{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid var(--border);margin-bottom:8px;transition:border-color .2s}
+.contact-link:hover{border-color:rgba(124,58,237,0.4)}
+.contact-link-icon{width:36px;height:36px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:16px}
+.contact-link-text span{display:block;font-size:12px;font-weight:600}
+.contact-link-text small{font-size:10px;color:var(--muted)}
+.newsletter-box{background:var(--bg2);border:1px solid var(--border);padding:24px}
+.newsletter-tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#10b981;font-weight:700;display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.newsletter-tag::before{content:'';width:6px;height:6px;background:#10b981;border-radius:50%}
+.newsletter-box h4{font-size:16px;font-weight:700;margin-bottom:8px}
+.newsletter-box p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+.newsletter-form{display:flex;gap:0}
+.newsletter-form input{flex:1;background:var(--bg);border:1px solid var(--border);border-right:none;padding:12px 14px;color:#fff;font-size:13px}
+.newsletter-form input::placeholder{color:rgba(255,255,255,0.2)}
+.newsletter-form button{background:var(--accent);border:none;color:#fff;padding:12px 16px;cursor:pointer;font-size:14px}
+
+/* FOOTER CAROUSEL */
+.cert-carousel-wrap{overflow:hidden;background:#080808;padding:28px 0 24px;border-top:1px solid var(--border)}
+.cert-carousel-label{text-align:center;font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.15);margin-bottom:18px}
+.cert-carousel-track{display:flex;gap:20px;width:max-content;animation:certscroll 28s linear infinite}
+.cert-carousel-track:hover{animation-play-state:paused}
+.cert-item{flex-shrink:0;height:110px;display:flex;align-items:center;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);padding:12px 20px}
+.cert-item img{height:90px;width:auto;max-width:200px;object-fit:contain;filter:brightness(0.9) grayscale(5%);transition:filter .2s}
+.cert-item:hover img{filter:brightness(1.05) grayscale(0%)}
+@keyframes certscroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* MAIN FOOTER */
+footer{background:#080808;border-top:1px solid var(--border);padding:60px 80px 32px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px;margin-bottom:48px}
+.footer-brand p{font-size:13px;color:var(--muted);margin-top:12px;line-height:1.6}
+.footer-brand .tagline{font-size:11px;color:rgba(255,255,255,0.2);margin-top:16px;font-style:italic}
+.footer-nav h4{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.footer-nav a{display:block;font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:10px;transition:color .2s}
+.footer-nav a:hover{color:#fff}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:11px;color:rgba(255,255,255,0.25)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{flex-direction:column;padding:100px 24px 60px;gap:40px}
+  .hero-right{width:100%}
+  .about-section,.projects-grid,.content-grid,.contact-grid,.footer-grid{grid-template-columns:1fr}
+  .about-section{padding:60px 24px}
+  .projects-section,.content-section,.contact-section{padding:60px 24px}
+  footer{padding:40px 24px 24px}
+  nav{padding:0 24px}
+  .nav-links-dark{display:none}
+  .hamburger-dark{display:flex}
+  .form-row{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .gallery-grid{grid-template-columns:1fr!important}
+}
+</style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS"/>
-      <div>
-        <span class="nav-logo-text">Marketing mit Sven</span>
-        <span class="nav-logo-sub">MMS · KLAR. PRAXISNAH. MIT HALTUNG.</span>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="ueber-mich.html">Über mich</a></li>
-      <li><a href="geschichte.html">Meine Geschichte</a></li>
-      <li><a href="wofuer-mms.html">Wofür MMS steht</a></li>
-      <li><a href="zertifikate.html">Zertifikate</a></li>
-      <li><a href="vision.html">Vision & Mission</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
-    </ul>
-    <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menü">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+  <a href="index.html" class="nav-logo-wrap">
+    <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS"/>
+    <span style="font-size:13px;font-weight:700;letter-spacing:1px">Marketing mit Sven</span>
+  </a>
+  <ul class="nav-links-dark">
+    <li><a href="ueber-mich.html">Über mich</a></li>
+    <li><a href="geschichte.html">Meine Geschichte</a></li>
+    <li><a href="wofuer-mms.html">Wofür MMS steht</a></li>
+    <li><a href="zertifikate.html">Zertifikate</a></li>
+    <li><a href="vision.html">Vision</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="kontakt.html" class="nav-cta-dark">Kontakt</a></li>
+  </ul>
+  <button class="hamburger-dark" onclick="document.querySelector('.mobile-menu-dark').classList.toggle('open')" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div class="mobile-menu">
+<div class="mobile-menu-dark">
   <a href="ueber-mich.html">Über mich</a>
   <a href="geschichte.html">Meine Geschichte</a>
   <a href="wofuer-mms.html">Wofür MMS steht</a>
   <a href="zertifikate.html">Zertifikate</a>
-  <a href="vision.html">Vision & Mission</a>
+  <a href="vision.html">Vision</a>
   <a href="blog.html">Blog</a>
   <a href="kontakt.html">Kontakt →</a>
 </div>
 
 <!-- HERO -->
-<section style="min-height:100vh;display:flex;align-items:center;background:var(--dark);padding:0;position:relative;overflow:hidden">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(124,58,237,0.15),transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(6,214,160,0.08),transparent 50%)"></div>
-  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.018) 1px,transparent 1px);background-size:55px 55px"></div>
-  <div style="max-width:1100px;margin:0 auto;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:center;position:relative;z-index:1;width:100%" class="hero-grid-main">
-    <div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
-        <div style="width:8px;height:8px;border-radius:50%;background:var(--grad)"></div>
-        <span style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.4)">Personal Brand · Portfolio · Sven Preuß</span>
-      </div>
-      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(38px,5.5vw,68px);font-weight:700;color:white;line-height:1.08;margin-bottom:16px">
-        Marketing<br/>mit Sven.<br/>
-        <span class="grad-text">Klar. Praxisnah.<br/>Mit Haltung.</span>
-      </h1>
-      <p style="font-size:15px;color:rgba(255,255,255,0.5);max-width:480px;line-height:1.85;margin-bottom:12px">
-        Kein Buzzword-Bingo, keine Guru-Show und kein glattgebügeltes Business-Gelaber. Sondern ehrliche Perspektiven, klare Learnings und moderne Gedanken zu KI, Marketing und Performance.
-      </p>
-      <p style="font-size:13px;color:rgba(255,255,255,0.28);margin-bottom:40px;font-style:italic">— weil gutes Marketing nicht laut sein muss, um zu wirken.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="ueber-mich.html" class="btn btn-primary">Mehr über mich</a>
-        <a href="geschichte.html" class="btn btn-dark" style="border:1px solid rgba(255,255,255,0.1)">Meine Geschichte</a>
-        <a href="blog.html" class="btn" style="background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.15)">Blog lesen</a>
-      </div>
-      <div style="display:flex;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.07)">
-        <div><p style="color:white;font-weight:900;font-size:22px;margin-bottom:2px">14+</p><span style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:1.5px;font-weight:600;text-transform:uppercase">Zertifikate</span></div>
-        <div><p style="color:white;font-weight:900;font-size:22px;margin-bottom:2px">KI & SEO</p><span style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:1.5px;font-weight:600;text-transform:uppercase">Schwerpunkte</span></div>
-        <div><p style="color:white;font-weight:900;font-size:22px;margin-bottom:2px">Jun '26</p><span style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:1.5px;font-weight:600;text-transform:uppercase">Abschluss MoD</span></div>
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Personal Brand · KI · Marketing · Performance</div>
+    <h1 class="hero-title">
+      Marketing<br/>
+      <span class="dim">mit </span><span class="accent-purple">Sven</span><br/>
+      <span class="dim">MMS.</span>
+    </h1>
+    <p class="hero-sub">Ich verbinde KI-Expertise mit strategischem Marketing-Denken — ehrlich, direkt, und mit messbaren Ergebnissen.</p>
+    <div class="hero-btns">
+      <a href="wofuer-mms.html" class="btn-primary">Projekte ansehen →</a>
+      <a href="kontakt.html" class="btn-ghost">Kontakt aufnehmen</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-wrap">
+      <img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/d3ecc4794_sven_full.jpg" alt="Sven Preuß" style="width:100%;height:auto;display:block;filter:grayscale(15%)"/>
+      <div class="hero-badge">
+        <span>50K+</span>
+        <small>Reichweite · Follower</small>
       </div>
     </div>
-    <div style="position:relative">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/cd81a8437_00167.jpg" alt="Sven Preuß" style="width:100%;display:block;filter:grayscale(8%)"/>
-      <div style="position:absolute;bottom:-16px;left:-16px;background:var(--dark);border:1px solid rgba(255,255,255,0.1);padding:14px 18px">
-        <p style="color:white;font-weight:700;font-size:13px;margin:0">Sven Preuß</p>
-        <span style="font-size:10px;color:rgba(6,214,160,0.9);letter-spacing:1px;font-weight:600">Marketing mit Sven · MMS</span>
+  </div>
+  <div class="scroll-hint">
+    <span class="scroll-line"></span>
+    Scroll to explore
+  </div>
+</section>
+
+<!-- ABOUT / STATS -->
+<section class="about-section">
+  <div class="about-left">
+    <div class="section-label">Über mich</div>
+    <h2 class="about-title">
+      Ich mache Marketing<br/>
+      <em class="italic-dim">ehrlich,</em> <span class="purple">messbar</span> und<br/>
+      <span class="green">menschlich.</span>
+    </h2>
+    <p class="about-text">Ich bin Sven — aus Tettnang. 13 Jahre lang habe ich mit FreiGeist eine Künstlervereinigung, ein Musik-Label, eine Deko-Crew und ein Festival im Schwarzwald aufgebaut. Marken, Communities und Erlebnisse — aus dem Nichts.</p>
+    <p class="about-text">Seit 2025 fokussiere ich mich mit der Unterstützung meiner Frau Chiara vollständig auf <strong>KI-gestütztes Marketing</strong>, <strong>SEO &amp; GEO</strong> und <strong>Performance</strong>. Was ich mitbringe: echtes Verständnis dafür, wie Marken, Communitys und Erlebnisse wirklich entstehen.</p>
+    <p class="about-text">Ich teile mein Wissen regelmäßig auf LinkedIn und in meinem Blog. Nicht um zu verkaufen — sondern weil ich überzeugt bin, dass offenes Wissen alle weiterbringt.</p>
+    <div class="tags-wrap">
+      <span class="tag-pill">KI-Marketing</span>
+      <span class="tag-pill">Performance Ads</span>
+      <span class="tag-pill">SEO / GEO</span>
+      <span class="tag-pill">Content Strategy</span>
+      <span class="tag-pill">Brand Building</span>
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num purple">13</div>
+        <div class="stat-label">Jahre Brand &amp; Event</div>
+        <div class="stat-sub">FreiGeist · 2012–2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num green">40</div>
+        <div class="stat-label">Künstler aus Europa</div>
+        <div class="stat-sub">FreiGeist Künstlervereinigung</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num purple">1</div>
+        <div class="stat-label">Festival gegründet</div>
+        <div class="stat-sub">FreiGeist FOMAA · Schwarzwald</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num green">16</div>
+        <div class="stat-label">Zertifikate</div>
+        <div class="stat-sub">SEO · KI · Ads · Design</div>
+      </div>
+    </div>
+    <div class="about-img">
+      <img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/d3ecc4794_sven_full.jpg" alt="Sven Preuß" style="width:100%;height:auto;display:block;filter:grayscale(15%)"/>
+      <div class="about-img-tag">Tettnang · Remote DACH</div>
+    </div>
+  </div>
+</section>
+
+<!-- ERFAHRUNG -->
+<section class="projects-section">
+  <div style="display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px;margin-bottom:60px;flex-wrap:wrap">
+    <div>
+      <div class="section-label">Erfahrung</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,70px);font-weight:700;line-height:1">
+        Echte <em style="font-style:italic;color:rgba(255,255,255,0.25)">Erfahrungen.</em>
+      </h2>
+    </div>
+    <p style="font-size:13px;color:var(--muted);max-width:260px;text-align:right">Aus der Praxis. Nicht aus dem Lehrbuch.</p>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card">
+      <span class="project-tag-pill tag-ki">Brand Building · Label</span>
+      <h3>FreiGeist SoundArt — Label &amp; Produktion</h3>
+      <p>Aufbau eines unabhängigen Goa/Psychedelic-Labels: Live-Act-CD zusammengestellt, designed und selbst gebrannt (CD-Publisher), CD-Case extern gedruckt. Merch-Linie entworfen und per Siebdruck mit eigenem Team produziert.</p>
+      <div class="project-metric" style="font-size:28px">2012–2025</div>
+      <div class="project-metric-label">Label · CD-Produktion · Merch · Siebdruck</div>
+      <div class="project-pills">
+        <span class="project-pill">Label</span>
+        <span class="project-pill">CD Design</span>
+        <span class="project-pill">Merch</span>
+        <span class="project-pill">Siebdruck</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <span class="project-tag-pill tag-ads">Event &amp; Festival</span>
+      <h3>FreiGeist FOMAA — Festival im Schwarzwald</h3>
+      <p>3-Tage-Festival mit 2 Bühnen (Indoor + Outdoor), Camping-Area, Kunst-Galerie mit 6 Künstlern, Workshops und 80 Artists. Gesamtkonzept, Eventleitung &amp; Deko: ich — gemeinsam mit meiner Frau Chiara als Co-Leitung.</p>
+      <div class="project-metric" style="font-size:28px">80 Artists</div>
+      <div class="project-metric-label">3 Tage · 2 Stages · Camping · Galerie</div>
+      <div class="project-pills">
+        <span class="project-pill">Festival</span>
+        <span class="project-pill">3 Tage</span>
+        <span class="project-pill">Camping</span>
+        <span class="project-pill">Galerie</span>
+        <span class="project-pill">Workshops</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <span class="project-tag-pill tag-seo">Kreation &amp; Design</span>
+      <h3>FreiGeist Decoration &amp; Brand Design</h3>
+      <p>Aufbau &amp; Leitung der Deko-Crew, kreative Gesamtführung. Dazu: Logo-Design, Flyer-Design und komplette visuelle Identität für alle FreiGeist-Projekte — Label, Deko, Festival. Von der Skizze bis zum fertigen Print.</p>
+      <div class="project-metric" style="font-size:28px">Full Brand</div>
+      <div class="project-metric-label">Logo · Flyer · Deko · Konzept · EU-weit</div>
+      <div class="project-pills">
+        <span class="project-pill">Logo Design</span>
+        <span class="project-pill">Flyer</span>
+        <span class="project-pill">Brand Identity</span>
+        <span class="project-pill">Deko</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <span class="project-tag-pill tag-ki">Social Media · Community</span>
+      <h3>FreiGeist — Social Media &amp; Community Management</h3>
+      <p>Admin und Manager von 26 Facebook-Seiten. Vollständige Führung von FreiGeist, FreiGeist SoundArt, FreiGeist Decoration (FB &amp; IG, Soundcloud), der Event-Gruppe Partyplaner Süddeutschland/Vorarlberg/Schweiz sowie Künstler-Seiten von Vereinigungsmitgliedern. Events promotet, Meta Ads geschaltet.</p>
+      <div class="project-metric" style="font-size:28px">26</div>
+      <div class="project-metric-label">Facebook-Seiten als Admin geführt</div>
+      <div class="project-pills">
+        <span class="project-pill">Meta Ads</span>
+        <span class="project-pill">FB &amp; IG</span>
+        <span class="project-pill">Soundcloud</span>
+        <span class="project-pill">Event-Promo</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ZERTIFIKATE KARUSSELL -->
 
-<div class="carousel-wrap">
-  <p class="carousel-label">Zertifikate & Weiterbildungen</p>
-  <div class="carousel-track">
-    <div class="carousel-item"><span>Google · Google Ads – Search</span></div>
-<div class="carousel-item"><span>Google · Google Ads – Display</span></div>
-<div class="carousel-item"><span>Google · Google Ads – Video</span></div>
-<div class="carousel-item"><span>Google · Google Analytics</span></div>
-<div class="carousel-item"><span>Google · Practical AI for Marketing</span></div>
-<div class="carousel-item"><span>BVDW · SEO Certified Professional</span></div>
-<div class="carousel-item"><span>SISTRIX · Keyword-Recherche</span></div>
-<div class="carousel-item"><span>SISTRIX · Wettbewerbsanalyse</span></div>
-<div class="carousel-item"><span>IBM / KI-Campus · Grundlagen der KI · 93%</span></div>
-<div class="carousel-item"><span>IBM / KI-Campus · Maschinelles Lernen · 100%</span></div>
-<div class="carousel-item"><span>IBM / KI-Campus · KI-Ethik · 100%</span></div>
-<div class="carousel-item"><span>Canva · Visual Suite & Design</span></div>
-<div class="carousel-item"><span>KI-Campus · Klickstarke Inhalte</span></div>
-<div class="carousel-item"><span>KI-Campus · Smarter arbeiten mit KI</span></div>
-<div class="carousel-item"><span>Google · Google Ads – Search</span></div>
-<div class="carousel-item"><span>Google · Google Ads – Display</span></div>
-<div class="carousel-item"><span>Google · Google Ads – Video</span></div>
-<div class="carousel-item"><span>Google · Google Analytics</span></div>
-<div class="carousel-item"><span>Google · Practical AI for Marketing</span></div>
-<div class="carousel-item"><span>BVDW · SEO Certified Professional</span></div>
-<div class="carousel-item"><span>SISTRIX · Keyword-Recherche</span></div>
-<div class="carousel-item"><span>SISTRIX · Wettbewerbsanalyse</span></div>
-<div class="carousel-item"><span>IBM / KI-Campus · Grundlagen der KI · 93%</span></div>
-<div class="carousel-item"><span>IBM / KI-Campus · Maschinelles Lernen · 100%</span></div>
-<div class="carousel-item"><span>IBM / KI-Campus · KI-Ethik · 100%</span></div>
-<div class="carousel-item"><span>Canva · Visual Suite & Design</span></div>
-<div class="carousel-item"><span>KI-Campus · Klickstarke Inhalte</span></div>
-<div class="carousel-item"><span>KI-Campus · Smarter arbeiten mit KI</span></div>
+<!-- GALERIE: FreiGeist Decoration -->
+<section style="padding:80px 80px 0;border-top:1px solid var(--border)">
+  <div style="margin-bottom:40px">
+    <div class="section-label">FreiGeist Decoration — Eigenarbeit</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,56px);font-weight:700;line-height:1.1">
+      Bühnen. Räume. <em style="font-style:italic;color:rgba(255,255,255,0.25)">Welten.</em>
+    </h2>
+    <p style="font-size:14px;color:var(--muted);margin-top:12px;max-width:600px">Konzept, Entwurf, Produktion und Aufbau — von der ersten Skizze bis zum leuchtenden Ergebnis auf der Bühne. Jedes Stück handgemacht.</p>
+  </div>
 
+  <!-- Haupt-Grid -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:3px">
+    <!-- Großes Bild links: indoor stage cobra -->
+    <div style="grid-column:1/2;grid-row:1/2;overflow:hidden;aspect-ratio:4/3;position:relative">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/1b36da5bb_photo_2026-05-23_03-10-17.jpg"
+           alt="FreiGeist Decoration Indoor Stage" loading="lazy"
+           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
+           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">Indoor Stage · Hauptbühne</div>
+    </div>
+    <!-- Mitte: teal tunnel full -->
+    <div style="grid-column:2/3;grid-row:1/2;overflow:hidden;aspect-ratio:4/3;position:relative">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/5dd3c4e7b_photo_2026-05-23_03-12-21.jpg"
+           alt="FreiGeist Decoration Tunnel" loading="lazy"
+           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
+           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">UV-Deko · Full Coverage</div>
+    </div>
+    <!-- Rechts: crowd shot -->
+    <div style="grid-column:3/4;grid-row:1/2;overflow:hidden;aspect-ratio:4/3;position:relative">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/69d39773c_photo_2026-05-23_03-10-30.jpg"
+           alt="FreiGeist Party Crowd" loading="lazy"
+           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
+           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">Crowd & Atmosphäre</div>
+    </div>
+    <!-- 2. Reihe: outdoor stage -->
+    <div style="grid-column:1/2;grid-row:2/3;overflow:hidden;aspect-ratio:4/3;position:relative">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/21e16a75b_photo_2026-05-23_03-10-34.jpg"
+           alt="FreiGeist Outdoor Stage" loading="lazy"
+           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
+           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">Outdoor Stage · Schwarzwald</div>
+    </div>
+    <!-- 2. Reihe Mitte: star piece -->
+    <div style="grid-column:2/3;grid-row:2/3;overflow:hidden;aspect-ratio:4/3;position:relative">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/24c0622c9_photo_2026-05-23_03-10-37.jpg"
+           alt="FreiGeist Stern Piece" loading="lazy"
+           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
+           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">Stern-Installation · Bühne</div>
+    </div>
+    <!-- 2. Reihe rechts: collage outdoor/indoor -->
+    <div style="grid-column:3/4;grid-row:2/3;overflow:hidden;aspect-ratio:4/3;position:relative">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/cbe66fc51_photo_2026-05-23_03-10-41.jpg"
+           alt="FreiGeist FOMAA Festival" loading="lazy"
+           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
+           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">FOMAA · Indoor + Outdoor</div>
+    </div>
+  </div>
+
+  <!-- Logos -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:3px">
+    <div style="background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;border:1px solid var(--border);gap:12px">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/0ae924b00_photo_2026-05-23_03-10-56.jpg"
+           alt="FreiGeist SoundArt Logo" loading="lazy"
+           style="max-height:180px;max-width:100%;object-fit:contain;display:block"/>
+      <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">FreiGeist SoundArt — Logo Design</span>
+    </div>
+    <div style="background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;border:1px solid var(--border);gap:12px">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/f68d872bb_photo_2026-05-23_03-11-00.jpg"
+           alt="FreiGeist Decoration Logo" loading="lazy"
+           style="max-height:180px;max-width:100%;object-fit:contain;display:block"/>
+      <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">FreiGeist Decoration — Logo Design</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT / WISSEN -->
+<section class="content-section">
+  <div class="content-header">
+    <h2>Wissen <em>geteilt.</em> <span class="green">Offen.</span></h2>
+    <div class="content-channels">
+      <span class="channel-pill">LinkedIn</span>
+      <span class="channel-pill">Blog</span>
+      <span class="channel-pill">Newsletter</span>
+    </div>
+  </div>
+  <div class="content-grid">
+    <div class="content-featured">
+      <span class="featured-label">Featured</span>
+      <div class="content-meta">Mai 2026 · 5 Min Lesezeit</div>
+      <h3>Warum 90% aller KI-Marketing-Strategien scheitern — und was wirklich funktioniert</h3>
+      <p>Die meisten Unternehmen nutzen KI als Abkürzung statt als Verstärker. Hier ist der Unterschied zwischen kurzfristigem Buzz und echtem Wettbewerbsvorteil.</p>
+      <a href="blog.html" class="read-more">Weiterlesen →</a>
+    </div>
+    <div class="content-sidebar">
+      <div class="content-item">
+        <div class="content-item-img"></div>
+        <div>
+          <div class="content-item-tag">Newsletter</div>
+          <h4>MMS-Brief: Prompt-Engineering für Marketer</h4>
+          <small>Mai 2026 · 3 Min</small>
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="content-item-img"></div>
+        <div>
+          <div class="content-item-tag">LinkedIn</div>
+          <h4>Das Ende des Keyword-Stuffings: Semantisches SEO mit KI</h4>
+          <small>Apr 2026 · 5 Min</small>
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="content-item-img"></div>
+        <div>
+          <div class="content-item-tag">Blog</div>
+          <h4>GEO: Wie du deine Inhalte für KI-Antwortmaschinen optimierst</h4>
+          <small>Apr 2026 · 7 Min</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="contact-section">
+  <div class="contact-label">Kontakt</div>
+  <h2 class="contact-title">Lass uns <span class="purple">reden.</span></h2>
+  <p class="contact-sub">Du hast ein Projekt, eine Idee oder einfach eine Frage? Ich antworte persönlich — kein Autoresponder, kein Formular-Nirwana.</p>
+  <div class="contact-grid">
+    <form class="contact-form" onsubmit="return false">
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label">Name</label>
+          <input class="form-input" type="text" placeholder="Dein Name"/>
+        </div>
+        <div class="form-field">
+          <label class="form-label">E-Mail</label>
+          <input class="form-input" type="email" placeholder="deine@email.de"/>
+        </div>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Betreff</label>
+        <input class="form-input" type="text" placeholder="Worum geht's?"/>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Nachricht</label>
+        <textarea class="form-input" placeholder="Erzähl mir von deinem Projekt, deiner Herausforderung oder deiner Idee..."></textarea>
+      </div>
+      <button class="btn-send" type="submit">Nachricht senden ✉</button>
+    </form>
+    <div class="contact-sidebar">
+      <div class="contact-direct">
+        <h4>Direkter Kontakt</h4>
+        <a href="https://linkedin.com/in/preussdigital/" target="_blank" class="contact-link">
+          <div class="contact-link-icon">in</div>
+          <div class="contact-link-text">
+            <span>LinkedIn</span>
+            <small>@preussdigital</small>
+          </div>
+        </a>
+        <a href="mailto:sven.preuss95@gmail.com" class="contact-link">
+          <div class="contact-link-icon">✉</div>
+          <div class="contact-link-text">
+            <span>E-Mail</span>
+            <small>sven.preuss95@gmail.com</small>
+          </div>
+        </a>
+      </div>
+      <div class="newsletter-box">
+        <div class="newsletter-tag">Newsletter</div>
+        <h4>Der MMS-Brief</h4>
+        <p>Wöchentlich. Kein Spam. KI-Marketing, Performance-Tipps und ehrliche Perspektiven — direkt ins Postfach.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="deine@email.de"/>
+          <button>→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZERTIFIKATS-KARUSSELL -->
+<div class="cert-carousel-wrap">
+  <p class="cert-carousel-label">Zertifikate &amp; Weiterbildungen</p>
+  <div class="cert-carousel-track">
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f5f5bac90_dd223881f_SEAfullCert.png" alt="Google Ads Suchmaschinenwerbung" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/731a0e4f7_e58bc0989_Displaycert.png" alt="Google Ads Display" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/7ca2b3018_c0adc615e_Displayfullcert.png" alt="Google Ads Display Full" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/b344d9bcf_191b06c5b_GoogleAdsVideowerbungZertifikat.png" alt="Google Ads Video" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2fb00c241_e9d08748c_Analyticfullcert.png" alt="Google Analytics" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/6d0b69584_351bba101_AnalyticsO.png" alt="Google Analytics Badge" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/0e79c118f_9a0380a55_SEAO.png" alt="SEA Zertifikat" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/895ebe799_af2af142b_CanvaAiZertifikat.png" alt="Canva AI" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/6f3bf9d5d_292b49989_die_visual_suite_von_canva-certificate_social_share.jpg" alt="Canva Visual Suite" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/d4a8097b9_d35522ac3_sven-preu-die-visual-suite-von-canva-badge.png" alt="Canva Visual Suite Badge" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/a0fa05d20_c797a9268_sven-preu-smarter-arbeiten-mit-ki-badge.png" alt="Smarter mit KI Badge" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f2467431e_e815daaa4_smarter_arbeiten_mit_ki-certificate_social_share.jpg" alt="Smarter mit KI" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bd9bc8ce_e506142b7_Badge_KI_Ethik_IBM.png" alt="KI Ethik IBM" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/4a009af1b_181ea7537_klickstarke_inhalte_erstellen-certificate_social_share.jpg" alt="Klickstarke Inhalte" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bc395a7e_55e0bf6aa_sven-preu-klickstarke-inhalte-erstellen-badge.png" alt="Klickstarke Inhalte Badge" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f5f5bac90_dd223881f_SEAfullCert.png" alt="Google Ads Suchmaschinenwerbung" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/731a0e4f7_e58bc0989_Displaycert.png" alt="Google Ads Display" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/7ca2b3018_c0adc615e_Displayfullcert.png" alt="Google Ads Display Full" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/b344d9bcf_191b06c5b_GoogleAdsVideowerbungZertifikat.png" alt="Google Ads Video" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2fb00c241_e9d08748c_Analyticfullcert.png" alt="Google Analytics" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/6d0b69584_351bba101_AnalyticsO.png" alt="Google Analytics Badge" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/0e79c118f_9a0380a55_SEAO.png" alt="SEA Zertifikat" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/895ebe799_af2af142b_CanvaAiZertifikat.png" alt="Canva AI" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/6f3bf9d5d_292b49989_die_visual_suite_von_canva-certificate_social_share.jpg" alt="Canva Visual Suite" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/d4a8097b9_d35522ac3_sven-preu-die-visual-suite-von-canva-badge.png" alt="Canva Visual Suite Badge" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/a0fa05d20_c797a9268_sven-preu-smarter-arbeiten-mit-ki-badge.png" alt="Smarter mit KI Badge" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f2467431e_e815daaa4_smarter_arbeiten_mit_ki-certificate_social_share.jpg" alt="Smarter mit KI" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bd9bc8ce_e506142b7_Badge_KI_Ethik_IBM.png" alt="KI Ethik IBM" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/4a009af1b_181ea7537_klickstarke_inhalte_erstellen-certificate_social_share.jpg" alt="Klickstarke Inhalte" loading="lazy"/></div>
+    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bc395a7e_55e0bf6aa_sven-preu-klickstarke-inhalte-erstellen-badge.png" alt="Klickstarke Inhalte Badge" loading="lazy"/></div>
   </div>
 </div>
+</div>
 
-
-<!-- NAVIGATION CARDS -->
-<section style="background:var(--dark);padding:80px 24px">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:48px">
-      <span class="label" style="color:rgba(255,255,255,0.3);display:block;text-align:center">WAS DICH ERWARTET</span>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,38px);color:white">Kein glattgebügelter Auftritt.<br/><span class="grad-text">Sondern einer mit Handschrift.</span></h2>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS" style="height:40px"/>
+      <p>Marketing mit Sven — Persönliche Marke & Portfolio von Sven Preuß.</p>
+      <p class="tagline">Klar. Praxisnah. Mit Haltung.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px" class="cards-3">
-      
-      <a href="ueber-mich.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
-        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">01</span>
-        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Über mich</h3>
-        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">Ich mag Marketing lieber klar und wirksam als laut und überladen.</p>
-        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
-      </a>
-      <a href="geschichte.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
-        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">02</span>
-        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Meine Geschichte</h3>
-        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">Nicht aus einem perfekten Plan — sondern aus echtem Leben und echten Brüchen.</p>
-        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
-      </a>
-      <a href="wofuer-mms.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
-        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">03</span>
-        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Wofür MMS steht</h3>
-        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">KI, Marketing und Performance – verständlich, praxisnah, mit Haltung.</p>
-        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
-      </a>
-      <a href="zertifikate.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
-        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">04</span>
-        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Zertifikate</h3>
-        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">14+ abgeschlossene Zertifizierungen in SEO, KI, Google Ads und mehr.</p>
-        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
-      </a>
-      <a href="vision.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
-        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">05</span>
-        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Vision & Mission</h3>
-        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">Eine Marke mit Klarheit und Substanz – nicht gebaut auf Lautstärke.</p>
-        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
-      </a>
-      <a href="blog.html" style="background:#1e1e1e;padding:36px 28px;text-decoration:none;display:block;border-top:3px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#7c3aed';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='transparent';this.style.transform='translateY(0)'">
-        <span style="font-size:10px;font-weight:700;letter-spacing:2px;color:#7c3aed;display:block;margin-bottom:14px">06</span>
-        <h3 style="color:white;font-size:17px;font-weight:700;margin-bottom:10px">Blog</h3>
-        <p style="color:rgba(255,255,255,0.38);font-size:13px;line-height:1.65;margin-bottom:16px">Meine Gedanken zu KI, Marketing, Performance und moderner Sichtbarkeit.</p>
-        <span style="color:#06d6a0;font-weight:700;font-size:14px">→</span>
-      </a>
+    <div class="footer-nav">
+      <h4>Seiten</h4>
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="geschichte.html">Meine Geschichte</a>
+      <a href="zertifikate.html">Zertifikate</a>
+      <a href="vision.html">Vision & Mission</a>
+      <a href="blog.html">Blog</a>
+      <a href="kontakt.html">Kontakt</a>
     </div>
-    <div style="text-align:center;margin-top:32px;padding:24px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06)">
-      <p style="color:rgba(255,255,255,0.35);font-size:14px;font-style:italic;max-width:580px;margin:0 auto">"Marketing mit Sven ist kein Verkaufsfunnel und keine Show-Bühne. Sondern ein ehrlicher Raum für Substanz, Entwicklung und modernes Marketing mit Haltung."</p>
+    <div class="footer-nav">
+      <h4>Kontakt</h4>
+      <a href="mailto:sven.preuss95@gmail.com">sven.preuss95@gmail.com</a>
+      <a href="https://linkedin.com/in/preussdigital/" target="_blank">LinkedIn · preussdigital</a>
+      <a href="#">Tettnang · Remote DACH</a>
     </div>
   </div>
-</section>
-
-<style>
-@media(max-width:900px){.hero-grid-main{grid-template-columns:1fr}.cards-3{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.cards-3{grid-template-columns:1fr}}
-</style>
-
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS" style="height:44px"/>
-        <p>Marketing mit Sven</p>
-        <span>KLAR · PRAXISNAH · MIT HALTUNG</span>
-        <p class="tagline">Persönliche Marke & Portfolio von Sven Preuß.<br/>Fokus auf KI, Marketing und Performance.</p>
-      </div>
-      <div class="footer-nav">
-        <h4>Seiten</h4>
-        <a href="index.html">Startseite</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="geschichte.html">Meine Geschichte</a>
-        <a href="wofuer-mms.html">Wofür MMS steht</a>
-        <a href="zertifikate.html">Zertifikate</a>
-        <a href="vision.html">Vision & Mission</a>
-        <a href="blog.html">Blog</a>
-        <a href="kontakt.html">Kontakt</a>
-      </div>
-      <div class="footer-nav">
-        <h4>Kontakt</h4>
-        <a href="mailto:sven.preuss95@gmail.com">sven.preuss95@gmail.com</a>
-        <a href="https://linkedin.com/in/preussdigital/" target="_blank">LinkedIn · preussdigital</a>
-        <a href="#">Tettnang / Remote DACH</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Sven Preuß · Marketing mit Sven</p>
-      <p style="color:rgba(255,255,255,0.25);font-style:italic">Klar. Praxisnah. Mit Haltung.</p>
-    </div>
+  <div class="footer-bottom">
+    <p>© 2026 Sven Preuß · Marketing mit Sven</p>
+    <p style="font-style:italic">Klar. Praxisnah. Mit Haltung.</p>
   </div>
 </footer>
 
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{e.preventDefault();var t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});});
-});
-</script>
 </body>
 </html>
