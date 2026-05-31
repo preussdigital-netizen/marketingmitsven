@@ -3,643 +3,760 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Marketing mit Sven – KI · Performance · SEO</title>
-<meta name="description" content="Marketing mit Sven – Sven Preuß verbindet KI-Expertise mit strategischem Marketing-Denken. Ehrlich, direkt, messbar."/>
+<title>Marketing mit Sven – Klar. Praxisnah. Mit Haltung.</title>
+<meta name="description" content="Marketing mit Sven – Sven Preuß. Keine Guru-Show. Keine leeren Buzzwords. Ehrliche Perspektiven zu KI, Marketing und Performance."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
 <style>
-/* ─── DARK THEME OVERRIDES ─── */
 :root{
-  --bg:#0a0a0a;
-  --bg2:#111;
-  --bg3:#1a1a1a;
+  --bg:#0c0c0e;
+  --bg2:#111114;
+  --bg3:#18181d;
   --accent:#7c3aed;
   --accent2:#10b981;
-  --text:#fff;
-  --muted:rgba(255,255,255,0.45);
-  --border:rgba(255,255,255,0.08);
+  --text:#f0f0f2;
+  --muted:rgba(240,240,242,0.45);
+  --muted2:rgba(240,240,242,0.2);
+  --border:rgba(255,255,255,0.07);
+  --border2:rgba(255,255,255,0.12);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6}
 a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.nav-logo-wrap{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:1px}
-.nav-logo-wrap img{height:28px}
-.nav-links-dark{display:flex;gap:32px;list-style:none}
-.nav-links-dark a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:color .2s}
-.nav-links-dark a:hover{color:#fff}
-.nav-cta-dark{background:var(--accent);color:#fff!important;padding:10px 20px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:background .2s!important}
-.nav-cta-dark:hover{background:#6d28d9!important}
-.hamburger-dark{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.hamburger-dark span{width:22px;height:2px;background:#fff;display:block}
-.mobile-menu-dark{display:none;position:fixed;top:64px;left:0;right:0;background:#0a0a0a;border-bottom:1px solid var(--border);padding:24px 40px;flex-direction:column;gap:20px;z-index:99}
-.mobile-menu-dark a{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.mobile-menu-dark.open{display:flex}
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:rgba(12,12,14,0.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-brand{font-size:14px;font-weight:700;letter-spacing:0.5px}
+.nav-brand span{color:var(--accent)}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:#fff!important;padding:9px 20px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;transition:opacity .2s!important}
+.nav-cta:hover{opacity:.85!important}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);display:block;transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:24px 48px 32px;flex-direction:column;gap:20px;z-index:199}
+.mobile-menu a{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);padding:8px 0;border-bottom:1px solid var(--border)}
+.mobile-menu.open{display:flex}
 
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:120px 80px 80px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(124,58,237,0.12) 0%,transparent 60%)}
-.hero-left{flex:1;z-index:2}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.3);padding:6px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#a78bfa;margin-bottom:40px}
-.hero-tag::before{content:'';width:6px;height:6px;background:#7c3aed;border-radius:50%;display:inline-block}
-.hero-title{font-family:'Playfair Display',serif;font-size:clamp(64px,8vw,120px);line-height:0.95;font-weight:700;margin-bottom:32px}
-.hero-title .dim{color:rgba(255,255,255,0.2)}
-.hero-title .accent-purple{color:#7c3aed}
-.hero-sub{font-size:16px;line-height:1.7;color:var(--muted);max-width:420px;margin-bottom:40px}
-.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
-.btn-primary{background:var(--accent);color:#fff;padding:14px 28px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:background .2s}
-.btn-primary:hover{background:#6d28d9}
-.btn-ghost{border:1px solid var(--border);color:var(--muted);padding:14px 28px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:all .2s}
-.btn-ghost:hover{border-color:#fff;color:#fff}
-.hero-right{width:320px;flex-shrink:0;position:relative;z-index:2}
-.hero-img-wrap{position:relative;border:1px solid var(--border)}
-.hero-img-wrap img{width:100%;display:block;filter:grayscale(30%)}
-.hero-badge{position:absolute;bottom:16px;left:16px;background:rgba(0,0,0,0.85);border:1px solid var(--border);padding:10px 16px;backdrop-filter:blur(8px)}
-.hero-badge span{font-size:20px;font-weight:900;color:#10b981;display:block;line-height:1}
-.hero-badge small{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.scroll-hint{position:absolute;bottom:40px;left:80px;display:flex;align-items:center;gap:12px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
-.scroll-line{width:40px;height:1px;background:var(--muted)}
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 48px 80px;position:relative;overflow:hidden}
+.hero-glow{position:absolute;top:20%;right:-10%;width:600px;height:600px;background:radial-gradient(ellipse,rgba(124,58,237,0.1) 0%,transparent 65%);pointer-events:none}
+.hero-glow2{position:absolute;bottom:10%;left:-5%;width:400px;height:400px;background:radial-gradient(ellipse,rgba(16,185,129,0.06) 0%,transparent 65%);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(124,58,237,0.8);margin-bottom:36px}
+.hero-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(52px,7vw,100px);line-height:1;font-weight:700;margin-bottom:28px}
+.hero-title .line2{color:rgba(255,255,255,0.18);display:block;margin-top:8px}
+.hero-claim{font-size:clamp(14px,1.8vw,18px);color:var(--muted);max-width:600px;line-height:1.75;margin-bottom:20px}
+.hero-claim strong{color:var(--text)}
+.hero-sub{font-size:14px;color:var(--muted2);max-width:540px;line-height:1.8;margin-bottom:48px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:#fff;padding:13px 28px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;display:inline-flex;align-items:center;gap:8px;transition:opacity .2s}
+.btn-primary:hover{opacity:.85}
+.btn-ghost{border:1px solid var(--border2);color:var(--muted);padding:13px 28px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;transition:all .2s}
+.btn-ghost:hover{border-color:var(--text);color:var(--text)}
+.hero-scroll{position:absolute;bottom:40px;left:48px;display:flex;align-items:center;gap:12px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted2)}
+.hero-scroll-line{width:40px;height:1px;background:var(--muted2)}
 
-/* ABOUT / STATS */
-.about-section{padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.about-left{}
-.section-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:24px;display:flex;align-items:center;gap:12px}
-.section-label::after{content:'';flex:1;max-width:60px;height:1px;background:var(--accent)}
-.about-title{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,56px);line-height:1.1;font-weight:700;margin-bottom:32px}
-.about-title .italic-dim{font-style:italic;color:rgba(255,255,255,0.3)}
-.about-title .green{color:#10b981}
-.about-title .purple{color:#7c3aed}
-.about-text{font-size:15px;line-height:1.8;color:var(--muted);margin-bottom:20px}
-.about-text strong{color:#fff}
-.tags-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
-.tag-pill{border:1px solid var(--border);padding:6px 14px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);border-radius:2px}
-.about-right{}
-.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px}
-.stat-card{background:var(--bg2);padding:32px 28px;border:1px solid var(--border)}
-.stat-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;line-height:1;margin-bottom:8px}
-.stat-num.purple{color:#7c3aed}
-.stat-num.green{color:#10b981}
-.stat-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.stat-sub{font-size:10px;color:rgba(255,255,255,0.25);margin-top:4px}
-.about-img{width:100%;display:block;filter:grayscale(20%)}
-.about-img img{width:100%;display:block;filter:grayscale(20%);aspect-ratio:16/9;object-fit:cover}
-.about-img-tag{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,0.8);padding:6px 12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+/* ── INTRO STRIP ── */
+.intro-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 48px;display:flex;gap:48px;align-items:center;overflow-x:auto;scrollbar-width:none}
+.intro-strip::-webkit-scrollbar{display:none}
+.strip-item{display:flex;align-items:center;gap:10px;white-space:nowrap;flex-shrink:0}
+.strip-icon{width:28px;height:28px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.strip-text{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.strip-div{width:1px;height:20px;background:var(--border);flex-shrink:0}
+
+/* ── SECTION BASICS ── */
+section{padding:100px 48px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--muted2);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.section-label::after{content:'';width:40px;height:1px;background:var(--accent);display:inline-block}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,64px);line-height:1.05;font-weight:700;margin-bottom:32px}
+.section-title .dim{color:rgba(255,255,255,0.15);font-style:italic}
+.section-title .green{color:var(--accent2)}
+.section-title .purple{color:var(--accent)}
+.divider{height:1px;background:var(--border);margin:0}
+
+/* ── ABOUT TEASER (Startseite) ── */
+.about-teaser{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.about-teaser-text p{font-size:15px;line-height:1.85;color:var(--muted);margin-bottom:18px}
+.about-teaser-text p strong{color:var(--text)}
+.about-teaser-right{}
+.expect-box{background:var(--bg2);border:1px solid var(--border);padding:40px;margin-bottom:2px}
+.expect-box h3{font-size:13px;font-weight:700;letter-spacing:1px;margin-bottom:24px;color:var(--text)}
+.expect-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.expect-list li{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:var(--muted);line-height:1.6}
+.expect-arrow{color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── NAV CARDS ── */
+.nav-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.nav-card{background:var(--bg2);border:1px solid var(--border);padding:36px 32px;position:relative;overflow:hidden;transition:border-color .3s;display:block}
+.nav-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,0.05) 0%,transparent 60%);opacity:0;transition:opacity .3s}
+.nav-card:hover{border-color:rgba(124,58,237,0.35)}
+.nav-card:hover::before{opacity:1}
+.nav-card-num{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);margin-bottom:20px}
+.nav-card-icon{font-size:24px;margin-bottom:16px}
+.nav-card h3{font-size:16px;font-weight:700;margin-bottom:10px}
+.nav-card p{font-size:12px;color:var(--muted);line-height:1.65}
+.nav-card-arrow{position:absolute;bottom:24px;right:24px;font-size:16px;color:var(--muted2);transition:color .3s}
+.nav-card:hover .nav-card-arrow{color:var(--accent)}
+
+/* ── CLOSING STRIP ── */
+.closing-strip{background:var(--bg2);border:1px solid var(--border);padding:60px 48px;text-align:center}
+.closing-strip p{font-size:14px;color:var(--muted);line-height:1.85;max-width:680px;margin:0 auto 24px}
+.closing-strip strong{color:var(--text)}
+
+/* ── PAGE SECTIONS ── */
+.page-hero{padding:160px 48px 80px;border-bottom:1px solid var(--border)}
+.page-hero-inner{max-width:1100px;margin:0 auto}
+.page-hero-inner h1{font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,88px);font-weight:700;line-height:1;margin-bottom:24px}
+.page-hero-inner .lead{font-size:16px;color:var(--muted);max-width:600px;line-height:1.8}
+
+/* ÜBER MICH */
+.ueber-grid{display:grid;grid-template-columns:3fr 2fr;gap:80px;align-items:start}
+.ueber-text p{font-size:15px;line-height:1.85;color:var(--muted);margin-bottom:20px}
+.ueber-text p strong{color:var(--text)}
+.facts-box{background:var(--bg2);border:1px solid var(--border);padding:36px}
+.facts-box h3{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);margin-bottom:24px}
+.facts-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.facts-list li{font-size:13px;color:var(--muted);line-height:1.6;padding-left:16px;position:relative}
+.facts-list li::before{content:'—';position:absolute;left:0;color:var(--accent)}
+
+/* GESCHICHTE */
+.geschichte-text p{font-size:15px;line-height:1.9;color:var(--muted);margin-bottom:22px}
+.geschichte-text p strong{color:var(--text)}
+.geschichte-text blockquote{border-left:2px solid var(--accent);padding:20px 28px;margin:36px 0;background:var(--bg2)}
+.geschichte-text blockquote p{color:var(--text);font-size:15px;margin:0}
+
+/* WOFÜR */
+.wofuer-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px}
+.wofuer-card{background:var(--bg2);border:1px solid var(--border);padding:40px;transition:border-color .3s}
+.wofuer-card:hover{border-color:rgba(124,58,237,0.3)}
+.wofuer-card-tag{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;display:inline-block}
+.tag-ki{color:var(--accent2)}
+.tag-marketing{color:var(--accent)}
+.tag-performance{color:#60a5fa}
+.tag-arbeitsweise{color:#f59e0b}
+.wofuer-card h3{font-size:20px;font-weight:700;margin-bottom:16px}
+.wofuer-card p{font-size:14px;color:var(--muted);line-height:1.8}
+
+/* ZERTIFIKATE */
+.zert-section-block{margin-bottom:48px}
+.zert-block-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.zert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.zert-card{background:var(--bg2);border:1px solid var(--border);padding:28px 24px;transition:border-color .3s}
+.zert-card:hover{border-color:var(--accent)}
+.zert-card-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.zert-card h4{font-size:13px;font-weight:700;color:var(--text);line-height:1.4}
+.zert-schwerpunkte{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.zert-pill{background:var(--bg3);border:1px solid var(--border);padding:8px 14px;font-size:10px;color:var(--muted);letter-spacing:.5px}
+.zert-hinweis{background:var(--bg2);border:1px solid var(--border);border-left:2px solid var(--accent);padding:28px 32px;margin-top:32px}
+.zert-hinweis p{font-size:13px;color:var(--muted);line-height:1.75}
+.zert-hinweis p strong{color:var(--text)}
+
+/* VISION */
+.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px}
+.vision-block{background:var(--bg2);border:1px solid var(--border);padding:48px 40px}
+.vision-block h3{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);margin-bottom:24px}
+.vision-block p{font-size:14px;color:var(--muted);line-height:1.85}
+.vision-block p strong{color:var(--text)}
+.vision-closing{text-align:center;padding:80px 48px;border-top:1px solid var(--border)}
+.vision-closing p{font-size:20px;font-weight:700;color:var(--text);line-height:1.6;max-width:560px;margin:0 auto}
+.vision-closing p span{color:var(--accent)}
+.vision-closing p .green{color:var(--accent2)}
 
 /* PROJEKTE */
-.projects-section{padding:100px 80px;border-top:1px solid var(--border)}
-.projects-header{margin-bottom:60px}
-.projects-header h2{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,70px);font-weight:700;line-height:1}
-.projects-header h2 em{font-style:italic;color:rgba(255,255,255,0.25)}
-.projects-header p{font-size:13px;color:var(--muted);margin-top:16px}
-.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.project-card{background:var(--bg2);border:1px solid var(--border);padding:40px;position:relative;overflow:hidden;transition:border-color .2s}
-.project-card:hover{border-color:rgba(124,58,237,0.4)}
-.project-tag-pill{display:inline-block;padding:4px 12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;border-radius:20px;margin-bottom:20px;font-weight:700}
-.tag-ki{background:rgba(16,185,129,0.15);color:#10b981;border:1px solid rgba(16,185,129,0.3)}
-.tag-ads{background:rgba(124,58,237,0.15);color:#a78bfa;border:1px solid rgba(124,58,237,0.3)}
-.tag-seo{background:rgba(59,130,246,0.15);color:#93c5fd;border:1px solid rgba(59,130,246,0.3)}
-.project-card h3{font-size:20px;font-weight:700;margin-bottom:12px}
-.project-card p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px}
-.project-metric{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#10b981;line-height:1}
-.project-metric-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px}
-.project-pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:20px}
-.project-pill{border:1px solid var(--border);padding:4px 10px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
-
-/* CONTENT / BLOG */
-.content-section{padding:100px 80px;border-top:1px solid var(--border)}
-.content-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;flex-wrap:wrap;gap:24px}
-.content-header h2{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,60px);font-weight:700;line-height:1}
-.content-header h2 em{font-style:italic;color:rgba(255,255,255,0.3)}
-.content-header h2 .green{color:#10b981}
-.content-channels{display:flex;gap:8px}
-.channel-pill{border:1px solid var(--border);padding:6px 14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:all .2s}
-.channel-pill:hover{border-color:#7c3aed;color:#a78bfa}
-.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.content-featured{background:var(--bg2);border:1px solid var(--border);padding:40px;position:relative}
-.featured-label{display:inline-block;background:rgba(124,58,237,0.2);border:1px solid rgba(124,58,237,0.3);color:#a78bfa;padding:4px 12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
-.content-featured h3{font-size:22px;font-weight:700;line-height:1.3;margin-bottom:16px}
-.content-featured p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px}
-.content-meta{font-size:10px;color:var(--muted);margin-bottom:4px}
-.read-more{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7c3aed;display:inline-flex;align-items:center;gap:8px}
-.content-sidebar{display:flex;flex-direction:column;gap:2px}
-.content-item{background:var(--bg2);border:1px solid var(--border);padding:24px;display:grid;grid-template-columns:80px 1fr;gap:16px;align-items:center;transition:border-color .2s}
-.content-item:hover{border-color:rgba(124,58,237,0.3)}
-.content-item-img{aspect-ratio:1;overflow:hidden;background:var(--bg3)}
-.content-item-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(40%)}
-.content-item-tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#10b981;font-weight:700;margin-bottom:6px}
-.content-item h4{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:4px}
-.content-item small{font-size:10px;color:var(--muted)}
+.projekte-coming{background:var(--bg2);border:1px solid var(--border);padding:80px 60px;text-align:center;position:relative;overflow:hidden}
+.projekte-coming::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;background:radial-gradient(ellipse,rgba(124,58,237,0.07) 0%,transparent 70%);pointer-events:none}
+.projekte-coming-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.25);padding:6px 16px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#a78bfa;margin-bottom:32px}
+.projekte-coming h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,56px);font-weight:700;margin-bottom:24px}
+.projekte-coming h2 em{font-style:italic;color:rgba(255,255,255,0.2)}
+.projekte-coming p{font-size:14px;color:var(--muted);line-height:1.85;max-width:560px;margin:0 auto 40px}
+.projekte-list{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:48px}
+.projekte-list-item{background:var(--bg3);border:1px solid var(--border);padding:10px 20px;font-size:11px;color:var(--muted);letter-spacing:.5px}
+.projekte-closing{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2)}
 
 /* KONTAKT */
-.contact-section{padding:100px 80px;border-top:1px solid var(--border)}
-.contact-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:24px;display:flex;align-items:center;justify-content:center;gap:16px}
-.contact-label::before,.contact-label::after{content:'';width:40px;height:1px;background:var(--border)}
-.contact-title{font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,90px);font-weight:700;text-align:center;line-height:1;margin-bottom:16px}
-.contact-title .purple{color:#7c3aed}
-.contact-sub{text-align:center;font-size:15px;color:var(--muted);max-width:500px;margin:0 auto 60px}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:900px;margin:0 auto}
-.contact-form{display:flex;flex-direction:column;gap:16px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-field{display:flex;flex-direction:column;gap:8px}
-.form-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.form-input{background:var(--bg2);border:1px solid var(--border);padding:14px 16px;color:#fff;font-size:14px;font-family:'Inter',sans-serif;transition:border-color .2s;width:100%}
-.form-input:focus{outline:none;border-color:rgba(124,58,237,0.5)}
-.form-input::placeholder{color:rgba(255,255,255,0.2)}
-textarea.form-input{resize:vertical;min-height:120px}
-.btn-send{background:var(--accent);color:#fff;border:none;padding:16px 28px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:background .2s;width:fit-content}
-.btn-send:hover{background:#6d28d9}
-.contact-sidebar{display:flex;flex-direction:column;gap:24px}
-.contact-direct h4{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-.contact-link{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid var(--border);margin-bottom:8px;transition:border-color .2s}
-.contact-link:hover{border-color:rgba(124,58,237,0.4)}
-.contact-link-icon{width:36px;height:36px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:16px}
-.contact-link-text span{display:block;font-size:12px;font-weight:600}
-.contact-link-text small{font-size:10px;color:var(--muted)}
-.newsletter-box{background:var(--bg2);border:1px solid var(--border);padding:24px}
-.newsletter-tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#10b981;font-weight:700;display:flex;align-items:center;gap:6px;margin-bottom:12px}
-.newsletter-tag::before{content:'';width:6px;height:6px;background:#10b981;border-radius:50%}
-.newsletter-box h4{font-size:16px;font-weight:700;margin-bottom:8px}
-.newsletter-box p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px}
-.newsletter-form{display:flex;gap:0}
-.newsletter-form input{flex:1;background:var(--bg);border:1px solid var(--border);border-right:none;padding:12px 14px;color:#fff;font-size:13px}
-.newsletter-form input::placeholder{color:rgba(255,255,255,0.2)}
-.newsletter-form button{background:var(--accent);border:none;color:#fff;padding:12px 16px;cursor:pointer;font-size:14px}
+.kontakt-grid{display:grid;grid-template-columns:3fr 2fr;gap:80px;align-items:start}
+.kontakt-text p{font-size:15px;line-height:1.85;color:var(--muted);margin-bottom:20px}
+.kontakt-text p strong{color:var(--text)}
+.kontakt-box{background:var(--bg2);border:1px solid var(--border);padding:36px}
+.kontakt-item{padding:16px 0;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:4px}
+.kontakt-item:last-child{border-bottom:none}
+.kontakt-item-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2)}
+.kontakt-item-value{font-size:13px;color:var(--text)}
+.kontakt-item-value a{color:var(--accent);transition:opacity .2s}
+.kontakt-item-value a:hover{opacity:.8}
+.kontakt-closing{margin-top:48px;border-top:1px solid var(--border);padding-top:40px}
+.kontakt-closing p{font-size:13px;color:var(--muted);line-height:1.75}
 
-/* FOOTER CAROUSEL */
-.cert-carousel-wrap{overflow:hidden;background:#080808;padding:28px 0 24px;border-top:1px solid var(--border)}
-.cert-carousel-label{text-align:center;font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.15);margin-bottom:18px}
-.cert-carousel-track{display:flex;gap:20px;width:max-content;animation:certscroll 28s linear infinite}
-.cert-carousel-track:hover{animation-play-state:paused}
-.cert-item{flex-shrink:0;height:110px;display:flex;align-items:center;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);padding:12px 20px}
-.cert-item img{height:90px;width:auto;max-width:200px;object-fit:contain;filter:brightness(0.9) grayscale(5%);transition:filter .2s}
-.cert-item:hover img{filter:brightness(1.05) grayscale(0%)}
-@keyframes certscroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* MAIN FOOTER */
-footer{background:#080808;border-top:1px solid var(--border);padding:60px 80px 32px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px;margin-bottom:48px}
-.footer-brand p{font-size:13px;color:var(--muted);margin-top:12px;line-height:1.6}
-.footer-brand .tagline{font-size:11px;color:rgba(255,255,255,0.2);margin-top:16px;font-style:italic}
-.footer-nav h4{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-.footer-nav a{display:block;font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:10px;transition:color .2s}
-.footer-nav a:hover{color:#fff}
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 48px 40px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.footer-brand h3 span{color:var(--accent)}
+.footer-brand p{font-size:12px;color:var(--muted);line-height:1.7;margin-top:8px}
+.footer-nav h4{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);margin-bottom:20px}
+.footer-nav ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-nav ul a{font-size:12px;color:var(--muted);transition:color .2s}
+.footer-nav ul a:hover{color:var(--text)}
+.footer-claim{display:flex;align-items:center}
+.footer-claim-text{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:rgba(255,255,255,0.15);line-height:1.4}
+.footer-claim-text strong{font-style:normal;color:rgba(255,255,255,0.3);font-family:'Inter',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:8px}
 .footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-bottom p{font-size:11px;color:rgba(255,255,255,0.25)}
+.footer-bottom p{font-size:11px;color:var(--muted2)}
 
-/* RESPONSIVE */
+/* ── RESPONSIVE ── */
 @media(max-width:900px){
-  .hero{flex-direction:column;padding:100px 24px 60px;gap:40px}
-  .hero-right{width:100%}
-  .about-section,.projects-grid,.content-grid,.contact-grid,.footer-grid{grid-template-columns:1fr}
-  .about-section{padding:60px 24px}
-  .projects-section,.content-section,.contact-section{padding:60px 24px}
-  footer{padding:40px 24px 24px}
   nav{padding:0 24px}
-  .nav-links-dark{display:none}
-  .hamburger-dark{display:flex}
-  .form-row{grid-template-columns:1fr}
-  .stats-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .mobile-menu{padding:24px}
+  section{padding:72px 24px}
+  .hero{padding:100px 24px 60px}
+  .hero-scroll{left:24px}
+  .intro-strip{padding:20px 24px;gap:28px}
+  .about-teaser{grid-template-columns:1fr}
+  .nav-cards-grid{grid-template-columns:1fr 1fr}
+  .ueber-grid{grid-template-columns:1fr}
+  .wofuer-grid{grid-template-columns:1fr}
+  .vision-grid{grid-template-columns:1fr}
+  .zert-grid{grid-template-columns:1fr 1fr}
+  .zert-schwerpunkte{grid-template-columns:1fr}
+  .kontakt-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .page-hero{padding:120px 24px 60px}
+  .projekte-coming{padding:48px 24px}
+  .closing-strip{padding:48px 24px}
 }
-@media(max-width:700px){
-  .gallery-grid{grid-template-columns:1fr!important}
+@media(max-width:600px){
+  .nav-cards-grid{grid-template-columns:1fr}
+  .zert-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo-wrap">
-    <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS"/>
-    <span style="font-size:13px;font-weight:700;letter-spacing:1px">Marketing mit Sven</span>
-  </a>
-  <ul class="nav-links-dark">
-    <li><a href="ueber-mich.html">Über mich</a></li>
-    <li><a href="geschichte.html">Meine Geschichte</a></li>
-    <li><a href="wofuer-mms.html">Wofür MMS steht</a></li>
-    <li><a href="zertifikate.html">Zertifikate</a></li>
-    <li><a href="vision.html">Vision</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="kontakt.html" class="nav-cta-dark">Kontakt</a></li>
+<nav id="top">
+  <a href="#home" class="nav-brand">Marketing <span>mit Sven</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#ueber">Über mich</a></li>
+    <li><a href="#geschichte">Geschichte</a></li>
+    <li><a href="#wofuer">MMS steht für</a></li>
+    <li><a href="#zertifikate">Weiterbildung</a></li>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#projekte">Projekte</a></li>
+    <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
   </ul>
-  <button class="hamburger-dark" onclick="document.querySelector('.mobile-menu-dark').classList.toggle('open')" aria-label="Menü">
+  <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
-<div class="mobile-menu-dark">
-  <a href="ueber-mich.html">Über mich</a>
-  <a href="geschichte.html">Meine Geschichte</a>
-  <a href="wofuer-mms.html">Wofür MMS steht</a>
-  <a href="zertifikate.html">Zertifikate</a>
-  <a href="vision.html">Vision</a>
-  <a href="blog.html">Blog</a>
-  <a href="kontakt.html">Kontakt →</a>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#ueber" onclick="closeMobile()">Über mich</a>
+  <a href="#geschichte" onclick="closeMobile()">Meine Geschichte</a>
+  <a href="#wofuer" onclick="closeMobile()">Wofür MMS steht</a>
+  <a href="#zertifikate" onclick="closeMobile()">Weiterbildungen</a>
+  <a href="#vision" onclick="closeMobile()">Vision & Mission</a>
+  <a href="#projekte" onclick="closeMobile()">Projekte / Cases</a>
+  <a href="#kontakt" onclick="closeMobile()">Kontakt</a>
 </div>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-tag">Personal Brand · KI · Marketing · Performance</div>
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="hero-dot"></span>
+      Personal Brand · Portfolio · Marketing
+    </div>
     <h1 class="hero-title">
-      Marketing<br/>
-      <span class="dim">mit </span><span class="accent-purple">Sven</span><br/>
-      <span class="dim">MMS.</span>
+      Marketing mit Sven
+      <span class="line2">Klar. Praxisnah. Mit&nbsp;Haltung.</span>
     </h1>
-    <p class="hero-sub">Ich verbinde KI-Expertise mit strategischem Marketing-Denken — ehrlich, direkt, und mit messbaren Ergebnissen.</p>
+    <p class="hero-claim">
+      <strong>Kein Buzzword-Bingo, keine Guru-Show</strong> und kein glattgebügeltes Business-Gelaber.<br>
+      Sondern ehrliche Perspektiven, klare Learnings und moderne Gedanken zu KI, Marketing und Performance.
+    </p>
+    <p class="hero-sub">
+      Willkommen bei MMS – meinem digitalen Raum für alles, was meine Arbeit ausmacht: meine Sicht auf modernes Marketing, meine Learnings, meine Projekte, meine Haltung und mein Weg.
+    </p>
     <div class="hero-btns">
-      <a href="wofuer-mms.html" class="btn-primary">Projekte ansehen →</a>
-      <a href="kontakt.html" class="btn-ghost">Kontakt aufnehmen</a>
+      <a href="#ueber" class="btn-primary">Mehr über mich →</a>
+      <a href="#geschichte" class="btn-ghost">Meine Geschichte</a>
+      <a href="#kontakt" class="btn-ghost">Kontakt</a>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="hero-img-wrap">
-      <img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/d3ecc4794_sven_full.jpg" alt="Sven Preuß" style="width:100%;height:auto;display:block;filter:grayscale(15%)"/>
-      <div class="hero-badge">
-        <span>50K+</span>
-        <small>Reichweite · Follower</small>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-hint">
-    <span class="scroll-line"></span>
-    Scroll to explore
+  <div class="hero-scroll">
+    <span class="hero-scroll-line"></span>
+    Scroll
   </div>
 </section>
 
-<!-- ABOUT / STATS -->
-<section class="about-section">
-  <div class="about-left">
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="strip-item">
+    <div class="strip-icon">⚡</div>
+    <span class="strip-text">KI & Automatisierung</span>
+  </div>
+  <div class="strip-div"></div>
+  <div class="strip-item">
+    <div class="strip-icon">🔍</div>
+    <span class="strip-text">SEO · GEO · Search</span>
+  </div>
+  <div class="strip-div"></div>
+  <div class="strip-item">
+    <div class="strip-icon">📊</div>
+    <span class="strip-text">Performance Marketing</span>
+  </div>
+  <div class="strip-div"></div>
+  <div class="strip-item">
+    <div class="strip-icon">✍️</div>
+    <span class="strip-text">Content & Strategy</span>
+  </div>
+  <div class="strip-div"></div>
+  <div class="strip-item">
+    <div class="strip-icon">🎯</div>
+    <span class="strip-text">Klar. Praxisnah. Mit Haltung.</span>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- ÜBER MICH TEASER -->
+<section id="ueber-teaser" style="padding:100px 48px">
+  <div class="section-inner">
+    <div class="about-teaser">
+      <div class="about-teaser-text">
+        <div class="section-label">Kurzvorstellung</div>
+        <h2 class="section-title">Ich bin Sven – und mich interessiert an Marketing nicht die Fassade, sondern das, <span class="dim">was wirklich funktioniert.</span></h2>
+        <p>Warum reagieren Menschen auf bestimmte Inhalte? Warum bleiben manche Botschaften hängen – und andere verpuffen nach drei Sekunden? Wie verbindet man Kreativität, Strategie, Technologie und echte Wirkung, ohne dabei künstlich oder austauschbar zu werden?</p>
+        <p>Genau an dieser Schnittstelle bewege ich mich mit <strong>Marketing mit Sven</strong>.</p>
+        <p>MMS ist meine persönliche Marke, mein Portfolio und mein Raum für echtes, verständliches Marketingdenken – mit Fokus auf KI, Marketing und Performance.</p>
+        <div style="margin-top:32px">
+          <a href="#ueber" class="btn-primary">Mehr über mich →</a>
+        </div>
+      </div>
+      <div class="about-teaser-right">
+        <div class="expect-box">
+          <h3>Was dich hier erwartet</h3>
+          <ul class="expect-list">
+            <li><span class="expect-arrow">→</span> Klare Perspektiven statt Marketing-Nebel</li>
+            <li><span class="expect-arrow">→</span> Praxisnahe Learnings statt Theorie-Deko</li>
+            <li><span class="expect-arrow">→</span> Moderne Themen rund um KI, Content und Performance</li>
+            <li><span class="expect-arrow">→</span> Eine persönliche Marke mit Haltung statt Hype</li>
+          </ul>
+        </div>
+        <div style="background:var(--bg3);border:1px solid var(--border);border-top:none;padding:24px 28px">
+          <p style="font-size:11px;color:var(--muted2);letter-spacing:.5px;line-height:1.7">„Hier ist jemand, der klar denkt, modern arbeitet, Substanz hat und kein Showman sein muss, um ernst genommen zu werden."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- NAV CARDS -->
+<section style="padding:100px 48px">
+  <div class="section-inner">
+    <div class="section-label">Alle Bereiche</div>
+    <h2 class="section-title" style="margin-bottom:48px">Was dich bei MMS erwartet</h2>
+    <div class="nav-cards-grid">
+      <a href="#ueber" class="nav-card">
+        <div class="nav-card-num">01</div>
+        <div class="nav-card-icon">👤</div>
+        <h3>Über mich</h3>
+        <p>Wer steckt hinter MMS? Mein Stil, meine Denkweise und der Anspruch, der diese Marke antreibt.</p>
+        <span class="nav-card-arrow">→</span>
+      </a>
+      <a href="#geschichte" class="nav-card">
+        <div class="nav-card-num">02</div>
+        <div class="nav-card-icon">📖</div>
+        <h3>Meine Geschichte</h3>
+        <p>Kein geschniegelter Lebenslauf. Sondern der echte Weg – mit allem, was dazugehört.</p>
+        <span class="nav-card-arrow">→</span>
+      </a>
+      <a href="#wofuer" class="nav-card">
+        <div class="nav-card-num">03</div>
+        <div class="nav-card-icon">🎯</div>
+        <h3>Wofür MMS steht</h3>
+        <p>KI, Marketing, Performance, Arbeitsweise – und der Blick dahinter.</p>
+        <span class="nav-card-arrow">→</span>
+      </a>
+      <a href="#zertifikate" class="nav-card">
+        <div class="nav-card-num">04</div>
+        <div class="nav-card-icon">📋</div>
+        <h3>Weiterbildungen</h3>
+        <p>Kein Deko-Lebenslauf. Sondern gezieltes Wissen, das in der Praxis angewendet wird.</p>
+        <span class="nav-card-arrow">→</span>
+      </a>
+      <a href="#vision" class="nav-card">
+        <div class="nav-card-num">05</div>
+        <div class="nav-card-icon">🔭</div>
+        <h3>Vision & Mission</h3>
+        <p>Weniger Fassade. Mehr Substanz. Was MMS langfristig sein soll – und warum.</p>
+        <span class="nav-card-arrow">→</span>
+      </a>
+      <a href="#projekte" class="nav-card">
+        <div class="nav-card-num">06</div>
+        <div class="nav-card-icon">💼</div>
+        <h3>Projekte / Cases</h3>
+        <p>Im Aufbau. Bewusst. Lieber sauber mit Substanz als schnell mit Blendwerk.</p>
+        <span class="nav-card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- CLOSING STRIP -->
+<div class="closing-strip">
+  <p><strong>Marketing mit Sven ist keine laute Bühne und kein Verkaufsfunnel.</strong><br>Es ist ein ehrlicher Ort für Substanz, Entwicklung, Perspektive und modernes Marketing mit Haltung.</p>
+  <a href="#kontakt" class="btn-primary">Schreib mir →</a>
+</div>
+<div class="divider"></div>
+
+<!-- ÜBER MICH (FULL) -->
+<section id="ueber" style="padding:100px 48px">
+  <div class="section-inner">
     <div class="section-label">Über mich</div>
-    <h2 class="about-title">
-      Ich mache Marketing<br/>
-      <em class="italic-dim">ehrlich,</em> <span class="purple">messbar</span> und<br/>
-      <span class="green">menschlich.</span>
-    </h2>
-    <p class="about-text">Ich bin Sven — aus Tettnang. 13 Jahre lang habe ich mit FreiGeist eine Künstlervereinigung, ein Musik-Label, eine Deko-Crew und ein Festival im Schwarzwald aufgebaut. Marken, Communities und Erlebnisse — aus dem Nichts.</p>
-    <p class="about-text">Seit 2025 fokussiere ich mich mit der Unterstützung meiner Frau Chiara vollständig auf <strong>KI-gestütztes Marketing</strong>, <strong>SEO &amp; GEO</strong> und <strong>Performance</strong>. Was ich mitbringe: echtes Verständnis dafür, wie Marken, Communitys und Erlebnisse wirklich entstehen.</p>
-    <p class="about-text">Ich teile mein Wissen regelmäßig auf LinkedIn und in meinem Blog. Nicht um zu verkaufen — sondern weil ich überzeugt bin, dass offenes Wissen alle weiterbringt.</p>
-    <div class="tags-wrap">
-      <span class="tag-pill">KI-Marketing</span>
-      <span class="tag-pill">Performance Ads</span>
-      <span class="tag-pill">SEO / GEO</span>
-      <span class="tag-pill">Content Strategy</span>
-      <span class="tag-pill">Brand Building</span>
-    </div>
-  </div>
-  <div class="about-right">
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-num purple">13</div>
-        <div class="stat-label">Jahre Brand &amp; Event</div>
-        <div class="stat-sub">FreiGeist · 2012–2025</div>
+    <h2 class="section-title" style="margin-bottom:56px">Hinter <span class="dim">der Marke</span></h2>
+    <div class="ueber-grid">
+      <div class="ueber-text">
+        <p>Ich bin Sven – und hinter Marketing mit Sven steckt der Anspruch, Marketing nicht komplizierter zu machen, als es sein muss.</p>
+        <p>Mich interessieren keine leeren Phrasen, keine künstliche Experten-Sprache und keine Inhalte, die nur gut klingen, aber in der Praxis nichts bringen. <strong>Mich interessiert, was funktioniert, warum es funktioniert und wie man daraus echte Learnings ableiten kann.</strong></p>
+        <p>Genau daraus ist MMS entstanden: als persönliche Marke, als Portfolio und als Ort, an dem KI, Marketing und Performance nicht theoretisch behandelt werden, sondern greifbar werden.</p>
+        <p>Ich mag klare Gedanken, starke Inhalte und Kommunikation, die professionell ist, ohne distanziert zu wirken. Ich denke gern in Tests, Hooks, Angles, Formaten und Wirkung. Nicht, um Marketing mechanisch zu machen – sondern um es besser zu verstehen.</p>
+        <p>Mein Stil ist <strong>direkt, reduziert und praxisnah.</strong> Ich mag Inhalte, die schnell verständlich sind, ohne oberflächlich zu werden. Und ich mag Marken, die nicht versuchen, alles für alle zu sein.</p>
+        <p>MMS steht deshalb für <strong>Klarheit statt Fassade, Haltung statt Hype und Relevanz statt Lautstärke.</strong></p>
       </div>
-      <div class="stat-card">
-        <div class="stat-num green">40</div>
-        <div class="stat-label">Künstler aus Europa</div>
-        <div class="stat-sub">FreiGeist Künstlervereinigung</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num purple">1</div>
-        <div class="stat-label">Festival gegründet</div>
-        <div class="stat-sub">FreiGeist FOMAA · Schwarzwald</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num green">16</div>
-        <div class="stat-label">Zertifikate</div>
-        <div class="stat-sub">SEO · KI · Ads · Design</div>
-      </div>
-    </div>
-    <div class="about-img">
-      <img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/d3ecc4794_sven_full.jpg" alt="Sven Preuß" style="width:100%;height:auto;display:block;filter:grayscale(15%)"/>
-      <div class="about-img-tag">Tettnang · Remote DACH</div>
-    </div>
-  </div>
-</section>
-
-<!-- ERFAHRUNG -->
-<section class="projects-section">
-  <div style="display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px;margin-bottom:60px;flex-wrap:wrap">
-    <div>
-      <div class="section-label">Erfahrung</div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,70px);font-weight:700;line-height:1">
-        Echte <em style="font-style:italic;color:rgba(255,255,255,0.25)">Erfahrungen.</em>
-      </h2>
-    </div>
-    <p style="font-size:13px;color:var(--muted);max-width:260px;text-align:right">Aus der Praxis. Nicht aus dem Lehrbuch.</p>
-  </div>
-  <div class="projects-grid">
-    <div class="project-card">
-      <span class="project-tag-pill tag-ki">Brand Building · Label</span>
-      <h3>FreiGeist SoundArt — Label &amp; Produktion</h3>
-      <p>Aufbau eines unabhängigen Goa/Psychedelic-Labels: Live-Act-CD zusammengestellt, designed und selbst gebrannt (CD-Publisher), CD-Case extern gedruckt. Merch-Linie entworfen und per Siebdruck mit eigenem Team produziert.</p>
-      <div class="project-metric" style="font-size:28px">2012–2025</div>
-      <div class="project-metric-label">Label · CD-Produktion · Merch · Siebdruck</div>
-      <div class="project-pills">
-        <span class="project-pill">Label</span>
-        <span class="project-pill">CD Design</span>
-        <span class="project-pill">Merch</span>
-        <span class="project-pill">Siebdruck</span>
-      </div>
-    </div>
-    <div class="project-card">
-      <span class="project-tag-pill tag-ads">Event &amp; Festival</span>
-      <h3>FreiGeist FOMAA — Festival im Schwarzwald</h3>
-      <p>3-Tage-Festival mit 2 Bühnen (Indoor + Outdoor), Camping-Area, Kunst-Galerie mit 6 Künstlern, Workshops und 80 Artists. Gesamtkonzept, Eventleitung &amp; Deko: ich — gemeinsam mit meiner Frau Chiara als Co-Leitung.</p>
-      <div class="project-metric" style="font-size:28px">80 Artists</div>
-      <div class="project-metric-label">3 Tage · 2 Stages · Camping · Galerie</div>
-      <div class="project-pills">
-        <span class="project-pill">Festival</span>
-        <span class="project-pill">3 Tage</span>
-        <span class="project-pill">Camping</span>
-        <span class="project-pill">Galerie</span>
-        <span class="project-pill">Workshops</span>
-      </div>
-    </div>
-    <div class="project-card">
-      <span class="project-tag-pill tag-seo">Kreation &amp; Design</span>
-      <h3>FreiGeist Decoration &amp; Brand Design</h3>
-      <p>Aufbau &amp; Leitung der Deko-Crew, kreative Gesamtführung. Dazu: Logo-Design, Flyer-Design und komplette visuelle Identität für alle FreiGeist-Projekte — Label, Deko, Festival. Von der Skizze bis zum fertigen Print.</p>
-      <div class="project-metric" style="font-size:28px">Full Brand</div>
-      <div class="project-metric-label">Logo · Flyer · Deko · Konzept · EU-weit</div>
-      <div class="project-pills">
-        <span class="project-pill">Logo Design</span>
-        <span class="project-pill">Flyer</span>
-        <span class="project-pill">Brand Identity</span>
-        <span class="project-pill">Deko</span>
-      </div>
-    </div>
-    <div class="project-card">
-      <span class="project-tag-pill tag-ki">Social Media · Community</span>
-      <h3>FreiGeist — Social Media &amp; Community Management</h3>
-      <p>Admin und Manager von 26 Facebook-Seiten. Vollständige Führung von FreiGeist, FreiGeist SoundArt, FreiGeist Decoration (FB &amp; IG, Soundcloud), der Event-Gruppe Partyplaner Süddeutschland/Vorarlberg/Schweiz sowie Künstler-Seiten von Vereinigungsmitgliedern. Events promotet, Meta Ads geschaltet.</p>
-      <div class="project-metric" style="font-size:28px">26</div>
-      <div class="project-metric-label">Facebook-Seiten als Admin geführt</div>
-      <div class="project-pills">
-        <span class="project-pill">Meta Ads</span>
-        <span class="project-pill">FB &amp; IG</span>
-        <span class="project-pill">Soundcloud</span>
-        <span class="project-pill">Event-Promo</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- GALERIE: FreiGeist Decoration -->
-<section style="padding:80px 80px 0;border-top:1px solid var(--border)">
-  <div style="margin-bottom:40px">
-    <div class="section-label">FreiGeist Decoration — Eigenarbeit</div>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,56px);font-weight:700;line-height:1.1">
-      Bühnen. Räume. <em style="font-style:italic;color:rgba(255,255,255,0.25)">Welten.</em>
-    </h2>
-    <p style="font-size:14px;color:var(--muted);margin-top:12px;max-width:600px">Konzept, Entwurf, Produktion und Aufbau — von der ersten Skizze bis zum leuchtenden Ergebnis auf der Bühne. Jedes Stück handgemacht.</p>
-  </div>
-
-  <!-- Haupt-Grid -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:3px">
-    <!-- Großes Bild links: indoor stage cobra -->
-    <div style="grid-column:1/2;grid-row:1/2;overflow:hidden;aspect-ratio:4/3;position:relative">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/1b36da5bb_photo_2026-05-23_03-10-17.jpg"
-           alt="FreiGeist Decoration Indoor Stage" loading="lazy"
-           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
-           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">Indoor Stage · Hauptbühne</div>
-    </div>
-    <!-- Mitte: teal tunnel full -->
-    <div style="grid-column:2/3;grid-row:1/2;overflow:hidden;aspect-ratio:4/3;position:relative">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/5dd3c4e7b_photo_2026-05-23_03-12-21.jpg"
-           alt="FreiGeist Decoration Tunnel" loading="lazy"
-           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
-           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">UV-Deko · Full Coverage</div>
-    </div>
-    <!-- Rechts: crowd shot -->
-    <div style="grid-column:3/4;grid-row:1/2;overflow:hidden;aspect-ratio:4/3;position:relative">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/69d39773c_photo_2026-05-23_03-10-30.jpg"
-           alt="FreiGeist Party Crowd" loading="lazy"
-           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
-           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">Crowd & Atmosphäre</div>
-    </div>
-    <!-- 2. Reihe: outdoor stage -->
-    <div style="grid-column:1/2;grid-row:2/3;overflow:hidden;aspect-ratio:4/3;position:relative">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/21e16a75b_photo_2026-05-23_03-10-34.jpg"
-           alt="FreiGeist Outdoor Stage" loading="lazy"
-           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
-           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">Outdoor Stage · Schwarzwald</div>
-    </div>
-    <!-- 2. Reihe Mitte: star piece -->
-    <div style="grid-column:2/3;grid-row:2/3;overflow:hidden;aspect-ratio:4/3;position:relative">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/24c0622c9_photo_2026-05-23_03-10-37.jpg"
-           alt="FreiGeist Stern Piece" loading="lazy"
-           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
-           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">Stern-Installation · Bühne</div>
-    </div>
-    <!-- 2. Reihe rechts: collage outdoor/indoor -->
-    <div style="grid-column:3/4;grid-row:2/3;overflow:hidden;aspect-ratio:4/3;position:relative">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/cbe66fc51_photo_2026-05-23_03-10-41.jpg"
-           alt="FreiGeist FOMAA Festival" loading="lazy"
-           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s"
-           onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"/>
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.6)">FOMAA · Indoor + Outdoor</div>
-    </div>
-  </div>
-
-  <!-- Logos -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:3px">
-    <div style="background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;border:1px solid var(--border);gap:12px">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/0ae924b00_photo_2026-05-23_03-10-56.jpg"
-           alt="FreiGeist SoundArt Logo" loading="lazy"
-           style="max-height:180px;max-width:100%;object-fit:contain;display:block"/>
-      <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">FreiGeist SoundArt — Logo Design</span>
-    </div>
-    <div style="background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;border:1px solid var(--border);gap:12px">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/f68d872bb_photo_2026-05-23_03-11-00.jpg"
-           alt="FreiGeist Decoration Logo" loading="lazy"
-           style="max-height:180px;max-width:100%;object-fit:contain;display:block"/>
-      <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">FreiGeist Decoration — Logo Design</span>
-    </div>
-  </div>
-</section>
-
-<!-- CONTENT / WISSEN -->
-<section class="content-section">
-  <div class="content-header">
-    <h2>Wissen <em>geteilt.</em> <span class="green">Offen.</span></h2>
-    <div class="content-channels">
-      <span class="channel-pill">LinkedIn</span>
-      <span class="channel-pill">Blog</span>
-      <span class="channel-pill">Newsletter</span>
-    </div>
-  </div>
-  <div class="content-grid">
-    <div class="content-featured">
-      <span class="featured-label">Featured</span>
-      <div class="content-meta">Mai 2026 · 5 Min Lesezeit</div>
-      <h3>Warum 90% aller KI-Marketing-Strategien scheitern — und was wirklich funktioniert</h3>
-      <p>Die meisten Unternehmen nutzen KI als Abkürzung statt als Verstärker. Hier ist der Unterschied zwischen kurzfristigem Buzz und echtem Wettbewerbsvorteil.</p>
-      <a href="blog.html" class="read-more">Weiterlesen →</a>
-    </div>
-    <div class="content-sidebar">
-      <div class="content-item">
-        <div class="content-item-img"></div>
-        <div>
-          <div class="content-item-tag">Newsletter</div>
-          <h4>MMS-Brief: Prompt-Engineering für Marketer</h4>
-          <small>Mai 2026 · 3 Min</small>
+      <div>
+        <div class="facts-box">
+          <h3>Kurzprofil</h3>
+          <ul class="facts-list">
+            <li>Personal Brand & Portfolio von Sven Preuß</li>
+            <li>Fokus auf KI, Marketing und Performance</li>
+            <li>Klare, verständliche und praxisnahe Kommunikation</li>
+            <li>Interesse an Strategie, Wirkung, Content und moderner Search-Entwicklung</li>
+            <li>Kein Show-Marketing, sondern Substanz mit Handschrift</li>
+            <li>Standort: Tettnang / Bodenseeraum</li>
+            <li>Digital & ortsunabhängig im DACH-Raum</li>
+          </ul>
         </div>
-      </div>
-      <div class="content-item">
-        <div class="content-item-img"></div>
-        <div>
-          <div class="content-item-tag">LinkedIn</div>
-          <h4>Das Ende des Keyword-Stuffings: Semantisches SEO mit KI</h4>
-          <small>Apr 2026 · 5 Min</small>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-item-img"></div>
-        <div>
-          <div class="content-item-tag">Blog</div>
-          <h4>GEO: Wie du deine Inhalte für KI-Antwortmaschinen optimierst</h4>
-          <small>Apr 2026 · 7 Min</small>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-top:none;padding:28px;margin-top:0">
+          <a href="#kontakt" class="btn-primary" style="width:100%;justify-content:center">Schreib mir →</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+<div class="divider"></div>
+
+<!-- MEINE GESCHICHTE -->
+<section id="geschichte" style="padding:100px 48px">
+  <div class="section-inner">
+    <div class="section-label">Meine Geschichte</div>
+    <h2 class="section-title" style="margin-bottom:56px">Kein <span class="dim">perfekter</span> Plan. <span class="green">Echtes</span> Leben.</h2>
+    <div class="geschichte-text" style="max-width:760px">
+      <p>Ich bin Sven – und Marketing mit Sven ist nicht aus einem perfekten Plan entstanden, sondern aus echtem Leben.</p>
+      <p>Mein Weg war nie geschniegelt, nie ganz gerade und sicher nicht so, wie man ihn in klassischen Business-Profilen liest. Genau deshalb ist MMS für mich mehr als nur ein Name oder ein Projekt. Es ist die Verbindung aus dem, was ich erlebt habe, was mich geprägt hat, was ich verloren habe – und aus der Haltung, mit der ich heute nach vorne gehe.</p>
+      <blockquote><p>Ein sehr großer Teil davon sind meine Eltern.</p></blockquote>
+      <p>Ich hatte das Glück, mit zwei besonderen Menschen aufzuwachsen. Zwei freie, warme, eigenwillige und auf ihre eigene Art sehr weise Seelen. Mein Vater war für mich Halt, Wegweiser und oft auch Rettungsanker im Alltag. Als er an Weihnachten 2020 an COPD verstorben ist, war das nicht nur ein Abschied. <strong>Es war der Moment, in dem ich lernen musste, wirklich auf eigenen Beinen zu stehen.</strong></p>
+      <p>Meine Mutter war auf eine andere Weise mein Zuhause. Sie hat die Familie zusammengehalten, Wärme gegeben und etwas in sich getragen, das schwer in Worte zu fassen ist. Als Jüngster von drei Kindern war ich ihr Kleiner – und wir hatten ein außergewöhnlich inniges Verhältnis. Tiefe, Intuition und ein Blick für mehr als nur das Offensichtliche – all das hat auch mit ihr zu tun. <strong>Im Oktober 2025 habe ich auch sie nach ihrer Lungenkrebserkrankung verloren.</strong></p>
+      <p>Dazwischen lagen weitere Einschnitte. 2020 hat Corona mein künstlerisches Business im großen Stil beendet. Später kam mein Unfall – ein weiterer Moment, der mich gezwungen hat, vieles neu zu betrachten.</p>
+      <blockquote><p>Es gibt Ereignisse, nach denen das Leben nicht einfach weiterläuft wie vorher. Man schaut anders auf Zeit. Anders auf Arbeit. Anders auf Menschen. Anders auf das, was wirklich zählt.</p></blockquote>
+      <p>Was geblieben ist, ist nicht nur Schmerz. <strong>Was geblieben ist, ist auch Substanz. Haltung. Dankbarkeit.</strong> Und das tiefe Bedürfnis, etwas Echtes aufzubauen.</p>
+      <p>Genau daraus ist MMS entstanden. Nicht als laute Marke. Nicht als Fassade. Nicht als aufgesetzte Expertenrolle. Sondern als ein ehrlicher Raum für meine Gedanken, meine Arbeit, meine Entwicklung und meine Perspektive auf Marketing, KI und Performance.</p>
+      <p>Mich interessieren keine Inhalte, die nur gut klingen, aber nichts tragen. Mich interessiert, was funktioniert. Warum es funktioniert. Und wie man Dinge so greifbar machen kann, dass daraus echte Klarheit entsteht.</p>
+      <p>Vielleicht kommt genau das aus meinem Weg. Aus Brüchen. Aus Erfahrung. Aus dem Wunsch, nicht oberflächlich zu leben – und auch nicht oberflächlich zu arbeiten.</p>
+      <blockquote><p><strong>Ich baue diese Marke nicht, weil ich eine perfekte Geschichte erzählen will. Ich baue sie, weil ich eine echte habe.</strong><br><br>Und vielleicht beginnt genau dort die stärkste Form von Storytelling: nicht bei Inszenierung, sondern bei Wahrheit.</p></blockquote>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- WOFÜR MMS STEHT -->
+<section id="wofuer" style="padding:100px 48px">
+  <div class="section-inner">
+    <div class="section-label">Wofür MMS steht</div>
+    <h2 class="section-title">Mehr als <span class="dim">ein Name.</span></h2>
+    <p style="font-size:15px;color:var(--muted);max-width:640px;line-height:1.8;margin-bottom:8px">Marketing mit Sven ist mehr als nur ein Name oder ein Kanal. Es ist die Art, wie ich auf Marketing schaue. MMS steht für Inhalte mit Haltung, eine moderne und direkte Kommunikation und den Willen, Dinge nicht nur zu zeigen, sondern sauber einzuordnen.</p>
+    <div class="wofuer-grid">
+      <div class="wofuer-card">
+        <span class="wofuer-card-tag tag-ki">KI</span>
+        <h3>Künstliche Intelligenz</h3>
+        <p>Mich interessiert bei KI nicht der oberflächliche Wow-Effekt, sondern der echte Nutzen. Wie verändert KI Marketing, Content und Arbeitsprozesse wirklich? Welche Tools helfen tatsächlich weiter? Wo entsteht echter Mehrwert – und wo sieht nur die Oberfläche kurz beeindruckend aus?</p>
+        <p style="margin-top:14px">Ich mag KI dort, wo sie sinnvoll unterstützt, Prozesse klarer macht, Denkwege beschleunigt und neue Möglichkeiten schafft – ohne dabei den Menschen, die Strategie oder die Qualität zu ersetzen.</p>
+      </div>
+      <div class="wofuer-card">
+        <span class="wofuer-card-tag tag-marketing">Marketing</span>
+        <h3>Marketing</h3>
+        <p>Marketing ist für mich nicht Lautstärke, sondern Klarheit. Mich interessiert, welche Inhalte heute wirklich funktionieren, wie man Sichtbarkeit aufbaut, ohne austauschbar zu werden, und wie Kommunikation wirkt, wenn sie nicht nur hübsch aussieht, sondern inhaltlich auch trägt.</p>
+        <p style="margin-top:14px">Ich glaube an gutes Marketing mit Substanz – nicht an Blendwerk mit schöner Verpackung.</p>
+      </div>
+      <div class="wofuer-card">
+        <span class="wofuer-card-tag tag-performance">Performance</span>
+        <h3>Performance</h3>
+        <p>Performance bedeutet für mich nicht nur Zahlen, sondern Verstehen. Was macht Reichweite wertvoll? Welche Rolle spielen Tests, Daten, Learnings und Wiederholbarkeit? Wie denkt man Inhalte nicht nur kreativ, sondern auch strategisch?</p>
+        <p style="margin-top:14px">Nicht alles, was messbar ist, ist automatisch gut. Und nicht alles, was laut läuft, hat langfristig Substanz.</p>
+      </div>
+      <div class="wofuer-card">
+        <span class="wofuer-card-tag tag-arbeitsweise">Arbeitsweise</span>
+        <h3>Meine Arbeitsweise</h3>
+        <p>Ich arbeite mit einer klaren Logik: <strong style="color:var(--text)">beobachten – verstehen – testen – dokumentieren – daraus lernen.</strong></p>
+        <p style="margin-top:14px">Mich interessiert nicht nur die Idee selbst, sondern auch ihre Funktion: Warum funktioniert etwas? Für wen? In welchem Format? Mit welchem Angle? Und was kann man daraus mitnehmen?</p>
+        <p style="margin-top:14px">MMS steht deshalb für moderne, verständliche und reflektierte Marketingarbeit – mit Haltung, Struktur und Persönlichkeit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- WEITERBILDUNGEN -->
+<section id="zertifikate" style="padding:100px 48px">
+  <div class="section-inner">
+    <div class="section-label">Weiterbildungen & Zertifikate</div>
+    <h2 class="section-title">Wissen, das <span class="dim">wirklich</span> <span class="green">trägt.</span></h2>
+    <p style="font-size:15px;color:var(--muted);max-width:620px;line-height:1.8;margin-bottom:56px">Mein Weg ist nicht klassisch geschniegelt – aber genau deshalb ist er echt. Ich bilde mich gezielt in den Bereichen weiter, in denen modernes Marketing heute wirklich entschieden wird: Search, SEO, Performance, KI, Content und Strategie.</p>
+
+    <div class="zert-section-block">
+      <div class="zert-block-title">Aktuell in Weiterbildung</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:24px;max-width:600px">Ich befinde mich in einer intensiven Umschulung im Bereich Online Marketing, Performance Marketing, SEO und KI – mit Fokus auf praxisnahe Anwendung, Tools, Analyse und moderne digitale Strategien.</p>
+      <div class="zert-schwerpunkte" style="grid-template-columns:repeat(3,1fr);max-width:800px">
+        <div class="zert-pill">Content & Meta</div>
+        <div class="zert-pill">Performance Marketing</div>
+        <div class="zert-pill">Google Ads</div>
+        <div class="zert-pill">YouTube Ads</div>
+        <div class="zert-pill">LinkedIn Ads</div>
+        <div class="zert-pill">SEO mit KI</div>
+        <div class="zert-pill">UX-Grundlagen</div>
+        <div class="zert-pill">SEO-Tools & Analysen</div>
+        <div class="zert-pill">WordPress-Basics</div>
+        <div class="zert-pill">LLMs & Automatisierung</div>
+        <div class="zert-pill">Moderne KI-Anwendung</div>
+      </div>
+    </div>
+
+    <div class="zert-section-block">
+      <div class="zert-block-title">Abgeschlossen</div>
+      <div class="zert-grid">
+        <div class="zert-card">
+          <div class="zert-card-label">Google</div>
+          <h4>Google Ads Zertifizierung – Displaywerbung</h4>
+        </div>
+        <div class="zert-card">
+          <div class="zert-card-label">Google</div>
+          <h4>Google Ads Zertifizierung – Suchmaschinenwerbung</h4>
+        </div>
+        <div class="zert-card">
+          <div class="zert-card-label">Google</div>
+          <h4>Google Analytics Zertifizierung</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="zert-section-block">
+      <div class="zert-block-title">Aktuell im Aufbau</div>
+      <div class="zert-grid">
+        <div class="zert-card">
+          <div class="zert-card-label">BVDW</div>
+          <h4>SEO Zertifikat</h4>
+        </div>
+        <div class="zert-card">
+          <div class="zert-card-label">Meta</div>
+          <h4>Meta-Zertifizierungen</h4>
+        </div>
+        <div class="zert-card">
+          <div class="zert-card-label">Vertiefung</div>
+          <h4>KI, SEO & Digitales Marketing</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="zert-hinweis">
+      <p><strong>Weiterbildung als Werkzeug, nicht als Deko.</strong><br>Mir geht es nicht darum, Zertifikate nur zu sammeln, sondern Wissen praktisch anzuwenden, zu testen und daraus echte Ergebnisse und Learnings zu entwickeln.</p>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- VISION & MISSION -->
+<section id="vision" style="padding:100px 48px">
+  <div class="section-inner">
+    <div class="section-label">Vision & Mission</div>
+    <h2 class="section-title">Weniger Fassade. <span class="dim">Mehr</span> <span class="purple">Substanz.</span></h2>
+    <div class="vision-grid">
+      <div class="vision-block">
+        <h3>Mission</h3>
+        <p>Meine Mission mit Marketing mit Sven ist es, Marketing, KI und Performance <strong>klarer, verständlicher und greifbarer</strong> zu machen.</p>
+        <br>
+        <p>Ich möchte Inhalte schaffen, die nicht nur Aufmerksamkeit erzeugen, sondern echten Wert liefern. Inhalte, die man versteht, einordnen und im besten Fall direkt anwenden kann. Ohne unnötige Komplexität. Ohne künstliches Experten-Gehabe. Ohne Hype um des Hypes willen.</p>
+        <br>
+        <p>Ich will zeigen, dass moderne Kommunikation professionell sein kann, ohne steif zu wirken. Dass Strategie verständlich sein darf. Und dass Personal Brand nicht laut sein muss, um Wiedererkennung aufzubauen.</p>
+      </div>
+      <div class="vision-block">
+        <h3>Vision</h3>
+        <p>Meine Vision ist eine Marke, die nicht durch Lautstärke sichtbar wird, sondern durch <strong>Klarheit, Haltung und Substanz.</strong></p>
+        <br>
+        <p>Ich möchte mit MMS einen Raum aufbauen, der modernes Marketing nahbar macht – ehrlich, praxisnah und mit einer Handschrift, die wiedererkennbar ist. Eine Marke, bei der man nicht nur sieht, was ich mache, sondern auch, wie ich denke.</p>
+        <br>
+        <p>Langfristig soll MMS für genau das stehen: für <strong>echte Learnings, verständliche Perspektiven, starke Inhalte und modernes Marketing mit Charakter.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="vision-closing">
+  <p>
+    Weniger Fassade. <span>Mehr Substanz.</span><br>
+    Weniger Hype. <span>Mehr Haltung.</span><br>
+    Weniger BlaBla. <span class="green">Mehr echtes Marketing.</span>
+  </p>
+</div>
+<div class="divider"></div>
+
+<!-- PROJEKTE / CASES -->
+<section id="projekte" style="padding:100px 48px">
+  <div class="section-inner">
+    <div class="section-label">Projekte / Cases</div>
+    <h2 class="section-title" style="margin-bottom:48px">Arbeit mit <span class="dim">Substanz.</span></h2>
+    <div class="projekte-coming">
+      <div class="projekte-coming-badge">
+        <span>●</span> Im Aufbau
+      </div>
+      <h2>Projekte & Cases.<br><em>Sauber. Nicht schnell.</em></h2>
+      <p>Hier werden nach und nach Projekte, Cases, Learnings und ausgewählte Arbeiten sichtbar, die zeigen, wie ich denke, arbeite und Marketing praktisch einordne.<br><br>Der Bereich befindet sich aktuell im Aufbau – bewusst. Nicht, weil es nichts zu zeigen gibt, sondern weil ich ihn lieber sauber und mit Substanz entwickle, statt ihn mit halbgarem Füllmaterial vollzukippen.</p>
+      <div class="projekte-list">
+        <div class="projekte-list-item">Projekt- & Markenanalysen</div>
+        <div class="projekte-list-item">Strategische Ableitungen</div>
+        <div class="projekte-list-item">Content & Marketing-Learnings</div>
+        <div class="projekte-list-item">Ausgewählte Arbeitsproben</div>
+        <div class="projekte-list-item">Cases aus KI, Search & Performance</div>
+      </div>
+      <div class="projekte-closing">Lieber Stück für Stück mit Qualität als schnell mit Blendwerk.</div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
 
 <!-- KONTAKT -->
-<section class="contact-section">
-  <div class="contact-label">Kontakt</div>
-  <h2 class="contact-title">Lass uns <span class="purple">reden.</span></h2>
-  <p class="contact-sub">Du hast ein Projekt, eine Idee oder einfach eine Frage? Ich antworte persönlich — kein Autoresponder, kein Formular-Nirwana.</p>
-  <div class="contact-grid">
-    <form class="contact-form" onsubmit="return false">
-      <div class="form-row">
-        <div class="form-field">
-          <label class="form-label">Name</label>
-          <input class="form-input" type="text" placeholder="Dein Name"/>
+<section id="kontakt" style="padding:100px 48px">
+  <div class="section-inner">
+    <div class="section-label">Kontakt</div>
+    <h2 class="section-title" style="margin-bottom:56px">Schreib <span class="dim">mir.</span></h2>
+    <div class="kontakt-grid">
+      <div class="kontakt-text">
+        <p>Du möchtest dich vernetzen, austauschen oder einfach einen besseren Eindruck von meiner Arbeit bekommen?</p>
+        <p><strong>Dann schreib mir gern.</strong> Ganz unkompliziert, ohne steife Förmlichkeit und ohne PowerPoint-Pflicht im Anhang.</p>
+        <p>Ich freue mich über spannende Gespräche rund um Marketing, KI, Search, Content, Performance und digitale Entwicklung.</p>
+        <div class="kontakt-closing">
+          <p>Wenn du Lust auf Austausch mit Klartext statt Floskeln hast, dann melde dich gern.</p>
+          <br>
+          <p style="font-family:'Playfair Display',serif;font-size:18px;color:var(--text)">Marketing mit Sven<br><span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2)">Klar. Praxisnah. Mit Haltung.</span></p>
         </div>
-        <div class="form-field">
-          <label class="form-label">E-Mail</label>
-          <input class="form-input" type="email" placeholder="deine@email.de"/>
+      </div>
+      <div>
+        <div class="kontakt-box">
+          <div class="kontakt-item">
+            <span class="kontakt-item-label">Name</span>
+            <span class="kontakt-item-value">Sven Preuß</span>
+          </div>
+          <div class="kontakt-item">
+            <span class="kontakt-item-label">Marke</span>
+            <span class="kontakt-item-value">Marketing mit Sven</span>
+          </div>
+          <div class="kontakt-item">
+            <span class="kontakt-item-label">Standort</span>
+            <span class="kontakt-item-value">Tettnang / Bodenseeraum</span>
+          </div>
+          <div class="kontakt-item">
+            <span class="kontakt-item-label">Arbeitsweise</span>
+            <span class="kontakt-item-value">Digital & ortsunabhängig im DACH-Raum</span>
+          </div>
+          <div class="kontakt-item">
+            <span class="kontakt-item-label">E-Mail</span>
+            <span class="kontakt-item-value"><a href="mailto:marketingmitsven@gmail.com">marketingmitsven@gmail.com</a></span>
+          </div>
         </div>
-      </div>
-      <div class="form-field">
-        <label class="form-label">Betreff</label>
-        <input class="form-input" type="text" placeholder="Worum geht's?"/>
-      </div>
-      <div class="form-field">
-        <label class="form-label">Nachricht</label>
-        <textarea class="form-input" placeholder="Erzähl mir von deinem Projekt, deiner Herausforderung oder deiner Idee..."></textarea>
-      </div>
-      <button class="btn-send" type="submit">Nachricht senden ✉</button>
-    </form>
-    <div class="contact-sidebar">
-      <div class="contact-direct">
-        <h4>Direkter Kontakt</h4>
-        <a href="https://linkedin.com/in/preussdigital/" target="_blank" class="contact-link">
-          <div class="contact-link-icon">in</div>
-          <div class="contact-link-text">
-            <span>LinkedIn</span>
-            <small>@preussdigital</small>
-          </div>
-        </a>
-        <a href="mailto:sven.preuss95@gmail.com" class="contact-link">
-          <div class="contact-link-icon">✉</div>
-          <div class="contact-link-text">
-            <span>E-Mail</span>
-            <small>sven.preuss95@gmail.com</small>
-          </div>
-        </a>
-      </div>
-      <div class="newsletter-box">
-        <div class="newsletter-tag">Newsletter</div>
-        <h4>Der MMS-Brief</h4>
-        <p>Wöchentlich. Kein Spam. KI-Marketing, Performance-Tipps und ehrliche Perspektiven — direkt ins Postfach.</p>
-        <div class="newsletter-form">
-          <input type="email" placeholder="deine@email.de"/>
-          <button>→</button>
+        <div style="margin-top:2px">
+          <a href="mailto:marketingmitsven@gmail.com" class="btn-primary" style="width:100%;justify-content:center;display:flex">E-Mail schreiben →</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ZERTIFIKATS-KARUSSELL -->
-<div class="cert-carousel-wrap">
-  <p class="cert-carousel-label">Zertifikate &amp; Weiterbildungen</p>
-  <div class="cert-carousel-track">
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f5f5bac90_dd223881f_SEAfullCert.png" alt="Google Ads Suchmaschinenwerbung" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/731a0e4f7_e58bc0989_Displaycert.png" alt="Google Ads Display" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/7ca2b3018_c0adc615e_Displayfullcert.png" alt="Google Ads Display Full" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/b344d9bcf_191b06c5b_GoogleAdsVideowerbungZertifikat.png" alt="Google Ads Video" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2fb00c241_e9d08748c_Analyticfullcert.png" alt="Google Analytics" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/6d0b69584_351bba101_AnalyticsO.png" alt="Google Analytics Badge" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/0e79c118f_9a0380a55_SEAO.png" alt="SEA Zertifikat" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/895ebe799_af2af142b_CanvaAiZertifikat.png" alt="Canva AI" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/6f3bf9d5d_292b49989_die_visual_suite_von_canva-certificate_social_share.jpg" alt="Canva Visual Suite" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/d4a8097b9_d35522ac3_sven-preu-die-visual-suite-von-canva-badge.png" alt="Canva Visual Suite Badge" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/a0fa05d20_c797a9268_sven-preu-smarter-arbeiten-mit-ki-badge.png" alt="Smarter mit KI Badge" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f2467431e_e815daaa4_smarter_arbeiten_mit_ki-certificate_social_share.jpg" alt="Smarter mit KI" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bd9bc8ce_e506142b7_Badge_KI_Ethik_IBM.png" alt="KI Ethik IBM" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/4a009af1b_181ea7537_klickstarke_inhalte_erstellen-certificate_social_share.jpg" alt="Klickstarke Inhalte" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bc395a7e_55e0bf6aa_sven-preu-klickstarke-inhalte-erstellen-badge.png" alt="Klickstarke Inhalte Badge" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f5f5bac90_dd223881f_SEAfullCert.png" alt="Google Ads Suchmaschinenwerbung" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/731a0e4f7_e58bc0989_Displaycert.png" alt="Google Ads Display" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/7ca2b3018_c0adc615e_Displayfullcert.png" alt="Google Ads Display Full" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/b344d9bcf_191b06c5b_GoogleAdsVideowerbungZertifikat.png" alt="Google Ads Video" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2fb00c241_e9d08748c_Analyticfullcert.png" alt="Google Analytics" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/6d0b69584_351bba101_AnalyticsO.png" alt="Google Analytics Badge" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/0e79c118f_9a0380a55_SEAO.png" alt="SEA Zertifikat" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/895ebe799_af2af142b_CanvaAiZertifikat.png" alt="Canva AI" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/6f3bf9d5d_292b49989_die_visual_suite_von_canva-certificate_social_share.jpg" alt="Canva Visual Suite" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/d4a8097b9_d35522ac3_sven-preu-die-visual-suite-von-canva-badge.png" alt="Canva Visual Suite Badge" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/a0fa05d20_c797a9268_sven-preu-smarter-arbeiten-mit-ki-badge.png" alt="Smarter mit KI Badge" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f2467431e_e815daaa4_smarter_arbeiten_mit_ki-certificate_social_share.jpg" alt="Smarter mit KI" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bd9bc8ce_e506142b7_Badge_KI_Ethik_IBM.png" alt="KI Ethik IBM" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/4a009af1b_181ea7537_klickstarke_inhalte_erstellen-certificate_social_share.jpg" alt="Klickstarke Inhalte" loading="lazy"/></div>
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bc395a7e_55e0bf6aa_sven-preu-klickstarke-inhalte-erstellen-badge.png" alt="Klickstarke Inhalte Badge" loading="lazy"/></div>
-  </div>
-</div>
-</div>
+<div class="divider"></div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS" style="height:40px"/>
-      <p>Marketing mit Sven — Persönliche Marke & Portfolio von Sven Preuß.</p>
-      <p class="tagline">Klar. Praxisnah. Mit Haltung.</p>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Marketing <span>mit Sven</span></h3>
+        <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--muted2);margin-top:4px">Klar. Praxisnah. Mit Haltung.</p>
+        <p>Marketing mit Sven ist die persönliche Marke und das Portfolio von Sven Preuß – mit Fokus auf KI, Marketing, Performance und verständliche Inhalte mit Substanz.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#ueber">Über mich</a></li>
+          <li><a href="#geschichte">Meine Geschichte</a></li>
+          <li><a href="#wofuer">Wofür MMS steht</a></li>
+          <li><a href="#zertifikate">Weiterbildungen</a></li>
+          <li><a href="#vision">Vision & Mission</a></li>
+          <li><a href="#projekte">Projekte / Cases</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-claim">
+        <div class="footer-claim-text">
+          <strong>MMS</strong>
+          „Weniger Fassade.<br>Mehr Substanz."
+        </div>
+      </div>
     </div>
-    <div class="footer-nav">
-      <h4>Seiten</h4>
-      <a href="index.html">Startseite</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="geschichte.html">Meine Geschichte</a>
-      <a href="zertifikate.html">Zertifikate</a>
-      <a href="vision.html">Vision & Mission</a>
-      <a href="blog.html">Blog</a>
-      <a href="kontakt.html">Kontakt</a>
+    <div class="footer-bottom">
+      <p>© 2026 Marketing mit Sven – Sven Preuß</p>
+      <p>Tettnang / Bodenseeraum · <a href="mailto:marketingmitsven@gmail.com" style="color:var(--accent)">marketingmitsven@gmail.com</a></p>
     </div>
-    <div class="footer-nav">
-      <h4>Kontakt</h4>
-      <a href="mailto:sven.preuss95@gmail.com">sven.preuss95@gmail.com</a>
-      <a href="https://linkedin.com/in/preussdigital/" target="_blank">LinkedIn · preussdigital</a>
-      <a href="#">Tettnang · Remote DACH</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Sven Preuß · Marketing mit Sven</p>
-    <p style="font-style:italic">Klar. Praxisnah. Mit Haltung.</p>
   </div>
 </footer>
 
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+function closeMobile(){ mobileMenu.classList.remove('open') }
+
+// Smooth scroll offset für fixed nav
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      const y = target.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({top:y, behavior:'smooth'});
+      closeMobile();
+    }
+  });
+});
+
+// Nav active highlight
+const sections = document.querySelectorAll('section[id], div[id]');
+const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 100) cur = s.id });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#'+cur ? 'var(--text)' : '';
+  });
+});
+</script>
 </body>
 </html>
