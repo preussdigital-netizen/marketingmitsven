@@ -212,7 +212,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 48p
 .footer-bottom p{font-size:11px;color:var(--muted2)}
 
 /* ── RESPONSIVE ── */
-@media(max-width:900px){
+@media(max-width:900px){.hero-foto{display:none}.hero-inner{grid-template-columns:1fr!important}
   nav{padding:0 24px}
   .nav-links{display:none}
   .hamburger{display:flex}
@@ -245,7 +245,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 48p
 
 <!-- NAV -->
 <nav id="top">
-  <a href="#home" class="nav-brand">Marketing <span>mit Sven</span></a>
+  <a href="#home" class="nav-brand"><img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS Logo" style="height:32px;width:auto;object-fit:contain;margin-right:10px;vertical-align:middle">Marketing <span>mit Sven</span></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#ueber">Über mich</a></li>
     <li><a href="#geschichte">Geschichte</a></li>
@@ -273,7 +273,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 48p
 <section class="hero" id="home">
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
-  <div class="hero-inner">
+  <div class="hero-inner" style="display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center">
     <div class="hero-eyebrow">
       <span class="hero-dot"></span>
       Personal Brand · Portfolio · Marketing
@@ -293,8 +293,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 48p
       <a href="#ueber" class="btn-primary">Mehr über mich →</a>
       <a href="#geschichte" class="btn-ghost">Meine Geschichte</a>
       <a href="#kontakt" class="btn-ghost">Kontakt</a>
+    
+    </div><!-- hero-left -->
+    <div class="hero-foto" style="width:280px;flex-shrink:0">
+      <div style="border:1px solid var(--border);position:relative">
+        <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/cd81a8437_00167.jpg" alt="Sven Preuß" style="width:100%;height:auto;display:block;filter:grayscale(15%)">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(12,12,14,0.85));padding:20px 16px 16px">
+          <span style="font-size:11px;font-weight:700;letter-spacing:1px;color:#fff">Sven Preuß</span><br>
+          <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.45)">Marketing mit Sven</span>
+        </div>
+      </div>
     </div>
-  </div>
+  </div><!-- hero-inner -->
   <div class="hero-scroll">
     <span class="hero-scroll-line"></span>
     Scroll
@@ -449,6 +459,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 48p
             <li>Standort: Tettnang / Bodenseeraum</li>
             <li>Digital & ortsunabhängig im DACH-Raum</li>
           </ul>
+        </div>
+        <div style="border:1px solid var(--border);border-top:none;margin-top:0">
+          <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/e8f1d3a8b_00177.jpg" alt="Sven Preuß" style="width:100%;height:auto;display:block;filter:grayscale(20%)">
         </div>
         <div style="background:var(--bg2);border:1px solid var(--border);border-top:none;padding:28px;margin-top:0">
           <a href="#kontakt" class="btn-primary" style="width:100%;justify-content:center">Schreib mir →</a>
@@ -698,7 +711,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 48p
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <h3>Marketing <span>mit Sven</span></h3>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px"><img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS Logo" style="height:36px;width:auto;object-fit:contain"><h3>Marketing <span>mit Sven</span></h3></div>
         <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:13px;color:var(--muted2);margin-top:4px">Klar. Praxisnah. Mit Haltung.</p>
         <p>Marketing mit Sven ist die persönliche Marke und das Portfolio von Sven Preuß – mit Fokus auf KI, Marketing, Performance und verständliche Inhalte mit Substanz.</p>
       </div>
