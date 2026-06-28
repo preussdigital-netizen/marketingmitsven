@@ -1,0 +1,36 @@
+<!-- NAV (shared snippet) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS"/>
+      <div>
+        <span class="nav-logo-text">Marketing mit Sven</span>
+        <span class="nav-logo-sub">MMS · KLAR. PRAXISNAH. MIT HALTUNG.</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="ueber-mich.html">Über mich</a></li>
+      <li><a href="geschichte.html">Meine Geschichte</a></li>
+      <li><a href="wofuer-mms.html">Wofür MMS steht</a></li>
+      <li><a href="zertifikate.html">Zertifikate</a></li>
+      <li><a href="vision.html">Vision & Mission</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
+    </ul>
+    <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="ueber-mich.html" onclick="this.parentElement.classList.remove('open')">Über mich</a>
+  <a href="geschichte.html" onclick="this.parentElement.classList.remove('open')">Meine Geschichte</a>
+  <a href="wofuer-mms.html" onclick="this.parentElement.classList.remove('open')">Wofür MMS steht</a>
+  <a href="zertifikate.html" onclick="this.parentElement.classList.remove('open')">Zertifikate</a>
+  <a href="vision.html" onclick="this.parentElement.classList.remove('open')">Vision & Mission</a>
+  <a href="blog.html" onclick="this.parentElement.classList.remove('open')">Blog</a>
+  <a href="kontakt.html" onclick="this.parentElement.classList.remove('open')">Kontakt →</a>
+</div>
