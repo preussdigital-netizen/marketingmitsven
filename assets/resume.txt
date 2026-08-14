@@ -1,0 +1,151 @@
+================================================================================
+LEBENSLAUF — SVEN PREUSS
+AI Business Systems Specialist & Search Growth Operations
+================================================================================
+
+1. PERSÖNLICHE DATEN & KONTAKT
+--------------------------------------------------------------------------------
+Name:               Sven Preuß
+Berufsbezeichnung:  AI Business Systems Specialist & Search Growth Operations
+Marke:              MMS — Marketing mit Sven
+Wohnort:            Tettnang, Baden-Württemberg, Deutschland (Remote verfügbar)
+E-Mail:             marketingmitsven@gmail.com
+Telefon:            +49 162 7165 515
+Website/Portfolio:  https://marketingmitsven.de
+LinkedIn:           https://linkedin.com/in/sven-preuss
+GitHub:             https://github.com/preussdigital-netizen
+
+
+2. PROFIL & ZUSAMMENFASSUNG
+--------------------------------------------------------------------------------
+AI Business Systems Specialist mit Spezialisierung auf SEO, GEO, AEO und KI-
+gestützte Automatisierung. Langjährige praktische Erfahrung im Eventmanagement,
+Markenaufbau und Social Media Operations. Umschulung 2026 abgeschlossen bei
+Masters of Digital Education (MoD). Verbindet strategisches Systemdenken mit
+operativer Umsetzungsstärke.
+
+
+3. BERUFSERFAHRUNG
+--------------------------------------------------------------------------------
+[06/2026 – heute]
+Unternehmen: Marketing mit Sven (MMS)
+Position:    AI Business Systems & Digital Marketing Specialist
+Location:    Tettnang / Remote
+Beschreibung:
+- Konzeption und Umsetzung AI-gestützter Business-Lösungen, Agentensysteme und
+  automatisierter Workflows mit Low-Code, APIs und modernen LLMs
+- Entwicklung praxisnaher Projekte in SEO, GEO, Workflow Automation und
+  AI-gestützter Business-Optimierung
+- Strategische Weiterentwicklung digitaler Produkte und Websites mit Fokus auf
+  AI Visibility, User Experience und nachhaltige Performance
+- Konzeptentwicklung von Ignite The Future — ein AI-/Automation-Konzept
+  in Entwicklung
+
+[2016-10 – 2024-03]
+Unternehmen: Michael Dewald Kunststoffverarbeitung GmbH
+Position:    Lager- und Versandmitarbeiter
+Location:    Tettnang, DE
+Beschreibung:
+- Verantwortung für Lager-, Kommissionierungs- und Versandprozesse
+- Sicherstellung effizienter Material- und Warenflüsse
+- Unterstützung bei der Optimierung interner Arbeitsabläufe
+
+[2012-01 – 2024-01]
+Unternehmen: FreiGeist Universe
+Position:    Founder & Business Operations Lead
+Location:    DACH
+Beschreibung:
+- Aufbau und Leitung einer internationalen Künstler-, Event- und Community-Plattform
+- Markenentwicklung, Projektmanagement, Budgetplanung und operative Gesamtkoordination
+- Aufbau und Betreuung eines internationalen Künstler- und Partnernetzwerks
+- Planung und Umsetzung von Veranstaltungen im gesamten DACH-Raum
+- Führung externer Teams sowie Steuerung von Marketing- und Kommunikationsmaßnahmen
+
+[2013-01 – 2020-01]
+Unternehmen: FreiGeist Decoration
+Position:    Freiberuflicher Künstler — Eventdekoration & Bühnenbild
+Location:    DACH
+Beschreibung:
+- Bühnenbilder, Eventdekoration, Raumgestaltungen, Lichtkonzepte für Festivals
+  und Kulturveranstaltungen
+
+[2014-11 – 2015-11]
+Unternehmen: ZaunProfi
+Position:    Hilfsarbeiter Zaunbau
+Location:    Bludenz, AT
+
+[2013-09 – 2013-12]
+Unternehmen: Bäckerei Reck Beck
+Position:    Bäckergeselle
+Location:    Tettnang, DE
+
+
+4. AUSBILDUNG
+--------------------------------------------------------------------------------
+[2025-12 – 2026-07]
+Institution: Masters of Digital Education (MoD Academy)
+Abschluss:   Umschulung zum AI Powered Full Funnel Online Marketing Manager
+Location:    Remote
+Einheiten:   1300 Unterrichtseinheiten
+Schwerpunkte:
+- Performance Marketing
+- SEO, GEO & AI Search
+- Google Ads & Social Media Advertising
+- Prompt Engineering & LLMs
+- Workflow Automation
+- AI Business & digitale Geschäftsmodelle
+- WordPress, Shopify & Low-Code
+- Analytics, Tracking & Conversion-Optimierung
+
+[2017 – 2019]
+Institution: Handwerkskammer Ulm
+Abschluss:   Airbrushdesigner (Fach- & Intensivlehrgang)
+Location:    Ulm, DE
+Einheiten:   288 Unterrichtseinheiten
+
+[2010 – 2013]
+Institution: Handwerkskammer Ulm / Bäckerei Reck Beck
+Abschluss:   Berufsausbildung Bäcker (Gesellenbrief)
+Location:    Tettnang, DE
+
+
+5. AUSGEWÄHLTE ZERTIFIKATE & WEITERBILDUNGEN
+--------------------------------------------------------------------------------
+- KI Anwender im Online-Marketing — IHK (2026)
+- KI-Modelle ausführen mit IBM Watson Studio — KI-Campus / IBM (2026)
+- Maschinelles Lernen & Deep Learning mit IBM — KI-Campus / IBM (2026)
+- Foundations of Deep Learning I: Basics — KI-Campus / IBM (2026)
+- IBM-Grundlagen der Künstlichen Intelligenz — KI-Campus / IBM (2026)
+- EU AI Act Essentials — KI-Campus / IBM (2026)
+- Die fünf Säulen der KI-Ethik — KI-Campus / IBM (2026)
+- SEO Certified Professional — BVDW (2026)
+- Google Ads — Google (2026)
+- Google Marketingplattform — Google (2026)
+- Prompt Engineering — Advanced — MoD / KI-Campus (2026)
+- GEO & AEO — Generative Engine Optimization — MoD (2026)
+- Marketing Automation Workflows — MoD (2026)
+- Content Marketing Strategy — MoD (2026)
+- Local SEO & Google Business Profile — MoD (2026)
+
+
+6. FÄHIGKEITEN & EXPERTISE
+--------------------------------------------------------------------------------
+Technical & Marketing:
+SEO, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization),
+Google Ads, Meta Ads, Google Analytics, Schema.org / JSON-LD, KPI-Management,
+Funnel-Optimierung, Content Strategy, Search Analytics.
+
+KI & Automatisierung:
+Prompt Engineering, KI-Automatisierung, Base44 App Development, Natural-Language-
+Prompting, Human-in-the-Loop Workflows, KI-Ethik, Maschinelles Lernen.
+
+Methoden & Operations:
+Systemdenken, Projektmanagement, Markenaufbau, Eventmanagement, Social Media
+Operations, Low-Code & Vibe Coding, API Integration.
+
+
+7. SPRACHEN
+--------------------------------------------------------------------------------
+- Deutsch: Muttersprache
+- Englisch: B2
+================================================================================
