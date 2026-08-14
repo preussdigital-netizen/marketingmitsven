@@ -1,5 +1,4 @@
 {
-  "$schema": "https://schema.org/Person",
   "meta": {
     "version": "3.0",
     "lastUpdated": "2026-08-14",
@@ -7,7 +6,8 @@
     "source": "single-source-of-truth (CV PDF, Stand 08/2026)",
     "futureIntegration": "MissionOS",
     "notes": "Public export only. Full address, grades, and pricing are managed externally (MissionOS).",
-    "schemaNote": "schema.org JSON-LD is generated separately in HTML <head>. resume.json is the machine-readable CV, not JSON-LD."
+    "schemaNote": "schema.org JSON-LD is generated separately in HTML <head>. resume.json is the machine-readable CV, not JSON-LD.",
+    "format": "MMS Resume Format v1.0 — custom machine-readable CV, not JSON-LD. Schema.org JSON-LD is generated separately in HTML <head>."
   },
   "basics": {
     "name": "Sven Preuß",
@@ -75,7 +75,7 @@
         "Konzeption und Umsetzung AI-gestützter Business-Lösungen, Agentensysteme und automatisierter Workflows mit Low-Code, APIs und modernen LLMs",
         "Entwicklung praxisnaher Projekte in SEO, GEO, Workflow Automation und AI-gestützter Business-Optimierung",
         "Strategische Weiterentwicklung digitaler Produkte und Websites mit Fokus auf AI Visibility, User Experience und nachhaltige Performance",
-        "Entwicklung des Agenturkonzepts Ignite The Future für AI-Automatisierung und digitale Business-Lösungen"
+        "Konzeptentwicklung von Ignite The Future — ein AI-/Automation-Konzept in Entwicklung"
       ]
     },
     {
