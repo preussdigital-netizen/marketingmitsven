@@ -314,7 +314,7 @@
         
         <!-- Links: Portrait-Foto -->
         <div class="portrait-wrapper">
-          <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/404e2414e_00177.jpg" alt="Sven Preuß Portrait">
+          <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/45d73a16f_00167klein.jpg" alt="Sven Preuß Portrait">
           <div class="portrait-overlay">
             <p>„Klarheit statt Fassade. Haltung statt Hype. Relevanz statt Lautstärke.“</p>
           </div>
@@ -427,11 +427,43 @@
         <!-- Sidebar / Image + Timeline Rechts -->
         <div class="story-sidebar">
           
-          <!-- Image -->
-          <div class="story-img-card">
-            <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/45d73a16f_00167klein.jpg" alt="Sven Preuß — Tettnang">
-            <div class="story-img-caption">
-              📍 Tettnang, Bodenseeraum – Digital & ortsunabhängig im DACH-Raum
+          <!-- Journey Visual -->
+          <div class="story-img-card" style="padding:24px; background:var(--surface-2); border:1px solid var(--border-dark);">
+            <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--accent-2); margin-bottom:16px;">Mein Weg</div>
+            <svg viewBox="0 0 280 260" style="width:100%; height:auto; display:block;" aria-label="Mein Weg: Handwerk → FreiGeist → Operations → Weiterbildung → AI Business Systems" role="img">
+              <defs>
+                <linearGradient id="journeyLine" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.5"/>
+                  <stop offset="100%" stop-color="#06d6a0" stop-opacity="0.5"/>
+                </linearGradient>
+              </defs>
+              <!-- Vertical connection line -->
+              <line x1="140" y1="30" x2="140" y2="230" stroke="url(#journeyLine)" stroke-width="1.5" stroke-dasharray="3,3"/>
+              <!-- Nodes -->
+              <!-- 1. Handwerk -->
+              <circle cx="140" cy="40" r="6" fill="#7c3aed" opacity="0.9"/>
+              <text x="155" y="36" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">Handwerk</text>
+              <text x="155" y="50" fill="rgba(255,255,255,0.4)" font-size="9" font-family="Inter,sans-serif">2010 — 2013</text>
+              <!-- 2. FreiGeist -->
+              <circle cx="140" cy="90" r="6" fill="#06d6a0" opacity="0.9"/>
+              <text x="155" y="86" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">FreiGeist</text>
+              <text x="155" y="100" fill="rgba(255,255,255,0.4)" font-size="9" font-family="Inter,sans-serif">2012 — 2024</text>
+              <!-- 3. Operations -->
+              <circle cx="140" cy="140" r="6" fill="#7c3aed" opacity="0.9"/>
+              <text x="155" y="136" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">Operations</text>
+              <text x="155" y="150" fill="rgba(255,255,255,0.4)" font-size="9" font-family="Inter,sans-serif">2016 — 2024</text>
+              <!-- 4. Weiterbildung -->
+              <circle cx="140" cy="190" r="6" fill="#06d6a0" opacity="0.9"/>
+              <text x="155" y="186" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">Weiterbildung</text>
+              <text x="155" y="200" fill="rgba(255,255,255,0.4)" font-size="9" font-family="Inter,sans-serif">2025 — 2026</text>
+              <!-- 5. AI Business Systems -->
+              <circle cx="140" cy="240" r="7" fill="#06d6a0" opacity="1"/>
+              <circle cx="140" cy="240" r="11" fill="none" stroke="#06d6a0" stroke-width="1" opacity="0.3"/>
+              <text x="155" y="236" fill="rgba(255,255,255,0.95)" font-size="11" font-weight="700" font-family="Inter,sans-serif">AI Business</text>
+              <text x="155" y="250" fill="rgba(255,255,255,0.4)" font-size="9" font-family="Inter,sans-serif">Systems · heute</text>
+            </svg>
+            <div style="font-size:11px; color:var(--text-muted-dark); margin-top:12px; text-align:center;">
+              📍 Tettnang, Bodenseeraum — Digital &amp; ortsunabhängig im DACH-Raum
             </div>
           </div>
 
