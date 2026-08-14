@@ -1,151 +1,268 @@
-================================================================================
-LEBENSLAUF — SVEN PREUSS
-AI Business Systems Specialist & Search Growth Operations
-================================================================================
+======================================================================
+  SVEN PREUSS
+  AI Business Systems Specialist & Search Growth Operations
+  AI Products & Micro SaaS · Workflow Automation
+======================================================================
 
-1. PERSÖNLICHE DATEN & KONTAKT
---------------------------------------------------------------------------------
-Name:               Sven Preuß
-Berufsbezeichnung:  AI Business Systems Specialist & Search Growth Operations
-Marke:              MMS — Marketing mit Sven
-Wohnort:            Tettnang, Baden-Württemberg, Deutschland (Remote verfügbar)
-E-Mail:             marketingmitsven@gmail.com
-Telefon:            +49 151 123 68 919
-Website/Portfolio:  https://marketingmitsven.de
-LinkedIn:           https://linkedin.com/in/sven-preuss
-GitHub:             https://github.com/preussdigital-netizen
+KONTAKT
+  E-Mail:      marketingmitsven@gmail.com
+  Telefon:     +49 151 123 68 919
+  Standort:    Tettnang, Baden-Württemberg, Germany
+  Remote:      Ja
+  Web:         https://marketingmitsven.de
+  LinkedIn:    https://www.linkedin.com/in/sven-preuss
+  GitHub:      https://github.com/preussdigital-netizen
 
+PROFIL
+  Ich bin ein ganzheitlicher Systemdenker an der Schnittstelle von KI, Full-Funnel-Marketing und AI-gestützten Business-Systemen. Unternehmen stehen heute vor der Herausforderung, KI sinnvoll in bestehende Prozesse zu integrieren und daraus echten Mehrwert zu schaffen. Genau an dieser Schnittstelle entwickle ich AI-gestützte Business-Systeme, die Strategie, Search, Automatisierung und digitale Produkte zu skalierbaren Lösungen verbinden. Mich interessiert nicht die Fassade eines Problems, sondern dessen Ursache.
 
-2. PROFIL & ZUSAMMENFASSUNG
---------------------------------------------------------------------------------
-AI Business Systems Specialist mit Spezialisierung auf SEO, GEO, AEO und KI-
-gestützte Automatisierung. Langjährige praktische Erfahrung im Eventmanagement,
-Markenaufbau und Social Media Operations. Umschulung 2026 abgeschlossen bei
-Masters of Digital Education (MoD). Verbindet strategisches Systemdenken mit
-operativer Umsetzungsstärke.
+  Während meiner Umschulung zum AI Powered Full Funnel Online Marketing Manager habe ich mich konsequent auf den Aufbau praxisnaher AI-Kompetenzen spezialisiert und parallel ein eigenes Projektportfolio entwickelt. Heute konzipiere und entwickle ich AI-Anwendungen, Automatisierungslösungen und digitale Produkte, mit denen ich neue Technologien unmittelbar in realen Anwendungsfällen erprobe und kontinuierlich weiterentwickle. Mein Ziel ist es, meine Erfahrung in einem innovativen Umfeld einzubringen, komplexe Herausforderungen gemeinsam zu lösen und Unternehmen dabei zu unterstützen, AI produktiv und wirtschaftlich sinnvoll einzusetzen.
 
+FOKUS
+  AI Business Systems, AI Products & Micro SaaS, Workflow Automation, Agent Orchestration
+  Low-Code & Vibe Coding, API Integration, AI Applications
+  SEO, AI Search & GEO, Search Growth Operations, Performance Marketing, Search Analytics
 
-3. BERUFSERFAHRUNG
---------------------------------------------------------------------------------
-[06/2026 – heute]
-Unternehmen: Marketing mit Sven (MMS)
-Position:    AI Business Systems & Digital Marketing Specialist
-Location:    Tettnang / Remote
-Beschreibung:
-- Konzeption und Umsetzung AI-gestützter Business-Lösungen, Agentensysteme und
-  automatisierter Workflows mit Low-Code, APIs und modernen LLMs
-- Entwicklung praxisnaher Projekte in SEO, GEO, Workflow Automation und
-  AI-gestützter Business-Optimierung
-- Strategische Weiterentwicklung digitaler Produkte und Websites mit Fokus auf
-  AI Visibility, User Experience und nachhaltige Performance
-- Konzeptentwicklung von Ignite The Future — ein AI-/Automation-Konzept
-  in Entwicklung
+BERUFSERFAHRUNG
+----------------------------------------------------------------------
+  AI Business Systems & Digital Marketing Specialist
+  Marketing mit Sven (MMS) · Tettnang / Remote
+  06.2026 – HEUTE
+  Entwicklung eines praxisorientierten Portfolios mit Fokus auf AI Business Systems, AI Search, Performance Marketing sowie SaaS- und Web-App-Konzepte.
+    • Konzeption und Umsetzung AI-gestützter Business-Lösungen, Agentensysteme und automatisierter Workflows mit Low-Code, APIs und modernen LLMs
+    • Entwicklung praxisnaher Projekte in SEO, GEO, Workflow Automation und AI-gestützter Business-Optimierung
+    • Strategische Weiterentwicklung digitaler Produkte und Websites mit Fokus auf AI Visibility, User Experience und nachhaltige Performance
+    • Konzeptentwicklung von Ignite The Future — ein AI-/Automation-Konzept in Entwicklung
 
-[2016-10 – 2024-03]
-Unternehmen: Michael Dewald Kunststoffverarbeitung GmbH
-Position:    Lager- und Versandmitarbeiter
-Location:    Tettnang, DE
-Beschreibung:
-- Verantwortung für Lager-, Kommissionierungs- und Versandprozesse
-- Sicherstellung effizienter Material- und Warenflüsse
-- Unterstützung bei der Optimierung interner Arbeitsabläufe
+  Lager- und Versandmitarbeiter
+  Michael Dewald Kunststoffverarbeitung GmbH · Tettnang, DE
+  10.2016 – 03.2024
+  Verantwortung für Lager-, Kommissionierungs- und Versandprozesse.
+    • Sicherstellung effizienter Material- und Warenflüsse
+    • Unterstützung bei der Optimierung interner Arbeitsabläufe und Prozessstrukturen
 
-[2012-01 – 2024-01]
-Unternehmen: FreiGeist Universe
-Position:    Founder & Business Operations Lead
-Location:    DACH
-Beschreibung:
-- Aufbau und Leitung einer internationalen Künstler-, Event- und Community-Plattform
-- Markenentwicklung, Projektmanagement, Budgetplanung und operative Gesamtkoordination
-- Aufbau und Betreuung eines internationalen Künstler- und Partnernetzwerks
-- Planung und Umsetzung von Veranstaltungen im gesamten DACH-Raum
-- Führung externer Teams sowie Steuerung von Marketing- und Kommunikationsmaßnahmen
+  Founder & Business Operations Lead
+  FreiGeist Universe · DACH
+  01.2012 – 01.2024
+  Aufbau und Leitung einer internationalen Künstler-, Event- und Community-Plattform.
+    • Markenentwicklung, Projektmanagement, Budgetplanung und operative Gesamtkoordination
+    • Aufbau und Betreuung eines internationalen Künstler- und Partnernetzwerks
+    • Planung und Umsetzung von Veranstaltungen im gesamten DACH-Raum
+    • Führung externer Teams sowie Steuerung von Marketing- und Kommunikationsmaßnahmen
 
-[2013-01 – 2020-01]
-Unternehmen: FreiGeist Decoration
-Position:    Freiberuflicher Künstler — Eventdekoration & Bühnenbild
-Location:    DACH
-Beschreibung:
-- Bühnenbilder, Eventdekoration, Raumgestaltungen, Lichtkonzepte für Festivals
-  und Kulturveranstaltungen
+  Freiberuflicher Künstler — Eventdekoration & Bühnenbild
+  FreiGeist Decoration · DACH
+  01.2013 – 01.2020
+  Bühnenbilder, Eventdekoration, Raumgestaltungen, Lichtkonzepte für Festivals und Kulturveranstaltungen.
 
-[2014-11 – 2015-11]
-Unternehmen: ZaunProfi
-Position:    Hilfsarbeiter Zaunbau
-Location:    Bludenz, AT
+  Hilfsarbeiter Zaunbau
+  ZaunProfi · Bludenz, AT
+  11.2014 – 11.2015
 
-[2013-09 – 2013-12]
-Unternehmen: Bäckerei Reck Beck
-Position:    Bäckergeselle
-Location:    Tettnang, DE
+  Bäckergeselle
+  Bäckerei Reck Beck · Tettnang, DE
+  09.2013 – 12.2013
 
+BILDUNG
+----------------------------------------------------------------------
+  AI Powered Full Funnel Online Marketing Manager
+  Masters of Digital Education (MoD Academy) · Remote
+  12.2025 – 07.2026
+  1300 Unterrichtseinheiten
+  Art: Umschulung
+  Schwerpunkte: Performance Marketing, SEO, GEO & AI Search, Google Ads & Social Media Advertising, Prompt Engineering & LLMs, Workflow Automation, AI Business & digitale Geschäftsmodelle, WordPress, Shopify & Low-Code, Analytics, Tracking & Conversion-Optimierung
 
-4. AUSBILDUNG
---------------------------------------------------------------------------------
-[2025-12 – 2026-07]
-Institution: Masters of Digital Education (MoD Academy)
-Abschluss:   Umschulung zum AI Powered Full Funnel Online Marketing Manager
-Location:    Remote
-Einheiten:   1300 Unterrichtseinheiten
-Schwerpunkte:
-- Performance Marketing
-- SEO, GEO & AI Search
-- Google Ads & Social Media Advertising
-- Prompt Engineering & LLMs
-- Workflow Automation
-- AI Business & digitale Geschäftsmodelle
-- WordPress, Shopify & Low-Code
-- Analytics, Tracking & Conversion-Optimierung
+  Airbrushdesigner (Fach- & Intensivlehrgang)
+  Handwerkskammer Ulm · Ulm, DE
+  2017 – 2019
+  288 Unterrichtseinheiten
+  Portraitdesign, Wandmalerei, Illustrationsmalerei & Fotorealistic. Adobe-Grundkenntnisse (Photoshop, Illustrator, InDesign). Vertiefung der Farbkenntnisse.
 
-[2017 – 2019]
-Institution: Handwerkskammer Ulm
-Abschluss:   Airbrushdesigner (Fach- & Intensivlehrgang)
-Location:    Ulm, DE
-Einheiten:   288 Unterrichtseinheiten
+  Bäcker
+  Handwerkskammer Ulm / Bäckerei Reck Beck · Tettnang, DE
+  2010 – 2013
+  288 Unterrichtseinheiten
+  Art: Ausbildung
+  Abschluss: Gesellenbrief
 
-[2010 – 2013]
-Institution: Handwerkskammer Ulm / Bäckerei Reck Beck
-Abschluss:   Berufsausbildung Bäcker (Gesellenbrief)
-Location:    Tettnang, DE
+ZERTIFIKATE
+----------------------------------------------------------------------
+  KI Anwender im Online-Marketing
+  Aussteller: IHK · 2026
+  Kategorie: Künstliche Intelligenz
 
+  KI-Modelle ausführen mit IBM Watson Studio
+  Aussteller: KI-Campus / IBM · 2026
+  Kategorie: Künstliche Intelligenz
 
-5. AUSGEWÄHLTE ZERTIFIKATE & WEITERBILDUNGEN
---------------------------------------------------------------------------------
-- KI Anwender im Online-Marketing — IHK (2026)
-- KI-Modelle ausführen mit IBM Watson Studio — KI-Campus / IBM (2026)
-- Maschinelles Lernen & Deep Learning mit IBM — KI-Campus / IBM (2026)
-- Foundations of Deep Learning I: Basics — KI-Campus / IBM (2026)
-- IBM-Grundlagen der Künstlichen Intelligenz — KI-Campus / IBM (2026)
-- EU AI Act Essentials — KI-Campus / IBM (2026)
-- Die fünf Säulen der KI-Ethik — KI-Campus / IBM (2026)
-- SEO Certified Professional — BVDW (2026)
-- Google Ads — Google (2026)
-- Google Marketingplattform — Google (2026)
-- Prompt Engineering — Advanced — MoD / KI-Campus (2026)
-- GEO & AEO — Generative Engine Optimization — MoD (2026)
-- Marketing Automation Workflows — MoD (2026)
-- Content Marketing Strategy — MoD (2026)
-- Local SEO & Google Business Profile — MoD (2026)
+  Maschinelles Lernen & Deep Learning mit IBM
+  Aussteller: KI-Campus / IBM · 2026
+  Kategorie: Künstliche Intelligenz
 
+  Foundations of Deep Learning I: Basics
+  Aussteller: KI-Campus / IBM · 2026
+  Kategorie: Künstliche Intelligenz
 
-6. FÄHIGKEITEN & EXPERTISE
---------------------------------------------------------------------------------
-Technical & Marketing:
-SEO, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization),
-Google Ads, Meta Ads, Google Analytics, Schema.org / JSON-LD, KPI-Management,
-Funnel-Optimierung, Content Strategy, Search Analytics.
+  IBM-Grundlagen der Künstlichen Intelligenz
+  Aussteller: KI-Campus / IBM · 2026
+  Kategorie: Künstliche Intelligenz
 
-KI & Automatisierung:
-Prompt Engineering, KI-Automatisierung, Base44 App Development, Natural-Language-
-Prompting, Human-in-the-Loop Workflows, KI-Ethik, Maschinelles Lernen.
+  EU AI Act Essentials
+  Aussteller: KI-Campus / IBM · 2026
+  Kategorie: Künstliche Intelligenz
 
-Methoden & Operations:
-Systemdenken, Projektmanagement, Markenaufbau, Eventmanagement, Social Media
-Operations, Low-Code & Vibe Coding, API Integration.
+  Die fünf Säulen der KI-Ethik
+  Aussteller: KI-Campus / IBM · 2026
+  Kategorie: Künstliche Intelligenz
 
+  Deine Zukunft in der KI-Joblandschaft
+  Aussteller: KI-Campus / IBM · 2026
+  Kategorie: Künstliche Intelligenz
 
-7. SPRACHEN
---------------------------------------------------------------------------------
-- Deutsch: Muttersprache
-- Englisch: B2
-================================================================================
+  Verantwortungsvolle KI Prompts beherrschen (mit Microsoft & Founderz)
+  Aussteller: Santander Open Academy · 2026
+  Kategorie: Künstliche Intelligenz
+
+  Praktische KI fürs Marketing by Google
+  Aussteller: Santander Open Academy / Google · 2026
+  Kategorie: Künstliche Intelligenz
+
+  Einführung in das Programmieren mit Python
+  Aussteller: Santander Open Academy · 2026
+  Kategorie: Künstliche Intelligenz
+
+  Praxis Digitale Sicherheit — Schütze dich im Alltag
+  Aussteller: Santander Open Academy · 2026
+  Kategorie: Künstliche Intelligenz
+
+  Google Ads — Suchmaschinenwerbung, Displaywerbung, Videowerbung
+  Aussteller: Google · 2026
+  Kategorie: Performance Marketing & Analytics
+
+  Google Marketingplattform — Google Analytics, Campaign Manager 360
+  Aussteller: Google · 2026
+  Kategorie: Performance Marketing & Analytics
+
+  SEO Certified Professional
+  Aussteller: BVDW · 2026
+  Kategorie: SEO & AI-Search
+
+  Keyword-Recherche & Wettbewerbsanalyse
+  Aussteller: Sistrix Academy · 2026
+  Kategorie: SEO & AI-Search
+
+  So erstellst du eine Website für Kleinunternehmen
+  Aussteller: Semrush Academy · 2026
+  Kategorie: SEO & AI-Search
+
+  Visual Suite / Klickstarke Inhalte / Smarter Arbeiten mit KI
+  Aussteller: Canva Design School · 2026
+  Kategorie: Design
+
+LIZENZEN
+----------------------------------------------------------------------
+  PKW — Klasse B (Bezirkshauptmannschaft, AT)
+  Laserschutzbeauftragter — 3B/3R/4 (Laserworld, DE)
+  Gabelstapler — FFM/L (Layer-Bildungswerkstatt, DE)
+
+EIGENPROJEKTE
+----------------------------------------------------------------------
+  AI Multi-Agent Content System
+  Entwicklung eines Multi-Agent-Systems zur automatisierten Content-Erstellung, Bildgenerierung, Freigabe und Veröffentlichung auf LinkedIn, Facebook und Instagram über API-Anbindungen.
+  Typ: AI Business Systems
+  Seit: 10.2025
+
+  Telegram AI Control Center
+  Entwicklung einer Telegram-basierten Steuerzentrale zur Verwaltung und Ausführung mehrerer AI-Agenten, Workflows und Automatisierungen.
+  Typ: AI Business Systems
+
+  AI Contentbank & Workflow Automation
+  Konzeption und Entwicklung einer webbasierten Contentbank zur Planung, Verwaltung und automatisierten Bereitstellung von Marketing-Content.
+  Typ: Workflow Automation
+
+  Base44 AI Applications
+  Entwicklung mehrerer AI-gestützter Business-Anwendungen mit Base44 unter Einsatz moderner LLMs, APIs, Datenbanken sowie Low-Code- und Vibe-Coding-Ansätzen.
+  Typ: AI Product Development
+
+  AI Chatbots & Voice Assistants
+  Konzeption und Entwicklung intelligenter Chatbots und AI-Telefonassistenten inklusive Terminbuchung über Cal.com sowie E-Mail-Integration.
+  Typ: AI Product Development
+
+  AI Workflow Automation
+  Entwicklung automatisierter Business-Workflows durch die Integration von AI-Agenten, APIs und externen Cloud-Diensten zur Optimierung digitaler Geschäftsprozesse.
+  Typ: Workflow Automation
+
+  AI Search Portfolio
+  Konzeption und kontinuierliche Weiterentwicklung eigener Websites mit Fokus auf SEO, GEO, AI Search, User Experience und AI-gestützte Sichtbarkeit.
+  Typ: AI Search
+
+  ITF — Ignite The Future
+  Konzept eines AI-Agenturmodells für AI Business Systems, Workflow-Automatisierung und digitale Lösungen — in Entwicklung, keine etablierte Agentur.
+  Typ: Konzept in Entwicklung
+
+  MMS — Marketing mit Sven
+  Aufbau eines praxisorientierten AI-Portfolios mit Fokus auf AI Business Systems, Performance Marketing, AI Search, SaaS-/Micro-SaaS-Konzepte und digitale Produktentwicklung.
+  Typ: Personal Brand
+
+  AI Business Apps & SaaS-Prototypen
+  Konzeption und Entwicklung mehrerer AI-gestützter Business-Apps, Web-Anwendungen sowie SaaS- und Micro-SaaS-Prototypen zur Automatisierung und Optimierung digitaler Geschäftsprozesse.
+  Typ: AI Product Development
+
+KOMPETENZEN
+----------------------------------------------------------------------
+  KERN KOMPETENZEN
+    AI Business & Growth Systems, AI Search & SEO, Workflows & Agenten, Low-Code & Vibe Coding, SaaS & Micro-SaaS, Business & System Architecture, UX/UI, Conversion Optimization
+
+  PERFORMANCE MARKETING
+    Strategische Kampagnenplanung, Full-Funnel-Marketing, Google Ads (Search, Display, Video), Meta Ads, KPI-basierte Analysen, Performance- & Conversion-Optimierung
+
+  SEO & ANALYSE
+    Keyword-Recherche & Wettbewerbsanalyse, Suchintention & Content-Struktur, SEO, GEO/AEO, AI Visibility, Technische SEO-Grundlagen, Datenbasierte Optimierung
+
+  KI & AUTOMATISIERUNG
+    KI-gestützte Workflows & Workflow Automation, AI-Agenten & Chatbots, Prompt Engineering, LLMs, Low-Code & Vibe Coding, API & MCP-Integrationen, Human-in-the-Loop (HITL), EU AI Act & DSGVO, Bias
+
+  WEB & CONVERSION
+    WordPress, Website-Management, UX/UI & conversionorientierte Seitenstrukturen, Conversion-Optimierung, Landingpages
+
+  AI PRODUKTENTWICKLUNG
+    Konzeption digitaler Produkte, Web-Apps, Business-Tools, SaaS- und Micro-SaaS-Konzepte, AI-gestützte Produktentwicklung, Moderne Low-Code & Vibe-Coding-Plattformen
+
+TECHNOLOGIEN & TOOLS
+----------------------------------------------------------------------
+  AI & LLMs
+    ChatGPT & Codex, Claude & Cowork, Gemini, Perplexity, Gemini Notebook (NotebookLM), Microsoft Copilot, LM Studio & Cursor (Basics)
+
+  Low-Code & AI Development
+    Base44, Rocket.New, Loveable, Figma Make, Squarespace, WordPress & Framer (Basics), Shopify
+
+  Workflow Automation
+    Make, Zapier, n8n (Basics), Cal.com, GitHub (Basics), REST APIs
+
+  Performance Marketing
+    Google Ads & Google Merchant Center, Meta Ads Manager & Shopify Ads, LinkedIn Campaign Manager (Basics)
+
+  SEO & AI Search
+    Google Search Console & Keyword Planner, Google Trends, Sistrix, Seobility, Semrush, Screaming Frog
+
+  Analytics & Tracking
+    Google Analytics 4 & Google Tag Manager, Looker Studio
+
+  Design & Content
+    Canva & Canva AI, Adobe: Photoshop | Illustrator | InDesign (Basics), Leonardo AI, Midjourney, Suno AI, ElevenLabs, VEED, Kling, Sora, Google Veo, Claude Design
+
+  Cloud & Datenspeicherung
+    fastio, Dropbox & WeTransfer, Google Drive & OneDrive
+
+  Produktivität & Zusammenarbeit
+    Google Workspace & Microsoft 365, Notion & Telegram, Trello & Asana
+
+SPRACHEN
+----------------------------------------------------------------------
+  Deutsch — Muttersprache
+  Englisch — B2
+
+======================================================================
+  Datenquelle: resume.json (Single Source of Truth)
+  Stand: August 2026
+======================================================================
