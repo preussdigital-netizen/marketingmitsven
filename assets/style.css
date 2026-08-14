@@ -499,3 +499,22 @@ h1,h2,h3,h4{line-height:1.15;font-weight:700}
   .footer-col a{font-size:12px}
   .btn{font-size:11.5px;padding:12px 20px}
 }
+
+/* System Flow responsive */
+.flow-mobile{display:none}
+@media(max-width:768px){
+  .flow-desktop{display:none}
+  .flow-mobile{display:block;margin:0 auto}
+}
+
+/* Hero circuit animation */
+@keyframes circuitPulse{
+  0%,100%{opacity:0.15}
+  50%{opacity:0.2}
+}
+.hero-circuit{animation:circuitPulse 6s ease-in-out infinite}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-circuit{animation:none}
+  *{animation:none!important;transition:none!important}
+}
