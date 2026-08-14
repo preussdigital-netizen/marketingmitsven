@@ -3,11 +3,9 @@
     "version": "3.0",
     "lastUpdated": "2026-08-14",
     "language": "de-DE",
-    "source": "single-source-of-truth (CV PDF, Stand 08/2026)",
-    "futureIntegration": "MissionOS",
-    "notes": "Public export only. Full address, grades, and pricing are managed externally (MissionOS).",
-    "schemaNote": "schema.org JSON-LD is generated separately in HTML <head>. resume.json is the machine-readable CV, not JSON-LD.",
-    "format": "MMS Resume Format v1.0 — custom machine-readable CV, not JSON-LD. Schema.org JSON-LD is generated separately in HTML <head>."
+    "source": "Single Source of Truth — CV PDF, Stand 08/2026",
+    "schemaNote": "Schema.org JSON-LD is generated separately in HTML <head>. resume.json is the machine-readable CV export.",
+    "format": "MMS Resume Format v1.0 — machine-readable CV export"
   },
   "basics": {
     "name": "Sven Preuß",
@@ -467,7 +465,7 @@
   "languages": [
     {
       "language": "Deutsch",
-      "fluency": "Muttersprache (C1)"
+      "fluency": "Muttersprache"
     },
     {
       "language": "Englisch",
