@@ -99,79 +99,24 @@
   </script>
 
   <style>
-    .case-card {
-      background: var(--surface);
-      border: 1px solid var(--border-dark);
-      border-radius: var(--radius);
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    .case-detail-note-box {
+      margin-top: 48px; background: var(--surface-2);
+      border: 1px solid rgba(124, 58, 237, 0.2);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius); padding: 24px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
     }
-    .case-card.featured {
-      border-color: rgba(124, 58, 237, 0.3);
-      background: linear-gradient(145deg, var(--surface), rgba(124, 58, 237, 0.06));
-      position: relative;
-      overflow: hidden;
+    .case-detail-note-content h4 {
+      color: #fff; font-size: 15px; margin-bottom: 6px;
+      display: flex; align-items: center; gap: 10px;
     }
-    .case-card.featured::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 4px; height: 100%;
-      background: var(--grad);
+    .case-detail-note-content p {
+      color: var(--text-muted-dark); font-size: 13px;
+      line-height: 1.6; max-width: 780px;
     }
-    .case-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .case-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 12px;
-      border-radius: 100px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .badge-eigen { background: rgba(124, 58, 237, 0.15); color: var(--accent); border: 1px solid rgba(124, 58, 237, 0.25); }
-    .badge-praxis { background: rgba(6, 214, 160, 0.12); color: var(--accent-2); border: 1px solid rgba(6, 214, 160, 0.2); }
-    .badge-weiter { background: rgba(255, 184, 0, 0.12); color: #ffb800; border: 1px solid rgba(255, 184, 0, 0.2); }
-    .badge-dev { background: rgba(255, 100, 100, 0.12); color: #ff6464; border: 1px solid rgba(255, 100, 100, 0.2); }
-    .case-section {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .case-section-label {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted-dark);
-    }
-    .case-section p {
-      font-size: 14px;
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.82);
-      margin: 0;
-    }
-    .case-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding-top: 4px;
-    }
-    .case-tags span {
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: var(--radius-sm);
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--text-muted-dark);
+    @media(max-width:600px){
+      .case-detail-note-box{padding:20px;flex-direction:column;align-items:flex-start}
     }
   </style>
 </head>
@@ -255,7 +200,7 @@
             <div class="case-section-label">System / Lösung</div>
             <p>Agenten-Pipeline mit klar definierten Rollen: Research-Agent, Writer-Agent, SEO-Agent, Review-Agent. Human-in-the-Loop an den kritischen Übergaben. Output: publikationsfähiger Content mit SEO-Metadaten.</p>
           </div>
-          <div class="case-section">
+          <div class="case-section compact">
             <div class="case-section-label">Methoden / Tools</div>
             <p>Base44, Prompt Engineering, Natural-Language-Prompting, Human-in-the-Loop Workflows</p>
           </div>
@@ -289,7 +234,7 @@
             <div class="case-section-label">System / Lösung</div>
             <p>Telegram-Bot als Interface zu AI-Agenten und Backend-Funktionen: Projekt-Statusabfragen, Content-Briefings, Termin-Erinnerungen, Quick-Research — alles via Chat-Befehle. Anbindung an Base44-Backend-Funktionen.</p>
           </div>
-          <div class="case-section">
+          <div class="case-section compact">
             <div class="case-section-label">Methoden / Tools</div>
             <p>Telegram Bot API, Base44 Backend Functions, AI-Agent-Orchestrierung, Natural-Language-Commands</p>
           </div>
@@ -323,7 +268,7 @@
             <div class="case-section-label">System / Lösung</div>
             <p>MissionOS / Sven OS ist ein eigenständiges AI-natives Operating-System-Projekt in aktiver Entwicklung. Kernmodule für Mission Control, Executive Office, Opportunity Workspace und Recruiting-Analyse wurden bereits prototypisch umgesetzt. Die öffentliche Website ist davon technisch entkoppelt. Die Website stellt über resume.json und JSON-LD strukturierte öffentliche Daten bereit, die später mit MissionOS verbunden werden können.</p>
           </div>
-          <div class="case-section">
+          <div class="case-section compact">
             <div class="case-section-label">Methoden / Tools</div>
             <p>JSON-Schema, Schema.org/JSON-LD, Single Source of Truth Pattern, modulare Datenarchitektur</p>
           </div>
@@ -357,7 +302,7 @@
             <div class="case-section-label">System / Lösung</div>
             <p>AARRR-Funnel-Architektur (Acquisition, Activation, Retention, Revenue, Referral), Base44-App-Prototypen, dokumentierte Prompt-Bibliothek mit Human-in-the-Loop-Nachweis.</p>
           </div>
-          <div class="case-section">
+          <div class="case-section compact">
             <div class="case-section-label">Methoden / Tools</div>
             <p>AARRR Framework, Base44, Natural-Language-Prompting, Meta Ads, Google Ads, SEO/GEO, Prompt Engineering</p>
           </div>
@@ -391,7 +336,7 @@
             <div class="case-section-label">System / Lösung</div>
             <p>Konzeption: Keyword-Mapping, Content-Gap-Analyse, OnPage-Optimierungsempfehlungen. Empfohlene Maßnahmen: Schema.org/JSON-LD-Integration für Rich Snippets, GEO-Optimierung für AI-Suchsysteme.</p>
           </div>
-          <div class="case-section">
+          <div class="case-section compact">
             <div class="case-section-label">Methoden / Tools</div>
             <p>SEO-Analyse, Content-Strategie, Schema.org/JSON-LD, GEO, Google Search Console</p>
           </div>
@@ -425,7 +370,7 @@
             <div class="case-section-label">System / Lösung</div>
             <p>Konzeption: Local-SEO-Optimierung (Google Business Profile), Meta-Ads-Kampagnen-Struktur, Content-Plan für Social Media, Funnel-Optimierung von Awareness bis Conversion.</p>
           </div>
-          <div class="case-section">
+          <div class="case-section compact">
             <div class="case-section-label">Methoden / Tools</div>
             <p>Local SEO, Google Business Profile, Meta Ads, Funnel-Optimierung, Content Strategy</p>
           </div>
