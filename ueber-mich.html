@@ -1,178 +1,630 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Über mich – Marketing mit Sven</title>
-<meta name="description" content="Sven Preuß – Wer ich bin, wie ich denke und warum ich Marketing lieber verständlich als kompliziert mache."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über mich — Sven Preuß | Marketing mit Sven</title>
+  <meta name="description" content="Über Sven Preuß — Wer dahintersteht, was ihn antreibt und wie Marketing mit Sven (MMS) aus echtem Leben, Wertebewusstsein und Systemdenken entstanden ist.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Shared Style -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Custom Page Enhancements -->
+  <style>
+    .portrait-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .portrait-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .portrait-wrapper:hover img {
+      transform: scale(1.02);
+    }
+    .portrait-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(10,10,11,0.95), transparent);
+      padding: 24px;
+      color: #fff;
+    }
+    .portrait-overlay p {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 15px;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+    }
+
+    .kurzprofil-box {
+      background: var(--surface);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-top: 32px;
+    }
+    .kurzprofil-box h4 {
+      color: var(--accent-2);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+    }
+    .kurzprofil-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .kurzprofil-list li {
+      color: var(--text-muted-dark);
+      font-size: 13px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .kurzprofil-list li::before {
+      content: "✓";
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+
+    .story-quote {
+      position: relative;
+      margin: 28px 0;
+      padding: 20px 24px;
+      background: var(--surface-2);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .story-quote p {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 16px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.95);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .story-highlight {
+      margin-top: 32px;
+      padding: 24px;
+      background: rgba(6, 214, 160, 0.08);
+      border-left: 3px solid var(--accent-2);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .story-highlight p.label-sm {
+      color: var(--accent-2);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .story-highlight p.highlight-text {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .story-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 24px);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .story-img-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      background: var(--surface);
+    }
+    .story-img-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .story-img-caption {
+      padding: 14px 18px;
+      background: var(--surface);
+      color: var(--text-faint);
+      font-size: 12px;
+      border-top: 1px solid var(--border-dark-2);
+    }
+
+    .timeline-card {
+      background: var(--surface);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .timeline-card-header {
+      color: var(--accent-2);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    .wert-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .wert-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+      border-color: rgba(124,58,237,0.3);
+    }
+    .wert-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(124, 58, 237, 0.08);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .wert-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .wert-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin: 0;
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data (schema.org Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sven Preuß",
+    "jobTitle": "AI Business Systems Specialist & Search Growth Operations",
+    "brand": {
+      "@type": "Brand",
+      "name": "Marketing mit Sven",
+      "alternateName": "MMS"
+    },
+    "url": "https://marketingmitsven.de",
+    "email": "marketingmitsven@gmail.com",
+    "telephone": "+49 162 7165 515",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tettnang",
+      "addressRegion": "Baden-Württemberg",
+      "addressCountry": "DE"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/sven-preuss",
+      "https://github.com/preussdigital-netizen"
+    ],
+    "knowsAbout": [
+      "SEO",
+      "GEO",
+      "AEO",
+      "Performance Marketing",
+      "KI-Automatisierung",
+      "Content Strategy",
+      "Base44 Systems"
+    ],
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Masters of Digital Education (MoD)"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "IHK"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS"/>
-      <div>
-        <span class="nav-logo-text">Marketing mit Sven</span>
-        <span class="nav-logo-sub">MMS · KLAR. PRAXISNAH. MIT HALTUNG.</span>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="ueber-mich.html" class='active'>Über mich</a></li>
-      <li><a href="geschichte.html">Meine Geschichte</a></li>
-      <li><a href="wofuer-mms.html">Wofür MMS steht</a></li>
-      <li><a href="zertifikate.html">Zertifikate</a></li>
-      <li><a href="vision.html">Vision & Mission</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
-    </ul>
-    <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menü">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="mobile-menu">
-  <a href="ueber-mich.html">Über mich</a>
-  <a href="geschichte.html">Meine Geschichte</a>
-  <a href="wofuer-mms.html">Wofür MMS steht</a>
-  <a href="zertifikate.html">Zertifikate</a>
-  <a href="vision.html">Vision & Mission</a>
-  <a href="blog.html">Blog</a>
-  <a href="kontakt.html">Kontakt →</a>
-</div>
 
-<div class="page-header">
-  <div class="page-header-bg"></div>
-  <div class="page-header-inner">
-    <span class="page-label">ÜBER MICH</span>
-    <h1 class="page-title">Sven Preuß</h1>
-    <p class="page-subtitle">Ich bin kein glattgebügelter Marketing-Manager. Ich bin jemand, der wirklich verstehen will, was funktioniert – und warum.</p>
-  </div>
-</div>
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-name">
+          <span class="primary">SVEN PREUSS</span>
+          <span class="secondary">MARKETING MIT SVEN</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="ueber-mich.html" class="active">Über mich</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="projekte.html">Projekte</a></li>
+        <li><a href="ai-business-systems.html">AI Business Systems</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="recruiter-mode.html">Recruiter</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="kontakt.html" class="nav-cta">Kontakt</a>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-<section>
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:start" class="two-col">
-      <div>
-        <span class="label">WER ICH BIN</span>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,40px);margin-bottom:8px">Mensch zuerst.<br/>Stratege danach.</h2>
-        <div class="divider"></div>
-        <p style="font-size:15px;color:var(--muted);line-height:1.9;margin-bottom:20px">Ich bin Sven – und hinter Marketing mit Sven steckt der Anspruch, Marketing nicht komplizierter zu machen, als es sein muss.</p>
-        <p style="font-size:15px;color:var(--muted);line-height:1.9;margin-bottom:20px">Mich interessieren keine leeren Phrasen, keine künstliche Experten-Sprache und keine Inhalte, die nur gut klingen, aber in der Praxis nichts bringen. Mich interessiert, <strong style="color:var(--dark)">was funktioniert, warum es funktioniert</strong> und wie man daraus echte Learnings ableiten kann.</p>
-        <p style="font-size:15px;color:var(--muted);line-height:1.9;margin-bottom:20px">Mein Stil ist direkt, reduziert und praxisnah. Ich mag Inhalte, die schnell verständlich sind, ohne oberflächlich zu werden. Und ich mag Marken, die nicht versuchen, alles für alle zu sein.</p>
-        <p style="font-size:15px;color:var(--muted);line-height:1.9;margin-bottom:32px">Genau daraus ist MMS entstanden: als persönliche Marke, als Portfolio und als Ort, an dem KI, Marketing und Performance nicht theoretisch behandelt werden, sondern greifbar werden.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px">
-          <span class="tag">🤖 KI & Automation</span><span class="tag">🔍 SEO & GEO</span><span class="tag">📊 Performance Marketing</span><span class="tag">📍 Tettnang / Remote</span><span class="tag">🎯 Systemdenker</span><span class="tag">👨‍👩‍👦 Familienvater</span>
-        </div>
-        <div style="background:white;padding:28px;border-left:3px solid var(--accent)">
-          <h4 style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:16px">KURZPROFIL · MMS</h4>
-          <div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;color:#444;line-height:1.6"><span style="color:var(--accent);font-weight:700;flex-shrink:0">→</span>Personal Brand & Portfolio von Sven Preuß</div><div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;color:#444;line-height:1.6"><span style="color:var(--accent);font-weight:700;flex-shrink:0">→</span>Fokus auf KI, Marketing und Performance</div><div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;color:#444;line-height:1.6"><span style="color:var(--accent);font-weight:700;flex-shrink:0">→</span>Klare, verständliche und praxisnahe Kommunikation</div><div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;color:#444;line-height:1.6"><span style="color:var(--accent);font-weight:700;flex-shrink:0">→</span>Interesse an Strategie, Wirkung, Content und moderner Search</div><div style="display:flex;gap:10px;margin-bottom:10px;font-size:13px;color:#444;line-height:1.6"><span style="color:var(--accent);font-weight:700;flex-shrink:0">→</span>Kein Show-Marketing, sondern Substanz mit Handschrift</div>
-        </div>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Start</a>
+    <a href="ueber-mich.html" class="active">Über mich</a>
+    <a href="expertise.html">Expertise</a>
+    <a href="projekte.html">Projekte</a>
+    <a href="ai-business-systems.html">AI Business Systems</a>
+    <a href="career.html">Career</a>
+    <a href="recruiter-mode.html">Recruiter</a>
+    <a href="insights.html">Insights</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+
+  <!-- 1. PAGE-HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Start</a> / Über mich
       </div>
-      <div>
-        <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/cd81a8437_00167.jpg" alt="Sven Preuß" style="width:100%;display:block"/>
-        <div style="margin-top:3px;background:var(--dark);padding:16px 18px">
-          <p style="color:rgba(255,255,255,0.4);font-size:12px;font-style:italic">"Klarheit statt Fassade. Haltung statt Hype."</p>
-        </div>
-        <div style="margin-top:16px">
-          <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/6af4fd3bd_20240523_193333.jpg" alt="Sven Preuß unterwegs" style="width:100%;display:block;filter:grayscale(15%)"/>
-          <div style="background:#f5f0f0;padding:12px 16px">
-            <p style="font-size:11px;color:var(--muted);font-style:italic">Immer auf der Suche nach dem nächsten Blickwinkel.</p>
+      <h1 class="h1">Über mich</h1>
+      <p>Sven Preuß — wer dahintersteht und was ihn antreibt.</p>
+    </div>
+  </section>
+
+  <!-- 2. PORTRAIT + KURZPROFIL (dark section) -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="grid-2" style="align-items: start; gap: 48px;">
+        
+        <!-- Links: Portrait-Foto -->
+        <div class="portrait-wrapper">
+          <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/404e2414e_00177.jpg" alt="Sven Preuß Portrait">
+          <div class="portrait-overlay">
+            <p>„Klarheit statt Fassade. Haltung statt Hype. Relevanz statt Lautstärke.“</p>
           </div>
         </div>
+
+        <!-- Rechts: Kurzprofil-Text & Content -->
+        <div>
+          <span class="eyebrow eyebrow-accent">PERSÖNLICHES PROFIL</span>
+          <h2 class="h2 serif" style="color: #fff; margin-bottom: 8px;">Sven Preuß</h2>
+          <div class="divider"></div>
+
+          <p style="font-size: 16px; color: rgba(255,255,255,0.92); font-weight: 500; line-height: 1.8; margin-bottom: 20px;">
+            Ich bin Sven — und hinter Marketing mit Sven steckt der Anspruch, Marketing nicht komplizierter zu machen als nötig.
+          </p>
+
+          <p style="font-size: 15px; color: var(--text-muted-dark); line-height: 1.85; margin-bottom: 20px;">
+            Mich interessieren keine leeren Phrasen, keine künstliche Experten-Sprache und keine Inhalte, die nur gut klingen, aber in der Praxis nichts bringen. Mich interessiert, <strong style="color: #fff;">was funktioniert, warum es funktioniert</strong> und wie man daraus echte Learnings und verlässliche Systeme ableiten kann.
+          </p>
+
+          <p style="font-size: 15px; color: var(--text-muted-dark); line-height: 1.85; margin-bottom: 20px;">
+            Mein Stil ist direkt, reduziert und praxisnah. Ich mag Inhalte, die schnell verständlich sind, ohne oberflächlich zu werden. Und ich mag Marken, die nicht versuchen, alles für alle zu sein.
+          </p>
+
+          <p style="font-size: 15px; color: var(--text-muted-dark); line-height: 1.85; margin-bottom: 28px;">
+            Genau daraus ist MMS entstanden: als persönliche Marke, als Portfolio und als Ort, an dem KI, Marketing und Performance-Systeme nicht rein theoretisch behandelt werden, sondern greifbare Anwendung finden.
+          </p>
+
+          <!-- Tags -->
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px;">
+            <span class="tag tag-accent">🤖 KI & Automation</span>
+            <span class="tag tag-green">🔍 SEO & GEO</span>
+            <span class="tag">📊 Performance Marketing</span>
+            <span class="tag">📍 Tettnang/Remote</span>
+            <span class="tag">🎯 Systemdenker</span>
+            
+          </div>
+
+          <!-- Kurzprofil Box -->
+          <div class="kurzprofil-box">
+            <h4>Kurzprofil · MMS</h4>
+            <ul class="kurzprofil-list">
+              <li>Personal Brand & Portfolio von Sven Preuß</li>
+              <li>Fokus auf KI, Performance Marketing, SEO & GEO-Systeme</li>
+              <li>Klare, verständliche und praxisnahe Kommunikation</li>
+              <li>Interesse an Strategie, Wirkung, Content und moderner Search</li>
+              <li>Kein Show-Marketing, sondern Substanz mit eigener Handschrift</li>
+            </ul>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section style="background:var(--dark);padding:64px 24px">
-  <div class="container" style="text-align:center">
-    <span class="label" style="color:rgba(6,214,160,0.8);text-align:center;display:block">DREI DINGE, DIE ICH WIRKLICH BIN</span>
-    <h2 style="font-family:'Playfair Display',serif;color:white;font-size:clamp(24px,3vw,36px);margin-bottom:48px">Was mich antreibt</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px" class="cards-3">
-      <div style="background:#1e1e1e;padding:36px 28px;text-align:left"><div style="background:var(--grad);width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px">🔗</div><h3 style="color:white;font-size:15px;font-weight:700;margin-bottom:10px">Systemdenker</h3><p style="color:rgba(255,255,255,0.45);font-size:13px;line-height:1.7">Ich sehe nicht einzelne Aufgaben — ich sehe wie Teile zusammenwirken. CRM, Content, Sales, SEO: alles greift ineinander.</p></div><div style="background:#1e1e1e;padding:36px 28px;text-align:left"><div style="background:var(--grad);width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px">⚡</div><h3 style="color:white;font-size:15px;font-weight:700;margin-bottom:10px">Schneller Lerner</h3><p style="color:rgba(255,255,255,0.45);font-size:13px;line-height:1.7">Ich lerne schnell, hinterfrage Dinge und setze konsequent um. Theorie wird bei mir immer zur Praxis.</p></div><div style="background:#1e1e1e;padding:36px 28px;text-align:left"><div style="background:var(--grad);width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px">❤️</div><h3 style="color:white;font-size:15px;font-weight:700;margin-bottom:10px">Familienmensch</h3><p style="color:rgba(255,255,255,0.45);font-size:13px;line-height:1.7">Meine Frau und mein Sohn sind mein stärkster Antrieb — sie geben mir den Grund, langfristig und verlässlich zu denken.</p></div>
+  <!-- 3. MEINE GESCHICHTE (surface/dark section) -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="grid-2" style="align-items: start; gap: 48px;">
+        
+        <!-- Story Text Links -->
+        <div>
+          <span class="eyebrow eyebrow-accent">MEINE GESCHICHTE</span>
+          <h2 class="h2 serif" style="color: #fff; margin-bottom: 8px;">
+            Kein perfekter Karrierefilm.<br>
+            <span class="grad-text">Sondern echtes Leben.</span>
+          </h2>
+          <div class="divider"></div>
+
+          <p style="font-size: 15px; color: var(--text-muted-dark); line-height: 1.85; margin-bottom: 20px;">
+            Ich bin Sven – und Marketing mit Sven ist nicht aus einem perfekten Plan entstanden, sondern aus echtem Leben.
+          </p>
+          <p style="font-size: 15px; color: var(--text-muted-dark); line-height: 1.85; margin-bottom: 24px;">
+            Mein Weg war nie geschniegelt, nie ganz gerade und sicher nicht so, wie man ihn in klassischen Business-Profilen liest.
+          </p>
+
+          <!-- ZITAT 1 -->
+          <blockquote class="story-quote">
+            <p>„Ein sehr großer Teil davon sind meine Eltern. Ich hatte das Glück, mit zwei besonderen Menschen aufzuwachsen. Zwei freie, warme, eigenwillige und auf ihre eigene Art sehr weise Seelen.“</p>
+          </blockquote>
+
+          <p style="font-size: 15px; color: var(--text-muted-dark); line-height: 1.85; margin-bottom: 20px;">
+            Mein Vater war für mich Halt, Wegweiser und oft auch Rettungsanker im Alltag. Als er an Weihnachten 2020 an COPD verstorben ist, war das nicht nur ein Abschied. Es war der Moment, in dem ich lernen musste, wirklich auf eigenen Beinen zu stehen.
+          </p>
+          <p style="font-size: 15px; color: var(--text-muted-dark); line-height: 1.85; margin-bottom: 20px;">
+            Meine Mutter war auf eine andere Weise mein Zuhause. Sie war das Herz. Sie hat mich nicht nur menschlich, sondern auch spirituell stark geprägt. Im Oktober 2025 habe ich auch sie nach ihrer Lungenkrebserkrankung verloren.
+          </p>
+          <p style="font-size: 15px; color: var(--text-muted-dark); line-height: 1.85; margin-bottom: 24px;">
+            Dazwischen lagen weitere Einschnitte. 2020 hat Corona mein künstlerisches Business beendet. Später kam mein Unfall – ein weiterer Moment, der mich gezwungen hat, vieles neu zu betrachten.
+          </p>
+
+          <!-- ZITAT 2 -->
+          <blockquote class="story-quote">
+            <p>„Es gibt Ereignisse, nach denen das Leben nicht einfach weiterläuft wie vorher. Man schaut anders auf Zeit. Anders auf Arbeit. Anders auf Menschen. Anders auf das, was wirklich zählt.“</p>
+          </blockquote>
+
+          <p style="font-size: 15px; color: var(--text-muted-dark); line-height: 1.85; margin-bottom: 20px;">
+            Was geblieben ist, ist nicht nur Schmerz. Was geblieben ist, ist auch <strong style="color: #fff;">Substanz. Haltung. Dankbarkeit.</strong> Und das tiefe Bedürfnis, etwas Echtes aufzubauen.
+          </p>
+          <p style="font-size: 15px; color: var(--text-muted-dark); line-height: 1.85; margin-bottom: 24px;">
+            Genau daraus ist MMS entstanden. Nicht als laute Marke. Nicht als Fassade. Sondern als ein ehrlicher Raum für meine Gedanken, meine Arbeit und meine Perspektive auf Marketing, KI und Performance.
+          </p>
+
+          <!-- Highlight Box -->
+          <div class="story-highlight">
+            <p class="label-sm">Kurz gesagt</p>
+            <p class="highlight-text">Ich baue diese Marke nicht, weil ich eine perfekte Geschichte erzählen will.<br>Ich baue sie, weil ich eine echte habe.</p>
+          </div>
+        </div>
+
+        <!-- Sidebar / Image + Timeline Rechts -->
+        <div class="story-sidebar">
+          
+          <!-- Image -->
+          <div class="story-img-card">
+            <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/45d73a16f_00167klein.jpg" alt="Sven Preuß — Tettnang">
+            <div class="story-img-caption">
+              📍 Tettnang, Bodenseeraum – Digital & ortsunabhängig im DACH-Raum
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="timeline-card">
+            <div class="timeline-card-header">Lebenslauf & Meilensteine</div>
+            <div class="timeline">
+
+              <div class="timeline-item">
+                <div class="date">2010 – 2013</div>
+                <h4>Bäckerausbildung</h4>
+                <p>Handwerkliche IHK-Berufsausbildung als Bäcker. Frühschichten, Disziplin und das Fundament für echtes Erschaffen.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="date">2011 – 2023</div>
+                <h4>FreiGeist</h4>
+                <p>Gründer & Leitung einer Künstlervereinigung mit 40 Mitgliedern. Organisation des FOMAA-Festivals (2 Bühnen), 26 Facebook-Seiten & Siebdruck-Merch.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="date">2016 – 2024</div>
+                <h4>Lager & Versand</h4>
+                <p>Operative Tätigkeit bei Michael Dewald in Festanstellung. Parallel dazu stetiger Ausbau des Künstlernetzwerks und digitaler Kenntnisse.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="date">DEZ 2020</div>
+                <h4>Vater verstorben</h4>
+                <p>Schwerer persönlicher Verlust durch COPD-Erkrankung des Vaters. Wendepunkt zum selbstständigen, eigenverantwortlichen Handeln.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="date">2023</div>
+                <h4>Unfall</h4>
+                <p>Physischer Einschnitt und gesundheitliche Zwangspause — der Anstoß für eine tiefgreifende berfliche und persönliche Neuorientierung.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="date">2024</div>
+                <h4>Ende Festanstellung</h4>
+                <p>Bewusster Abschluss der bisherigen Festanstellung im Lagerbereich zur vollen Fokussierung auf die digitale Neuorientierung.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="date">OKT 2025</div>
+                <h4>Mutter verstorben</h4>
+                <p>Verlust der Mutter nach Lungenkrebserkrankung. Vertiefung von Demut, innerer Klarheit und dankbarer Haltung.</p>
+              </div>
+
+              <div class="timeline-item green">
+                <div class="date">2025</div>
+                <h4>Umschulung bei MoD</h4>
+                <p>Start der Umschulung bei Masters of Digital Education (AI Powered Full Funnel Online Marketing Manager, SEO, GEO/AEO & KI-Automation).</p>
+              </div>
+
+              <div class="timeline-item green">
+                <div class="date">JUN 2026</div>
+                <h4>Abschluss</h4>
+                <p>Erfolgreicher Abschluss der MoD-Umschulung & offizieller Launch von Marketing mit Sven (MMS).</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </div>
-  </div>
-</section>
-<style>@media(max-width:900px){.two-col{grid-template-columns:1fr}.cards-3{grid-template-columns:1fr 1fr}}@media(max-width:600px){.cards-3{grid-template-columns:1fr}}</style>
+  </section>
 
+  <!-- 4. WERTE (light/cream section) -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header" style="text-align: center; max-width: 680px; margin: 0 auto 56px;">
+        <span class="eyebrow eyebrow-accent">WERTE & HALTUNG</span>
+        <h2 class="h2 serif" style="color: var(--text);">Worauf es ankommt</h2>
+        <div class="divider-center"></div>
+        <p style="color: var(--text-muted); font-size: 16px; margin: 0 auto;">
+          Vier Grundpfeiler, die sowohl mein persönliches Handeln als auch meine Arbeitsweise in Marketing, Strategie und KI-Projekten leiten.
+        </p>
+      </div>
 
+      <div class="grid-2" style="gap: 28px;">
+        
+        <!-- Wert 1: Substanz -->
+        <div class="wert-card">
+          <div class="wert-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3>Substanz</h3>
+          <p>Marketing ohne Geschwurbel. Datenbasierte Fakten, funktionierende Prozesse und verlässliche Resultate statt leeren Versprechungen, Buzzword-Bingo und oberflächlicher KI-Hype-Shows.</p>
+        </div>
 
+        <!-- Wert 2: Haltung -->
+        <div class="wert-card">
+          <div class="wert-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+          </div>
+          <h3>Haltung</h3>
+          <p>Klar Kante zeigen, auch wenn es unbequem ist. Nicht versuchen, alles für jeden zu sein, sondern verlässlich für Qualität, Respekt und die eigenen Grundsätze einzustehen.</p>
+        </div>
 
-<div class="cert-carousel-wrap">
-  <p class="cert-carousel-label">Zertifikate & Weiterbildungen</p>
-  <div class="cert-carousel-track">
-    <div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f5f5bac90_dd223881f_SEAfullCert.png" alt="Google Ads Search" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/731a0e4f7_e58bc0989_Displaycert.png" alt="Google Ads Display" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/b344d9bcf_191b06c5b_GoogleAdsVideowerbungZertifikat.png" alt="Google Ads Video" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2fb00c241_e9d08748c_Analyticfullcert.png" alt="Google Analytics" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/7ca2b3018_c0adc615e_Displayfullcert.png" alt="Display Zertifikat" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bd9bc8ce_e506142b7_Badge_KI_Ethik_IBM.png" alt="KI Ethik IBM" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/a0fa05d20_c797a9268_sven-preu-smarter-arbeiten-mit-ki-badge.png" alt="Smarter mit KI" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f2467431e_e815daaa4_smarter_arbeiten_mit_ki-certificate_social_share.jpg" alt="KI Zertifikat" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/4a009af1b_181ea7537_klickstarke_inhalte_erstellen-certificate_social_share.jpg" alt="Klickstarke Inhalte" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bc395a7e_55e0bf6aa_sven-preu-klickstarke-inhalte-erstellen-badge.png" alt="Klickstarke Badge" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/6f3bf9d5d_292b49989_die_visual_suite_von_canva-certificate_social_share.jpg" alt="Canva Visual Suite" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/d4a8097b9_d35522ac3_sven-preu-die-visual-suite-von-canva-badge.png" alt="Canva Badge" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/895ebe799_af2af142b_CanvaAiZertifikat.png" alt="Canva AI" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f5f5bac90_dd223881f_SEAfullCert.png" alt="Google Ads Search" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/731a0e4f7_e58bc0989_Displaycert.png" alt="Google Ads Display" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/b344d9bcf_191b06c5b_GoogleAdsVideowerbungZertifikat.png" alt="Google Ads Video" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2fb00c241_e9d08748c_Analyticfullcert.png" alt="Google Analytics" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/7ca2b3018_c0adc615e_Displayfullcert.png" alt="Display Zertifikat" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bd9bc8ce_e506142b7_Badge_KI_Ethik_IBM.png" alt="KI Ethik IBM" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/a0fa05d20_c797a9268_sven-preu-smarter-arbeiten-mit-ki-badge.png" alt="Smarter mit KI" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/f2467431e_e815daaa4_smarter_arbeiten_mit_ki-certificate_social_share.jpg" alt="KI Zertifikat" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/4a009af1b_181ea7537_klickstarke_inhalte_erstellen-certificate_social_share.jpg" alt="Klickstarke Inhalte" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/2bc395a7e_55e0bf6aa_sven-preu-klickstarke-inhalte-erstellen-badge.png" alt="Klickstarke Badge" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/6f3bf9d5d_292b49989_die_visual_suite_von_canva-certificate_social_share.jpg" alt="Canva Visual Suite" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/d4a8097b9_d35522ac3_sven-preu-die-visual-suite-von-canva-badge.png" alt="Canva Badge" loading="lazy"/></div>
-<div class="cert-item"><img src="https://base44.app/api/apps/6a0661365d07c74c883d932d/files/mp/public/6a0661365d07c74c883d932d/895ebe799_af2af142b_CanvaAiZertifikat.png" alt="Canva AI" loading="lazy"/></div>
+        <!-- Wert 3: Dankbarkeit -->
+        <div class="wert-card">
+          <div class="wert-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3>Dankbarkeit</h3>
+          <p>Demut vor dem Leben, Respekt vor Mitmenschen und harter Arbeit. Die Einsichten aus persönlichen Rückschlägen nutzen, um wertschätzend, geerdet und nahbar zu bleiben.</p>
+        </div>
 
-  </div>
-</div>
+        <!-- Wert 4: Ehrlichkeit -->
+        <div class="wert-card">
+          <div class="wert-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+          </div>
+          <h3>Ehrlichkeit</h3>
+          <p>Transparente Kommunikation ohne künstliche Fassade. Offenlegen, was klappt – und genauso ehrlich benennen, was nicht funktioniert, wo Hürden liegen oder was optimiert werden muss.</p>
+        </div>
 
-<footer>
-  <div class="footer-inner">
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FOOTER -->
+  <footer class="footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS" style="height:44px"/>
-        <p>Marketing mit Sven</p>
-        <span>KLAR · PRAXISNAH · MIT HALTUNG</span>
-        <p class="tagline">Persönliche Marke & Portfolio von Sven Preuß.<br/>Fokus auf KI, Marketing und Performance.</p>
+        <div>
+          <div class="name">SVEN PREUSS</div>
+          <div class="sub">MARKETING MIT SVEN</div>
+        </div>
+        <p>AI Business Systems Specialist & Search Growth Operations.</p>
       </div>
-      <div class="footer-nav">
-        <h4>Seiten</h4>
-        <a href="index.html">Startseite</a>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <a href="index.html">Start</a>
         <a href="ueber-mich.html">Über mich</a>
-        <a href="geschichte.html">Meine Geschichte</a>
-        <a href="wofuer-mms.html">Wofür MMS steht</a>
-        <a href="zertifikate.html">Zertifikate</a>
-        <a href="vision.html">Vision & Mission</a>
-        <a href="blog.html">Blog</a>
+        <a href="expertise.html">Expertise</a>
+        <a href="projekte.html">Projekte</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Fokus</h5>
+        <a href="ai-business-systems.html">AI Business Systems</a>
+        <a href="career.html">Career</a>
+        <a href="recruiter-mode.html">Recruiter</a>
+        <a href="insights.html">Insights</a>
         <a href="kontakt.html">Kontakt</a>
       </div>
-      <div class="footer-nav">
-        <h4>Kontakt</h4>
-        <a href="mailto:sven.preuss95@gmail.com">sven.preuss95@gmail.com</a>
-        <a href="https://linkedin.com/in/preussdigital/" target="_blank">LinkedIn · preussdigital</a>
-        <a href="#">Tettnang / Remote DACH</a>
+
+      <div class="footer-col">
+        <h5>Kontakt &amp; Rechtliches</h5>
+        <a href="mailto:marketingmitsven@gmail.com">marketingmitsven@gmail.com</a>
+        <a href="tel:+491627165515">+49 162 7165 515</a>
+        <a href="https://linkedin.com/in/sven-preuss" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        <a href="#">Tettnang (Bodensee)</a>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>© 2026 Sven Preuß · Marketing mit Sven</p>
-      <p style="color:rgba(255,255,255,0.25);font-style:italic">Klar. Praxisnah. Mit Haltung.</p>
+      <p>&copy; 2026 Sven Preuß — Marketing mit Sven (MMS). Alle Rechte vorbehalten.</p>
+      <span class="vis-badge vis-public">Public Portfolio v2.0</span>
     </div>
-  </div>
-</footer>
+  </footer>
 
-
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{e.preventDefault();var t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});});
-});
-</script>
+  <!-- JS FOR HAMBURGER MENU -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function() {
+          mobileMenu.classList.toggle('open');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
