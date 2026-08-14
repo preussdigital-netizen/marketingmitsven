@@ -444,18 +444,15 @@
               Der MMS-Newsletter für strategische Marketing-Insights und KI-Workflows befindet sich im Aufbau. Möchtest du benachrichtigt werden, sobald die ersten Deep Dives erscheinen?
             </p>
             
-            <!-- Hinweis & Formular -->
-            <form class="newsletter-form" id="newsletterForm" onsubmit="handleSubscribe(event)">
-              <input type="email" id="emailInput" placeholder="Deine E-Mail-Adresse..." required>
-              <button type="submit" class="btn btn-primary">Formate anfordern</button>
-            </form>
-            <div id="formFeedback" style="display: none; margin-top: 12px; font-size: 13px; color: var(--accent-2);">
-              ✓ Danke! Deine E-Mail wurde vorgemerkt. Ich melde mich zum Launch des ersten Deep Dives.
+            <!-- Newsletter noch nicht aktiv — kein Fake-Formular -->
+            <div style="margin-top: 24px; padding: 20px 24px; background: rgba(6,214,160,0.06); border: 1px solid rgba(6,214,160,0.2); border-radius: var(--radius-sm);">
+              <p style="font-size: 14px; color: var(--accent-2); font-weight: 600; margin-bottom: 8px;">
+                ✦ Newsletter noch nicht aktiv
+              </p>
+              <p style="font-size: 13px; color: var(--text-muted-dark); line-height: 1.7; margin: 0;">
+                Bis zum Launch der ersten Deep Dives freue ich mich über direkten Austausch per E-Mail oder LinkedIn.
+              </p>
             </div>
-
-            <p style="font-size: 12px; color: var(--text-faint); margin-top: 16px;">
-              Kein Spam. Jederzeit abbestellbar. Bis zum Newsletter-Start freue ich mich über direkten Austausch:
-            </p>
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 16px; background: rgba(0,0,0,0.3); padding: 32px; border-radius: var(--radius); border: 1px solid var(--border-dark);">
@@ -540,16 +537,7 @@
       });
     }
 
-    function handleSubscribe(event) {
-      event.preventDefault();
-      const emailInput = document.getElementById('emailInput');
-      const formFeedback = document.getElementById('formFeedback');
-      
-      if (emailInput && emailInput.value) {
-        formFeedback.style.display = 'block';
-        emailInput.value = '';
-      }
-    }
+
   </script>
 </body>
 </html>
