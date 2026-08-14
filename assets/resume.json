@@ -1,0 +1,477 @@
+{
+  "$schema": "https://schema.org/Person",
+  "meta": {
+    "version": "3.0",
+    "lastUpdated": "2026-08-14",
+    "language": "de-DE",
+    "source": "single-source-of-truth (CV PDF, Stand 08/2026)",
+    "futureIntegration": "MissionOS",
+    "notes": "Public export only. Full address, grades, and pricing are managed externally (MissionOS).",
+    "schemaNote": "schema.org JSON-LD is generated separately in HTML <head>. resume.json is the machine-readable CV, not JSON-LD."
+  },
+  "basics": {
+    "name": "Sven Preuß",
+    "label": "AI Business Systems Specialist & Search Growth Operations",
+    "tagline": "AI Products & Micro SaaS · Workflow Automation",
+    "brand": "Marketing mit Sven (MMS)",
+    "email": "marketingmitsven@gmail.com",
+    "phone": "+49 162 7165 515",
+    "location": {
+      "city": "Tettnang",
+      "region": "Baden-Württemberg",
+      "country": "Germany",
+      "remote": true
+    },
+    "url": "https://marketingmitsven.de",
+    "profiles": {
+      "linkedin": "https://www.linkedin.com/in/sven-preuss",
+      "github": "https://github.com/preussdigital-netizen"
+    },
+    "summary": "Ich bin ein ganzheitlicher Systemdenker an der Schnittstelle von KI, Full-Funnel-Marketing und AI-gestützten Business-Systemen. Unternehmen stehen heute vor der Herausforderung, KI sinnvoll in bestehende Prozesse zu integrieren und daraus echten Mehrwert zu schaffen. Genau an dieser Schnittstelle entwickle ich AI-gestützte Business-Systeme, die Strategie, Search, Automatisierung und digitale Produkte zu skalierbaren Lösungen verbinden. Mich interessiert nicht die Fassade eines Problems, sondern dessen Ursache.",
+    "profileText": "Während meiner Umschulung zum AI Powered Full Funnel Online Marketing Manager habe ich mich konsequent auf den Aufbau praxisnaher AI-Kompetenzen spezialisiert und parallel ein eigenes Projektportfolio entwickelt. Heute konzipiere und entwickle ich AI-Anwendungen, Automatisierungslösungen und digitale Produkte, mit denen ich neue Technologien unmittelbar in realen Anwendungsfällen erprobe und kontinuierlich weiterentwickle. Mein Ziel ist es, meine Erfahrung in einem innovativen Umfeld einzubringen, komplexe Herausforderungen gemeinsam zu lösen und Unternehmen dabei zu unterstützen, AI produktiv und wirtschaftlich sinnvoll einzusetzen.",
+    "focusAreas": {
+      "aiAndBusinessSystems": [
+        "AI Business Systems",
+        "AI Products & Micro SaaS",
+        "Workflow Automation",
+        "Agent Orchestration"
+      ],
+      "development": [
+        "Low-Code & Vibe Coding",
+        "API Integration",
+        "AI Applications"
+      ],
+      "searchAndGrowth": [
+        "SEO, AI Search & GEO",
+        "Search Growth Operations",
+        "Performance Marketing",
+        "Search Analytics"
+      ]
+    },
+    "methodology": [
+      "Overview",
+      "Fokus",
+      "Analyse",
+      "Strategie",
+      "Lösung",
+      "Produkt",
+      "Design",
+      "System",
+      "UI/UX",
+      "SEO & AI Visibility",
+      "Implementierung",
+      "Optimierung"
+    ]
+  },
+  "work": [
+    {
+      "company": "Marketing mit Sven (MMS)",
+      "position": "AI Business Systems & Digital Marketing Specialist",
+      "startDate": "2026-06",
+      "endDate": "present",
+      "location": "Tettnang / Remote",
+      "summary": "Entwicklung eines praxisorientierten Portfolios mit Fokus auf AI Business Systems, AI Search, Performance Marketing sowie SaaS- und Web-App-Konzepte.",
+      "highlights": [
+        "Konzeption und Umsetzung AI-gestützter Business-Lösungen, Agentensysteme und automatisierter Workflows mit Low-Code, APIs und modernen LLMs",
+        "Entwicklung praxisnaher Projekte in SEO, GEO, Workflow Automation und AI-gestützter Business-Optimierung",
+        "Strategische Weiterentwicklung digitaler Produkte und Websites mit Fokus auf AI Visibility, User Experience und nachhaltige Performance",
+        "Entwicklung des Agenturkonzepts Ignite The Future für AI-Automatisierung und digitale Business-Lösungen"
+      ]
+    },
+    {
+      "company": "Michael Dewald Kunststoffverarbeitung GmbH",
+      "position": "Lager- und Versandmitarbeiter",
+      "startDate": "2016-10",
+      "endDate": "2024-03",
+      "location": "Tettnang, DE",
+      "summary": "Verantwortung für Lager-, Kommissionierungs- und Versandprozesse.",
+      "highlights": [
+        "Sicherstellung effizienter Material- und Warenflüsse",
+        "Unterstützung bei der Optimierung interner Arbeitsabläufe und Prozessstrukturen"
+      ]
+    },
+    {
+      "company": "FreiGeist Universe",
+      "position": "Founder & Business Operations Lead",
+      "startDate": "2012-01",
+      "endDate": "2024-01",
+      "location": "DACH",
+      "summary": "Aufbau und Leitung einer internationalen Künstler-, Event- und Community-Plattform.",
+      "highlights": [
+        "Markenentwicklung, Projektmanagement, Budgetplanung und operative Gesamtkoordination",
+        "Aufbau und Betreuung eines internationalen Künstler- und Partnernetzwerks",
+        "Planung und Umsetzung von Veranstaltungen im gesamten DACH-Raum",
+        "Führung externer Teams sowie Steuerung von Marketing- und Kommunikationsmaßnahmen"
+      ]
+    },
+    {
+      "company": "FreiGeist Decoration",
+      "position": "Freiberuflicher Künstler — Eventdekoration & Bühnenbild",
+      "startDate": "2013-01",
+      "endDate": "2020-01",
+      "location": "DACH",
+      "summary": "Bühnenbilder, Eventdekoration, Raumgestaltungen, Lichtkonzepte für Festivals und Kulturveranstaltungen."
+    },
+    {
+      "company": "ZaunProfi",
+      "position": "Hilfsarbeiter Zaunbau",
+      "startDate": "2014-11",
+      "endDate": "2015-11",
+      "location": "Bludenz, AT"
+    },
+    {
+      "company": "Bäckerei Reck Beck",
+      "position": "Bäckergeselle",
+      "startDate": "2013-09",
+      "endDate": "2013-12",
+      "location": "Tettnang, DE"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Masters of Digital Education (MoD Academy)",
+      "area": "AI Powered Full Funnel Online Marketing Manager",
+      "studyType": "Umschulung",
+      "startDate": "2025-12",
+      "endDate": "2026-07",
+      "location": "Remote",
+      "units": "1300 Unterrichtseinheiten",
+      "focusAreas": [
+        "Performance Marketing",
+        "SEO, GEO & AI Search",
+        "Google Ads & Social Media Advertising",
+        "Prompt Engineering & LLMs",
+        "Workflow Automation",
+        "AI Business & digitale Geschäftsmodelle",
+        "WordPress, Shopify & Low-Code",
+        "Analytics, Tracking & Conversion-Optimierung"
+      ]
+    },
+    {
+      "institution": "Handwerkskammer Ulm",
+      "area": "Airbrushdesigner (Fach- & Intensivlehrgang)",
+      "startDate": "2017",
+      "endDate": "2019",
+      "location": "Ulm, DE",
+      "units": "288 Unterrichtseinheiten",
+      "summary": "Portraitdesign, Wandmalerei, Illustrationsmalerei & Fotorealistic. Adobe-Grundkenntnisse (Photoshop, Illustrator, InDesign). Vertiefung der Farbkenntnisse."
+    },
+    {
+      "institution": "Handwerkskammer Ulm / Bäckerei Reck Beck",
+      "area": "Bäcker",
+      "studyType": "Ausbildung",
+      "startDate": "2010",
+      "endDate": "2013",
+      "location": "Tettnang, DE",
+      "units": "288 Unterrichtseinheiten",
+      "credential": "Gesellenbrief"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "KI Anwender im Online-Marketing",
+      "issuer": "IHK",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "KI-Modelle ausführen mit IBM Watson Studio",
+      "issuer": "KI-Campus / IBM",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "Maschinelles Lernen & Deep Learning mit IBM",
+      "issuer": "KI-Campus / IBM",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "Foundations of Deep Learning I: Basics",
+      "issuer": "KI-Campus / IBM",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "IBM-Grundlagen der Künstlichen Intelligenz",
+      "issuer": "KI-Campus / IBM",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "EU AI Act Essentials",
+      "issuer": "KI-Campus / IBM",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "Die fünf Säulen der KI-Ethik",
+      "issuer": "KI-Campus / IBM",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "Deine Zukunft in der KI-Joblandschaft",
+      "issuer": "KI-Campus / IBM",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "Verantwortungsvolle KI Prompts beherrschen (mit Microsoft & Founderz)",
+      "issuer": "Santander Open Academy",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "Praktische KI fürs Marketing by Google",
+      "issuer": "Santander Open Academy / Google",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "Einführung in das Programmieren mit Python",
+      "issuer": "Santander Open Academy",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "Praxis Digitale Sicherheit — Schütze dich im Alltag",
+      "issuer": "Santander Open Academy",
+      "date": "2026",
+      "category": "Künstliche Intelligenz"
+    },
+    {
+      "name": "Google Ads — Suchmaschinenwerbung, Displaywerbung, Videowerbung",
+      "issuer": "Google",
+      "date": "2026",
+      "category": "Performance Marketing & Analytics"
+    },
+    {
+      "name": "Google Marketingplattform — Google Analytics, Campaign Manager 360",
+      "issuer": "Google",
+      "date": "2026",
+      "category": "Performance Marketing & Analytics"
+    },
+    {
+      "name": "SEO Certified Professional",
+      "issuer": "BVDW",
+      "date": "2026",
+      "category": "SEO & AI-Search"
+    },
+    {
+      "name": "Keyword-Recherche & Wettbewerbsanalyse",
+      "issuer": "Sistrix Academy",
+      "date": "2026",
+      "category": "SEO & AI-Search"
+    },
+    {
+      "name": "So erstellst du eine Website für Kleinunternehmen",
+      "issuer": "Semrush Academy",
+      "date": "2026",
+      "category": "SEO & AI-Search"
+    },
+    {
+      "name": "Visual Suite / Klickstarke Inhalte / Smarter Arbeiten mit KI",
+      "issuer": "Canva Design School",
+      "date": "2026",
+      "category": "Design"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "PKW — Klasse B",
+      "issuer": "Bezirkshauptmannschaft, AT"
+    },
+    {
+      "name": "Laserschutzbeauftragter — 3B/3R/4",
+      "issuer": "Laserworld, DE"
+    },
+    {
+      "name": "Gabelstapler — FFM/L",
+      "issuer": "Layer-Bildungswerkstatt, DE"
+    }
+  ],
+  "projects": [
+    {
+      "name": "AI Multi-Agent Content System",
+      "description": "Entwicklung eines Multi-Agent-Systems zur automatisierten Content-Erstellung, Bildgenerierung, Freigabe und Veröffentlichung auf LinkedIn, Facebook und Instagram über API-Anbindungen.",
+      "type": "AI Business Systems",
+      "startDate": "2025-10"
+    },
+    {
+      "name": "Telegram AI Control Center",
+      "description": "Entwicklung einer Telegram-basierten Steuerzentrale zur Verwaltung und Ausführung mehrerer AI-Agenten, Workflows und Automatisierungen.",
+      "type": "AI Business Systems"
+    },
+    {
+      "name": "AI Contentbank & Workflow Automation",
+      "description": "Konzeption und Entwicklung einer webbasierten Contentbank zur Planung, Verwaltung und automatisierten Bereitstellung von Marketing-Content.",
+      "type": "Workflow Automation"
+    },
+    {
+      "name": "Base44 AI Applications",
+      "description": "Entwicklung mehrerer AI-gestützter Business-Anwendungen mit Base44 unter Einsatz moderner LLMs, APIs, Datenbanken sowie Low-Code- und Vibe-Coding-Ansätzen.",
+      "type": "AI Product Development"
+    },
+    {
+      "name": "AI Chatbots & Voice Assistants",
+      "description": "Konzeption und Entwicklung intelligenter Chatbots und AI-Telefonassistenten inklusive Terminbuchung über Cal.com sowie E-Mail-Integration.",
+      "type": "AI Product Development"
+    },
+    {
+      "name": "AI Workflow Automation",
+      "description": "Entwicklung automatisierter Business-Workflows durch die Integration von AI-Agenten, APIs und externen Cloud-Diensten zur Optimierung digitaler Geschäftsprozesse.",
+      "type": "Workflow Automation"
+    },
+    {
+      "name": "AI Search Portfolio",
+      "description": "Konzeption und kontinuierliche Weiterentwicklung eigener Websites mit Fokus auf SEO, GEO, AI Search, User Experience und AI-gestützte Sichtbarkeit.",
+      "type": "AI Search"
+    },
+    {
+      "name": "ITF — Ignite The Future",
+      "description": "Konzept eines AI-Agenturmodells für AI Business Systems, Workflow-Automatisierung und digitale Lösungen — in Entwicklung, keine etablierte Agentur.",
+      "type": "Konzept in Entwicklung"
+    },
+    {
+      "name": "MMS — Marketing mit Sven",
+      "description": "Aufbau eines praxisorientierten AI-Portfolios mit Fokus auf AI Business Systems, Performance Marketing, AI Search, SaaS-/Micro-SaaS-Konzepte und digitale Produktentwicklung.",
+      "type": "Personal Brand"
+    },
+    {
+      "name": "AI Business Apps & SaaS-Prototypen",
+      "description": "Konzeption und Entwicklung mehrerer AI-gestützter Business-Apps, Web-Anwendungen sowie SaaS- und Micro-SaaS-Prototypen zur Automatisierung und Optimierung digitaler Geschäftsprozesse.",
+      "type": "AI Product Development"
+    }
+  ],
+  "skills": {
+    "core": [
+      "AI Business & Growth Systems",
+      "AI Search & SEO",
+      "Workflows & Agenten",
+      "Low-Code & Vibe Coding",
+      "SaaS & Micro-SaaS",
+      "Business & System Architecture",
+      "UX/UI",
+      "Conversion Optimization"
+    ],
+    "performanceMarketing": [
+      "Strategische Kampagnenplanung",
+      "Full-Funnel-Marketing",
+      "Google Ads (Search, Display, Video)",
+      "Meta Ads",
+      "KPI-basierte Analysen",
+      "Performance- & Conversion-Optimierung"
+    ],
+    "seoAndAnalysis": [
+      "Keyword-Recherche & Wettbewerbsanalyse",
+      "Suchintention & Content-Struktur",
+      "SEO, GEO/AEO, AI Visibility",
+      "Technische SEO-Grundlagen",
+      "Datenbasierte Optimierung"
+    ],
+    "aiAndAutomation": [
+      "KI-gestützte Workflows & Workflow Automation",
+      "AI-Agenten & Chatbots",
+      "Prompt Engineering",
+      "LLMs",
+      "Low-Code & Vibe Coding",
+      "API & MCP-Integrationen",
+      "Human-in-the-Loop (HITL)",
+      "EU AI Act & DSGVO, Bias"
+    ],
+    "webAndConversion": [
+      "WordPress",
+      "Website-Management",
+      "UX/UI & conversionorientierte Seitenstrukturen",
+      "Conversion-Optimierung",
+      "Landingpages"
+    ],
+    "aiProductDevelopment": [
+      "Konzeption digitaler Produkte",
+      "Web-Apps",
+      "Business-Tools",
+      "SaaS- und Micro-SaaS-Konzepte",
+      "AI-gestützte Produktentwicklung",
+      "Moderne Low-Code & Vibe-Coding-Plattformen"
+    ]
+  },
+  "tools": {
+    "aiAndLLMs": [
+      "ChatGPT & Codex",
+      "Claude & Cowork",
+      "Gemini",
+      "Perplexity",
+      "Gemini Notebook (NotebookLM)",
+      "Microsoft Copilot",
+      "LM Studio & Cursor (Basics)"
+    ],
+    "lowCodeAndAiDevelopment": [
+      "Base44",
+      "Rocket.New",
+      "Loveable",
+      "Figma Make",
+      "Squarespace",
+      "WordPress & Framer (Basics)",
+      "Shopify"
+    ],
+    "workflowAutomation": [
+      "Make",
+      "Zapier",
+      "n8n (Basics)",
+      "Cal.com",
+      "GitHub (Basics)",
+      "REST APIs"
+    ],
+    "performanceMarketing": [
+      "Google Ads & Google Merchant Center",
+      "Meta Ads Manager & Shopify Ads",
+      "LinkedIn Campaign Manager (Basics)"
+    ],
+    "seoAndAiSearch": [
+      "Google Search Console & Keyword Planner",
+      "Google Trends",
+      "Sistrix",
+      "Seobility",
+      "Semrush",
+      "Screaming Frog"
+    ],
+    "analyticsAndTracking": [
+      "Google Analytics 4 & Google Tag Manager",
+      "Looker Studio"
+    ],
+    "designAndContent": [
+      "Canva & Canva AI",
+      "Adobe: Photoshop | Illustrator | InDesign (Basics)",
+      "Leonardo AI",
+      "Midjourney",
+      "Suno AI",
+      "ElevenLabs",
+      "VEED",
+      "Kling",
+      "Sora",
+      "Google Veo",
+      "Claude Design"
+    ],
+    "cloudAndStorage": [
+      "fastio",
+      "Dropbox & WeTransfer",
+      "Google Drive & OneDrive"
+    ],
+    "productivity": [
+      "Google Workspace & Microsoft 365",
+      "Notion & Telegram",
+      "Trello & Asana"
+    ]
+  },
+  "languages": [
+    {
+      "language": "Deutsch",
+      "fluency": "Muttersprache (C1)"
+    },
+    {
+      "language": "Englisch",
+      "fluency": "B2"
+    }
+  ]
+}
