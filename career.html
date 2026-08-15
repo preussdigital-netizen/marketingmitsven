@@ -246,31 +246,51 @@
     </div>
   </section>
 
-  <!-- 3. ATS-TEXTFASSUNG (surface section) -->
+    <!-- 3. ATS-TEXTFASSUNG (surface section) -->
   <section class="section section-surface" id="ats-section">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow eyebrow-green">ATS-FREUNDLICH & MASCHINENLESBAR</span>
+        <span class="eyebrow eyebrow-green">ATS-FREUNDLICH &amp; MASCHINENLESBAR</span>
         <h2 class="h2">ATS-Optimierte Textfassung</h2>
-        <p>Speziell aufbereiteter Plain-Text für Applicant Tracking Systeme (ATS), Recruiter-Datenbanken und KI-Parsing-Pipelines.</p>
+        <p>basierend auf dem aktuellen Lebenslauf und den strukturierten CV-Daten.</p>
       </div>
 
-      <div class="card" style="background: var(--surface-2); border-color: var(--border-dark);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+      <div class="card" style="background: var(--surface-2); border-color: var(--border-dark); max-width: 800px; margin: 0 auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
           <div style="display: flex; align-items: center; gap: 8px;">
-            <span class="vis-badge vis-public">ATS Plain Text Format</span>
-            <span style="font-size: 12px; color: var(--text-muted-dark);">Monospaced UTF-8</span>
+            <span style="font-size: 12px; color: var(--text-muted-dark);">Plain Text · UTF-8 · ~2 KB</span>
           </div>
-          <button class="btn btn-dark" id="copyBtn" onclick="copyAtsText()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            Text in Zwischenablage kopieren
-          </button>
         </div>
 
-        <pre id="atsText" style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.8; color: var(--text-muted-dark); padding: 24px; background: var(--surface); border: 1px solid var(--border-dark); border-radius: var(--radius); overflow-x: auto;">======================================================================
+        <!-- Preview (compact, always visible) -->
+        <pre id="atsPreview" style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.8; color: var(--text-muted-dark); padding: 20px; background: var(--surface); border: 1px solid var(--border-dark); border-radius: var(--radius); overflow-x: auto; margin: 0;">======================================================================
   SVEN PREUSS
-  AI Business Systems Specialist &amp; Search Growth Operations
-  AI Products &amp; Micro SaaS · Workflow Automation
+  AI Business Systems Specialist & Search Growth Operations
+  AI Products & Micro SaaS · Workflow Automation
+======================================================================
+
+KONTAKT
+  E-Mail:      marketingmitsven@gmail.com
+  Telefon:     +49 151 123 68 919
+  Standort:    Tettnang, Baden-Württemberg, Germany
+  Remote:      Ja
+  Web:         https://marketingmitsven.de
+  LinkedIn:    https://www.linkedin.com/in/sven-preuss
+  GitHub:      https://github.com/preussdigital-netizen
+
+PROFIL
+  Ich bin ein ganzheitlicher Systemdenker an der Schnittstelle von KI, Full-Funnel-Marketing und AI-gestützten Business-Systemen. Unternehmen stehen heute vor der Herausforderung, KI sinnvoll in bestehende Prozesse zu integrieren und daraus echten Mehrwert zu schaffen. Genau an dieser Schnittstelle entwickle ich AI-gestützte Business-Systeme, die Strategie, Search, Automatisierung und digitale Produkte zu skalierbaren Lösungen verbinden. Mich interessiert nicht die Fassade eines Problems, sondern dessen Ursache.
+
+  ...
+  [Vollständiger Text — aufklappen]</pre>
+
+        <!-- Full text (hidden by default) -->
+        <details style="margin-top: 16px;">
+          <summary style="cursor: pointer; font-size: 13px; font-weight: 600; color: var(--accent-2); padding: 8px 0;">Vollständigen Text anzeigen</summary>
+          <pre id="atsText" style="white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.8; color: var(--text-muted-dark); padding: 20px; background: var(--surface); border: 1px solid var(--border-dark); border-radius: var(--radius); overflow-x: auto; margin-top: 12px;">======================================================================
+  SVEN PREUSS
+  AI Business Systems Specialist & Search Growth Operations
+  AI Products & Micro SaaS · Workflow Automation
 ======================================================================
 
 KONTAKT
@@ -288,13 +308,13 @@ PROFIL
   Während meiner Umschulung zum AI Powered Full Funnel Online Marketing Manager habe ich mich konsequent auf den Aufbau praxisnaher AI-Kompetenzen spezialisiert und parallel ein eigenes Projektportfolio entwickelt. Heute konzipiere und entwickle ich AI-Anwendungen, Automatisierungslösungen und digitale Produkte, mit denen ich neue Technologien unmittelbar in realen Anwendungsfällen erprobe und kontinuierlich weiterentwickle. Mein Ziel ist es, meine Erfahrung in einem innovativen Umfeld einzubringen, komplexe Herausforderungen gemeinsam zu lösen und Unternehmen dabei zu unterstützen, AI produktiv und wirtschaftlich sinnvoll einzusetzen.
 
 FOKUS
-  AI Business Systems, AI Products &amp; Micro SaaS, Workflow Automation, Agent Orchestration
-  Low-Code &amp; Vibe Coding, API Integration, AI Applications
-  SEO, AI Search &amp; GEO, Search Growth Operations, Performance Marketing, Search Analytics
+  AI Business Systems, AI Products & Micro SaaS, Workflow Automation, Agent Orchestration
+  Low-Code & Vibe Coding, API Integration, AI Applications
+  SEO, AI Search & GEO, Search Growth Operations, Performance Marketing, Search Analytics
 
 BERUFSERFAHRUNG
 ----------------------------------------------------------------------
-  AI Business Systems &amp; Digital Marketing Specialist
+  AI Business Systems & Digital Marketing Specialist
   Marketing mit Sven (MMS) · Tettnang / Remote
   06.2026 – HEUTE
   Entwicklung eines praxisorientierten Portfolios mit Fokus auf AI Business Systems, AI Search, Performance Marketing sowie SaaS- und Web-App-Konzepte.
@@ -310,7 +330,7 @@ BERUFSERFAHRUNG
     • Sicherstellung effizienter Material- und Warenflüsse
     • Unterstützung bei der Optimierung interner Arbeitsabläufe und Prozessstrukturen
 
-  Founder &amp; Business Operations Lead
+  Founder & Business Operations Lead
   FreiGeist Universe · DACH
   01.2012 – 01.2024
   Aufbau und Leitung einer internationalen Künstler-, Event- und Community-Plattform.
@@ -319,7 +339,7 @@ BERUFSERFAHRUNG
     • Planung und Umsetzung von Veranstaltungen im gesamten DACH-Raum
     • Führung externer Teams sowie Steuerung von Marketing- und Kommunikationsmaßnahmen
 
-  Freiberuflicher Künstler — Eventdekoration &amp; Bühnenbild
+  Freiberuflicher Künstler — Eventdekoration & Bühnenbild
   FreiGeist Decoration · DACH
   01.2013 – 01.2020
   Bühnenbilder, Eventdekoration, Raumgestaltungen, Lichtkonzepte für Festivals und Kulturveranstaltungen.
@@ -339,13 +359,13 @@ BILDUNG
   12.2025 – 07.2026
   1300 Unterrichtseinheiten
   Art: Umschulung
-  Schwerpunkte: Performance Marketing, SEO, GEO &amp; AI Search, Google Ads &amp; Social Media Advertising, Prompt Engineering &amp; LLMs, Workflow Automation, AI Business &amp; digitale Geschäftsmodelle, WordPress, Shopify &amp; Low-Code, Analytics, Tracking &amp; Conversion-Optimierung
+  Schwerpunkte: Performance Marketing, SEO, GEO & AI Search, Google Ads & Social Media Advertising, Prompt Engineering & LLMs, Workflow Automation, AI Business & digitale Geschäftsmodelle, WordPress, Shopify & Low-Code, Analytics, Tracking & Conversion-Optimierung
 
-  Airbrushdesigner (Fach- &amp; Intensivlehrgang)
+  Airbrushdesigner (Fach- & Intensivlehrgang)
   Handwerkskammer Ulm · Ulm, DE
   2017 – 2019
   288 Unterrichtseinheiten
-  Portraitdesign, Wandmalerei, Illustrationsmalerei &amp; Fotorealistic. Adobe-Grundkenntnisse (Photoshop, Illustrator, InDesign). Vertiefung der Farbkenntnisse.
+  Portraitdesign, Wandmalerei, Illustrationsmalerei & Fotorealistic. Adobe-Grundkenntnisse (Photoshop, Illustrator, InDesign). Vertiefung der Farbkenntnisse.
 
   Bäcker
   Handwerkskammer Ulm / Bäckerei Reck Beck · Tettnang, DE
@@ -364,7 +384,7 @@ ZERTIFIKATE
   Aussteller: KI-Campus / IBM · 2026
   Kategorie: Künstliche Intelligenz
 
-  Maschinelles Lernen &amp; Deep Learning mit IBM
+  Maschinelles Lernen & Deep Learning mit IBM
   Aussteller: KI-Campus / IBM · 2026
   Kategorie: Künstliche Intelligenz
 
@@ -388,7 +408,7 @@ ZERTIFIKATE
   Aussteller: KI-Campus / IBM · 2026
   Kategorie: Künstliche Intelligenz
 
-  Verantwortungsvolle KI Prompts beherrschen (mit Microsoft &amp; Founderz)
+  Verantwortungsvolle KI Prompts beherrschen (mit Microsoft & Founderz)
   Aussteller: Santander Open Academy · 2026
   Kategorie: Künstliche Intelligenz
 
@@ -406,23 +426,23 @@ ZERTIFIKATE
 
   Google Ads — Suchmaschinenwerbung, Displaywerbung, Videowerbung
   Aussteller: Google · 2026
-  Kategorie: Performance Marketing &amp; Analytics
+  Kategorie: Performance Marketing & Analytics
 
   Google Marketingplattform — Google Analytics, Campaign Manager 360
   Aussteller: Google · 2026
-  Kategorie: Performance Marketing &amp; Analytics
+  Kategorie: Performance Marketing & Analytics
 
   SEO Certified Professional
   Aussteller: BVDW · 2026
-  Kategorie: SEO &amp; AI-Search
+  Kategorie: SEO & AI-Search
 
-  Keyword-Recherche &amp; Wettbewerbsanalyse
+  Keyword-Recherche & Wettbewerbsanalyse
   Aussteller: Sistrix Academy · 2026
-  Kategorie: SEO &amp; AI-Search
+  Kategorie: SEO & AI-Search
 
   So erstellst du eine Website für Kleinunternehmen
   Aussteller: Semrush Academy · 2026
-  Kategorie: SEO &amp; AI-Search
+  Kategorie: SEO & AI-Search
 
   Visual Suite / Klickstarke Inhalte / Smarter Arbeiten mit KI
   Aussteller: Canva Design School · 2026
@@ -445,7 +465,7 @@ EIGENPROJEKTE
   Entwicklung einer Telegram-basierten Steuerzentrale zur Verwaltung und Ausführung mehrerer AI-Agenten, Workflows und Automatisierungen.
   Typ: AI Business Systems
 
-  AI Contentbank &amp; Workflow Automation
+  AI Contentbank & Workflow Automation
   Konzeption und Entwicklung einer webbasierten Contentbank zur Planung, Verwaltung und automatisierten Bereitstellung von Marketing-Content.
   Typ: Workflow Automation
 
@@ -453,7 +473,7 @@ EIGENPROJEKTE
   Entwicklung mehrerer AI-gestützter Business-Anwendungen mit Base44 unter Einsatz moderner LLMs, APIs, Datenbanken sowie Low-Code- und Vibe-Coding-Ansätzen.
   Typ: AI Product Development
 
-  AI Chatbots &amp; Voice Assistants
+  AI Chatbots & Voice Assistants
   Konzeption und Entwicklung intelligenter Chatbots und AI-Telefonassistenten inklusive Terminbuchung über Cal.com sowie E-Mail-Integration.
   Typ: AI Product Development
 
@@ -473,58 +493,58 @@ EIGENPROJEKTE
   Aufbau eines praxisorientierten AI-Portfolios mit Fokus auf AI Business Systems, Performance Marketing, AI Search, SaaS-/Micro-SaaS-Konzepte und digitale Produktentwicklung.
   Typ: Personal Brand
 
-  AI Business Apps &amp; SaaS-Prototypen
+  AI Business Apps & SaaS-Prototypen
   Konzeption und Entwicklung mehrerer AI-gestützter Business-Apps, Web-Anwendungen sowie SaaS- und Micro-SaaS-Prototypen zur Automatisierung und Optimierung digitaler Geschäftsprozesse.
   Typ: AI Product Development
 
 KOMPETENZEN
 ----------------------------------------------------------------------
   KERN KOMPETENZEN
-    AI Business &amp; Growth Systems, AI Search &amp; SEO, Workflows &amp; Agenten, Low-Code &amp; Vibe Coding, SaaS &amp; Micro-SaaS, Business &amp; System Architecture, UX/UI, Conversion Optimization
+    AI Business & Growth Systems, AI Search & SEO, Workflows & Agenten, Low-Code & Vibe Coding, SaaS & Micro-SaaS, Business & System Architecture, UX/UI, Conversion Optimization
 
   PERFORMANCE MARKETING
-    Strategische Kampagnenplanung, Full-Funnel-Marketing, Google Ads (Search, Display, Video), Meta Ads, KPI-basierte Analysen, Performance- &amp; Conversion-Optimierung
+    Strategische Kampagnenplanung, Full-Funnel-Marketing, Google Ads (Search, Display, Video), Meta Ads, KPI-basierte Analysen, Performance- & Conversion-Optimierung
 
-  SEO &amp; ANALYSE
-    Keyword-Recherche &amp; Wettbewerbsanalyse, Suchintention &amp; Content-Struktur, SEO, GEO/AEO, AI Visibility, Technische SEO-Grundlagen, Datenbasierte Optimierung
+  SEO & ANALYSE
+    Keyword-Recherche & Wettbewerbsanalyse, Suchintention & Content-Struktur, SEO, GEO/AEO, AI Visibility, Technische SEO-Grundlagen, Datenbasierte Optimierung
 
-  KI &amp; AUTOMATISIERUNG
-    KI-gestützte Workflows &amp; Workflow Automation, AI-Agenten &amp; Chatbots, Prompt Engineering, LLMs, Low-Code &amp; Vibe Coding, API &amp; MCP-Integrationen, Human-in-the-Loop (HITL), EU AI Act &amp; DSGVO, Bias
+  KI & AUTOMATISIERUNG
+    KI-gestützte Workflows & Workflow Automation, AI-Agenten & Chatbots, Prompt Engineering, LLMs, Low-Code & Vibe Coding, API & MCP-Integrationen, Human-in-the-Loop (HITL), EU AI Act & DSGVO, Bias
 
-  WEB &amp; CONVERSION
-    WordPress, Website-Management, UX/UI &amp; conversionorientierte Seitenstrukturen, Conversion-Optimierung, Landingpages
+  WEB & CONVERSION
+    WordPress, Website-Management, UX/UI & conversionorientierte Seitenstrukturen, Conversion-Optimierung, Landingpages
 
   AI PRODUKTENTWICKLUNG
-    Konzeption digitaler Produkte, Web-Apps, Business-Tools, SaaS- und Micro-SaaS-Konzepte, AI-gestützte Produktentwicklung, Moderne Low-Code &amp; Vibe-Coding-Plattformen
+    Konzeption digitaler Produkte, Web-Apps, Business-Tools, SaaS- und Micro-SaaS-Konzepte, AI-gestützte Produktentwicklung, Moderne Low-Code & Vibe-Coding-Plattformen
 
-TECHNOLOGIEN &amp; TOOLS
+TECHNOLOGIEN & TOOLS
 ----------------------------------------------------------------------
-  AI &amp; LLMs
-    ChatGPT &amp; Codex, Claude &amp; Cowork, Gemini, Perplexity, Gemini Notebook (NotebookLM), Microsoft Copilot, LM Studio &amp; Cursor (Basics)
+  AI & LLMs
+    ChatGPT & Codex, Claude & Cowork, Gemini, Perplexity, Gemini Notebook (NotebookLM), Microsoft Copilot, LM Studio & Cursor (Basics)
 
-  Low-Code &amp; AI Development
-    Base44, Rocket.New, Loveable, Figma Make, Squarespace, WordPress &amp; Framer (Basics), Shopify
+  Low-Code & AI Development
+    Base44, Rocket.New, Loveable, Figma Make, Squarespace, WordPress & Framer (Basics), Shopify
 
   Workflow Automation
     Make, Zapier, n8n (Basics), Cal.com, GitHub (Basics), REST APIs
 
   Performance Marketing
-    Google Ads &amp; Google Merchant Center, Meta Ads Manager &amp; Shopify Ads, LinkedIn Campaign Manager (Basics)
+    Google Ads & Google Merchant Center, Meta Ads Manager & Shopify Ads, LinkedIn Campaign Manager (Basics)
 
-  SEO &amp; AI Search
-    Google Search Console &amp; Keyword Planner, Google Trends, Sistrix, Seobility, Semrush, Screaming Frog
+  SEO & AI Search
+    Google Search Console & Keyword Planner, Google Trends, Sistrix, Seobility, Semrush, Screaming Frog
 
-  Analytics &amp; Tracking
-    Google Analytics 4 &amp; Google Tag Manager, Looker Studio
+  Analytics & Tracking
+    Google Analytics 4 & Google Tag Manager, Looker Studio
 
-  Design &amp; Content
-    Canva &amp; Canva AI, Adobe: Photoshop | Illustrator | InDesign (Basics), Leonardo AI, Midjourney, Suno AI, ElevenLabs, VEED, Kling, Sora, Google Veo, Claude Design
+  Design & Content
+    Canva & Canva AI, Adobe: Photoshop | Illustrator | InDesign (Basics), Leonardo AI, Midjourney, Suno AI, ElevenLabs, VEED, Kling, Sora, Google Veo, Claude Design
 
-  Cloud &amp; Datenspeicherung
-    fastio, Dropbox &amp; WeTransfer, Google Drive &amp; OneDrive
+  Cloud & Datenspeicherung
+    fastio, Dropbox & WeTransfer, Google Drive & OneDrive
 
-  Produktivität &amp; Zusammenarbeit
-    Google Workspace &amp; Microsoft 365, Notion &amp; Telegram, Trello &amp; Asana
+  Produktivität & Zusammenarbeit
+    Google Workspace & Microsoft 365, Notion & Telegram, Trello & Asana
 
 SPRACHEN
 ----------------------------------------------------------------------
@@ -535,6 +555,19 @@ SPRACHEN
   Datenquelle: resume.json (Single Source of Truth)
   Stand: August 2026
 ======================================================================</pre>
+        </details>
+
+        <!-- Action buttons -->
+        <div style="display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap;">
+          <a href="assets/resume.txt" download class="btn btn-dark" style="font-size: 13px; padding: 10px 20px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            ATS/TXT herunterladen
+          </a>
+          <button class="btn btn-ghost" id="copyBtn" onclick="copyAtsText()" style="font-size: 13px; padding: 10px 20px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:6px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Text kopieren
+          </button>
+        </div>
       </div>
     </div>
   </section>
