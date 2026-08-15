@@ -231,10 +231,10 @@ KOMPETENZEN
 TECHNOLOGIEN & TOOLS
 ----------------------------------------------------------------------
   AI & LLMs
-    ChatGPT & Codex, Claude & Cowork, Gemini, Perplexity, Gemini Notebook (NotebookLM), Microsoft Copilot, LM Studio & Cursor (Basics)
+    ChatGPT & Codex, Claude & Cowork, Gemini, Perplexity, NotebookLM, Microsoft Copilot, LM Studio & Cursor (Basics)
 
   Low-Code & AI Development
-    Base44, Rocket.New, Loveable, Figma Make, Squarespace, WordPress & Framer (Basics), Shopify
+    Base44, Rocket.New, Lovable, Figma Make, Squarespace, WordPress & Framer (Basics), Shopify
 
   Workflow Automation
     Make, Zapier, n8n (Basics), Cal.com, GitHub (Basics), REST APIs
