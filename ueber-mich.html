@@ -15,197 +15,6 @@
   <link rel="stylesheet" href="assets/style.css">
 
   <!-- Custom Page Enhancements -->
-  <style>
-    .portrait-wrapper {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--border-dark);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    }
-    .portrait-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-    .portrait-wrapper:hover img {
-      transform: scale(1.02);
-    }
-    .portrait-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(10,10,11,0.95), transparent);
-      padding: 24px;
-      color: #fff;
-    }
-    .portrait-overlay p {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-size: 15px;
-      color: rgba(255,255,255,0.9);
-      line-height: 1.5;
-    }
-
-    .kurzprofil-box {
-      background: var(--surface);
-      border: 1px solid var(--border-dark);
-      border-radius: var(--radius);
-      padding: 24px 28px;
-      margin-top: 32px;
-    }
-    .kurzprofil-box h4 {
-      color: var(--accent-2);
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 16px;
-    }
-    .kurzprofil-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .kurzprofil-list li {
-      color: var(--text-muted-dark);
-      font-size: 13px;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      line-height: 1.5;
-    }
-    .kurzprofil-list li::before {
-      content: "✓";
-      color: var(--accent-2);
-      font-weight: 700;
-    }
-
-    .story-quote {
-      position: relative;
-      margin: 28px 0;
-      padding: 20px 24px;
-      background: var(--surface-2);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    }
-    .story-quote p {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 16px;
-      font-style: italic;
-      color: rgba(255, 255, 255, 0.95);
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    .story-highlight {
-      margin-top: 32px;
-      padding: 24px;
-      background: rgba(6, 214, 160, 0.08);
-      border-left: 3px solid var(--accent-2);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    }
-    .story-highlight p.label-sm {
-      color: var(--accent-2);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-    .story-highlight p.highlight-text {
-      color: #fff;
-      font-size: 15px;
-      font-weight: 600;
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    .story-sidebar {
-      position: sticky;
-      top: calc(var(--nav-h) + 24px);
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-    .story-img-card {
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid var(--border-dark);
-      background: var(--surface);
-    }
-    .story-img-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .story-img-caption {
-      padding: 14px 18px;
-      background: var(--surface);
-      color: var(--text-faint);
-      font-size: 12px;
-      border-top: 1px solid var(--border-dark-2);
-    }
-
-    .timeline-card {
-      background: var(--surface);
-      border: 1px solid var(--border-dark);
-      border-radius: var(--radius);
-      padding: 24px;
-    }
-    .timeline-card-header {
-      color: var(--accent-2);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 20px;
-    }
-
-    .wert-card {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-      transition: all 0.25s ease;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .wert-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
-      border-color: rgba(124,58,237,0.3);
-    }
-    .wert-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 12px;
-      background: rgba(124, 58, 237, 0.08);
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .wert-card h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-    .wert-card p {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.75;
-      margin: 0;
-    }
-  </style>
 
   <!-- JSON-LD Structured Data (schema.org Person) -->
   <script type="application/ld+json">
@@ -310,10 +119,10 @@
   <!-- 2. PORTRAIT + KURZPROFIL (dark section) -->
   <section class="section section-dark">
     <div class="container">
-      <div class="grid-2" style="align-items: start; gap: 48px;">
+      <div class="ueber-grid" style="align-items: start; gap: 48px;">
         
         <!-- Links: Portrait-Foto -->
-        <div class="portrait-wrapper">
+        <div class="portrait-wrapper" style="max-width: 480px;">
           <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/45d73a16f_00167klein.jpg" alt="Sven Preuß Portrait">
           <div class="portrait-overlay">
             <p>„Klarheit statt Fassade. Haltung statt Hype. Relevanz statt Lautstärke.“</p>
@@ -372,7 +181,7 @@
   <!-- 3. MEINE GESCHICHTE (surface/dark section) -->
   <section class="section section-surface">
     <div class="container">
-      <div class="grid-2" style="align-items: start; gap: 48px;">
+      <div class="ueber-grid" style="align-items: start; gap: 48px;">
         
         <!-- Story Text Links -->
         <div>
@@ -633,7 +442,7 @@
         <a href="mailto:marketingmitsven@gmail.com">marketingmitsven@gmail.com</a>
         <a href="tel:+4915112368919">+49 151 123 68 919</a>
         <a href="https://linkedin.com/in/sven-preuss" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-        <a href="#">Tettnang (Bodensee)</a>
+        <span>Tettnang (Bodensee)</span>
       </div>
     </div>
 
