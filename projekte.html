@@ -121,7 +121,7 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
       <a href="kontakt.html" class="nav-cta">Kontakt</a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Menu öffnen">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menü öffnen">
         <span></span>
         <span></span>
         <span></span>
@@ -156,7 +156,7 @@
   </header>
 
   <!-- CASES GRID -->
-  <section class="section section-dark">
+  <section class="section section-dark section-tech-overlay" id="projects">
     <div class="container">
       <div class="grid-2">
 
@@ -489,7 +489,7 @@
           <div class="name">SVEN PREUSS</div>
           <div class="sub">MARKETING MIT SVEN</div>
         </div>
-        <p>AI Business Systems Specialist &amp; Search Growth Operations. Verbindung von SEO, GEO, AEO, Paid Ads und KI-gestützter Automatisierung zu messbarem Wachstum.</p>
+        <p>AI Business Systems Specialist &amp; Search Growth Operations. Verbindung von SEO, GEO, AEO, Paid Ads und KI-gestützter Automatisierung zu systematischem Wachstum.</p>
       </div>
       <div class="footer-col">
         <h5>Navigation</h5>
@@ -511,6 +511,7 @@
         <a href="https://linkedin.com/in/sven-preuss" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/preussdigital-netizen" target="_blank" rel="noopener">GitHub</a>
         <a href="kontakt.html">Impressum</a>
+        <a href="kontakt.html">Datenschutz</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -518,5 +519,20 @@
     </div>
   </footer>
 
+
+  <!-- JavaScript for Hamburger Menu Toggle -->
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+    }
+  </script>
+
+  <!-- Sven Guide -->
+  <script src="assets/sven-guide.js" defer></script>
 </body>
 </html>
