@@ -79,6 +79,7 @@ body{
   gap:12px;
 }
 .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.nav-brand-logo{width:30px;height:30px;object-fit:contain;border-radius:6px;flex-shrink:0;opacity:0.9}
 .nav-brand-name{display:flex;flex-direction:column;line-height:1.1}
 .nav-brand-name .primary{color:#fff;font-weight:700;font-size:13px;letter-spacing:0.3px}
 .nav-brand-name .secondary{color:var(--accent-2);font-size:8px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
@@ -483,6 +484,7 @@ h1,h2,h3,h4{line-height:1.15;font-weight:700}
   .nav-links a{padding:6px 8px;font-size:11px}
   .nav-brand-name .primary{font-size:12px}
   .nav-brand-name .secondary{font-size:7px}
+  .nav-brand-logo{width:26px;height:26px}
 }
 
 /* Tablet — 900px and below */
@@ -546,6 +548,7 @@ h1,h2,h3,h4{line-height:1.15;font-weight:700}
 @media(max-width:380px){
   .nav-brand-name .primary{font-size:11px}
   .nav-brand-name .secondary{font-size:7px}
+  .nav-brand-logo{width:24px;height:24px}
   .hero-title{font-size:28px}
   .hero-subtitle{font-size:13.5px}
   .capability-bar .cap-item{font-size:12px;padding:10px 12px}
