@@ -1,842 +1,399 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Marketing mit Sven – Klar. Praxisnah. Mit Haltung.</title>
-<meta name="description" content="Marketing mit Sven – Persönliche Marke und Portfolio von Sven Preuß. Fokus auf KI, Marketing, Performance und verständliche Inhalte mit Substanz."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet"/>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Person",
-  "name":"Sven Preuß",
-  "jobTitle":"Full Funnel Performance Marketing Manager",
-  "brand":{"@type":"Brand","name":"Marketing mit Sven"},
-  "url":"https://marketingmitsven.de",
-  "email":"marketingmitsven@gmail.com",
-  "sameAs":["https://linkedin.com/in/preussdigital/"],
-  "knowsAbout":["SEO","GEO","KI","Performance Marketing","Content Marketing","Google Ads"]
-}
-</script>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --black:#0d0d0d;
-  --dark:#1a1a1a;
-  --mid:#2a2a2a;
-  --accent:#7c3aed;
-  --accent2:#06d6a0;
-  --grad:linear-gradient(135deg,#7c3aed,#06d6a0);
-  --cream:#fafaf8;
-  --text:#1a1a1a;
-  --muted:#666;
-  --border:#e5e5e5;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
-.serif{font-family:'Playfair Display',serif}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,13,13,0.95);backdrop-filter:blur(12px);padding:0 24px;border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nav-logo img{height:36px;width:auto}
-.nav-logo span{color:white;font-weight:700;font-size:14px;letter-spacing:0.5px}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:0.3px;transition:color 0.2s}
-.nav-links a:hover{color:white}
-.nav-cta{background:var(--grad);color:white;padding:8px 20px;font-size:12px;font-weight:700;text-decoration:none;letter-spacing:1px;border-radius:0}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.hamburger span{display:block;width:22px;height:2px;background:white;transition:all 0.3s}
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--dark);z-index:99;padding:24px;flex-direction:column;gap:16px}
-.mobile-menu a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:15px;font-weight:500;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
-.mobile-menu.open{display:flex}
-
-/* SECTIONS */
-section{padding:96px 24px}
-.container{max-width:1100px;margin:0 auto}
-.container-sm{max-width:780px;margin:0 auto}
-.label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:16px}
-.label-light{color:var(--accent2)}
-h1,h2,h3{line-height:1.15}
-.divider{width:48px;height:3px;background:var(--grad);margin:20px 0 32px}
-.divider-center{width:48px;height:3px;background:var(--grad);margin:20px auto 32px}
-.btn{display:inline-block;padding:13px 28px;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:1px;transition:all 0.2s;cursor:pointer;border:none}
-.btn-primary{background:var(--grad);color:white}
-.btn-dark{background:var(--dark);color:white}
-.btn-outline{background:transparent;color:var(--dark);border:2px solid var(--dark)}
-.btn:hover{opacity:0.88;transform:translateY(-1px)}
-.tag{display:inline-block;background:#f0f0f0;color:#444;font-size:11px;font-weight:600;padding:5px 12px;border-radius:0;margin:3px}
-
-/* HERO */
-#home{padding:0;min-height:100vh;display:flex;align-items:center;background:var(--dark);position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(124,58,237,0.15) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(6,214,160,0.08) 0%,transparent 50%)}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;opacity:0.5}
-.hero-inner{max-width:1100px;margin:0 auto;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:center;position:relative;z-index:1}
-.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:24px}
-.hero-dot{width:8px;height:8px;border-radius:50%;background:var(--grad)}
-.hero-eyebrow span{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5)}
-.hero-h1{font-size:clamp(38px,5.5vw,68px);font-weight:900;color:white;line-height:1.05;margin-bottom:12px}
-.hero-h1 .grad-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-sub{font-size:clamp(14px,1.8vw,17px);color:rgba(255,255,255,0.55);line-height:1.75;max-width:500px;margin-bottom:16px}
-.hero-tagline{font-size:15px;color:rgba(255,255,255,0.35);margin-bottom:40px;font-style:italic}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.hero-img-wrap{position:relative}
-.hero-img-wrap img{width:100%;display:block;filter:grayscale(10%)}
-.hero-img-badge{position:absolute;bottom:-16px;left:-16px;background:var(--dark);border:1px solid rgba(255,255,255,0.1);padding:14px 18px}
-.hero-img-badge p{color:white;font-weight:700;font-size:13px;margin:0}
-.hero-img-badge span{font-size:10px;color:var(--accent2);letter-spacing:1px;font-weight:600}
-.hero-stats{display:flex;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.08)}
-.hero-stat p{color:white;font-weight:900;font-size:24px;margin-bottom:2px}
-.hero-stat span{color:rgba(255,255,255,0.4);font-size:11px;letter-spacing:1px}
-
-/* ABOUT */
-#about{background:var(--cream)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.about-img{position:relative}
-.about-img img{width:100%;display:block}
-.about-img-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(13,13,13,0.85));padding:32px 24px 24px}
-.about-img-overlay p{color:white;font-size:13px;font-style:italic;margin:0}
-.about-kurzprofil{margin-top:32px;background:white;padding:24px;border-left:3px solid var(--accent)}
-.about-kurzprofil h4{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-.kurzprofil-item{display:flex;gap:10px;margin-bottom:10px;font-size:13px;color:#444;line-height:1.6}
-.kurzprofil-item::before{content:"→";color:var(--accent);font-weight:700;flex-shrink:0}
-
-/* GESCHICHTE */
-#geschichte{background:var(--dark);color:white}
-#geschichte h2{color:white}
-#geschichte .label{color:var(--accent2)}
-.story-layout{display:grid;grid-template-columns:1fr 360px;gap:64px;align-items:start}
-.story-text p{color:rgba(255,255,255,0.75);font-size:15px;line-height:1.95;margin-bottom:20px}
-.story-text strong{color:white}
-.story-quote{background:rgba(124,58,237,0.12);border-left:3px solid var(--accent);padding:24px 28px;margin:32px 0}
-.story-quote p{color:rgba(255,255,255,0.85);font-size:15px;line-height:1.85;font-style:italic}
-.story-img img{width:100%;display:block;opacity:0.85}
-.story-img-caption{background:rgba(6,214,160,0.1);border-top:2px solid var(--accent2);padding:14px 16px;margin-top:0}
-.story-img-caption p{color:rgba(255,255,255,0.6);font-size:12px;font-style:italic}
-
-/* WOFÜR MMS STEHT */
-#wofuer{background:var(--cream)}
-.pillars{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px}
-.pillar{background:white;padding:36px 32px;border-top:3px solid transparent;transition:border-color 0.2s}
-.pillar:hover{border-color:var(--accent)}
-.pillar-icon{font-size:28px;margin-bottom:16px;display:block}
-.pillar h3{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:12px}
-.pillar p{font-size:13px;color:var(--muted);line-height:1.75}
-.arbeitsweise{background:var(--dark);padding:48px;margin-top:2px;grid-column:1/-1}
-.arbeitsweise h3{color:white;font-size:18px;font-weight:700;margin-bottom:20px}
-.aw-steps{display:flex;gap:0;align-items:center;flex-wrap:wrap}
-.aw-step{color:white;font-weight:600;font-size:13px;padding:10px 20px;background:rgba(255,255,255,0.06);letter-spacing:0.5px}
-.aw-arrow{color:var(--accent2);font-weight:700;padding:0 8px;font-size:16px}
-.aw-text{color:rgba(255,255,255,0.55);font-size:13px;line-height:1.75;margin-top:20px;max-width:600px}
-
-/* PROJEKTE / CASES */
-#projekte{background:var(--dark);color:white}
-#projekte h2{color:white}
-#projekte .label{color:var(--accent2)}
-#projekte .cert-intro{color:rgba(255,255,255,0.6)}
-.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px}
-.case-card{background:#1e1e1e;padding:32px 28px;position:relative;overflow:hidden;border-top:3px solid transparent;transition:all 0.2s}
-.case-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
-.case-card:hover::after{transform:scaleX(1)}
-.case-card:hover{transform:translateY(-3px)}
-.case-feature{grid-column:1/-1;background:linear-gradient(135deg,rgba(124,58,237,0.18),rgba(6,214,160,0.10));border:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
-.case-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.case-num{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px}
-.case-type{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent2);background:rgba(6,214,160,0.12);padding:4px 10px}
-.case-card h3{color:white;font-size:20px;font-weight:700;margin-bottom:6px;font-family:'Playfair Display',serif}
-.case-sub{color:rgba(255,255,255,0.4);font-size:12px;letter-spacing:0.5px;margin-bottom:14px}
-.case-card p{color:rgba(255,255,255,0.6);font-size:13px;line-height:1.75;margin-bottom:16px}
-.case-tags{display:flex;flex-wrap:wrap;gap:6px}
-.case-tag{font-size:11px;font-weight:600;color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.06);padding:5px 11px}
-.case-score{display:inline-flex;align-items:center;gap:7px;background:rgba(6,214,160,0.14);color:var(--accent2);font-size:13px;font-weight:700;padding:8px 16px;letter-spacing:0.5px;white-space:nowrap}
-.case-note{margin-top:32px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:20px 24px;font-size:13px;color:rgba(255,255,255,0.45);font-style:italic;text-align:center}
-
-/* ZERTIFIKATE */
-#zertifikate{background:white}
-.cert-intro{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:48px;max-width:680px}
-.cert-section-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:40px}
-.cert-card{background:var(--cream);padding:20px 18px;border-left:3px solid var(--accent);transition:all 0.2s}
-.cert-card:hover{background:#f5f0ff;transform:translateY(-2px)}
-.cert-card .org{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-.cert-card .name{font-size:13px;font-weight:600;color:var(--dark);line-height:1.4}
-.cert-card .score{font-size:11px;color:var(--accent2);font-weight:700;margin-top:6px}
-.certs-wip{background:#fff9f0;border:1px solid #ffe4b5;padding:20px 24px}
-.certs-wip h4{font-size:11px;font-weight:700;letter-spacing:2px;color:#e08000;margin-bottom:12px}
-.wip-item{font-size:13px;color:#555;margin-bottom:6px;padding-left:16px;position:relative}
-.wip-item::before{content:"⏳";position:absolute;left:-4px;font-size:11px}
-.cert-note{background:var(--dark);color:rgba(255,255,255,0.7);padding:24px 28px;margin-top:32px;font-size:14px;line-height:1.8;border-left:3px solid var(--accent2)}
-.sw-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-
-/* VISION MISSION */
-#vision{background:var(--dark)}
-#vision .label{color:var(--accent2)}
-.vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:48px}
-.vm-card{padding:48px 40px}
-.vm-card.mission{background:rgba(124,58,237,0.12);border-top:3px solid var(--accent)}
-.vm-card.vision-card{background:rgba(6,214,160,0.08);border-top:3px solid var(--accent2)}
-.vm-card h3{color:white;font-size:22px;font-weight:700;margin-bottom:20px;font-family:'Playfair Display',serif}
-.vm-card p{color:rgba(255,255,255,0.7);font-size:14px;line-height:1.9;margin-bottom:16px}
-.vm-manifesto{background:var(--mid);padding:40px;margin-top:3px;text-align:center}
-.vm-manifesto-items{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:24px}
-.vm-m-item{color:rgba(255,255,255,0.5);font-size:14px;font-weight:500;position:relative}
-.vm-m-item strong{color:white;display:block;font-size:16px;font-weight:700;margin-bottom:4px}
-.vm-m-sep{color:rgba(255,255,255,0.15);font-size:28px;align-self:center}
-
-/* KONTAKT */
-#kontakt{background:var(--cream)}
-.kontakt-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.kontakt-text p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:20px}
-.kontakt-cards{display:flex;flex-direction:column;gap:12px;margin-top:32px}
-.kontakt-card{background:white;padding:20px 22px;display:flex;align-items:center;gap:16px;text-decoration:none;color:var(--dark);transition:all 0.2s;border:1px solid var(--border)}
-.kontakt-card:hover{border-color:var(--accent);transform:translateX(4px)}
-.kontakt-card-icon{width:40px;height:40px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.kontakt-card-text strong{display:block;font-size:13px;font-weight:700;margin-bottom:2px}
-.kontakt-card-text span{font-size:12px;color:var(--muted)}
-.kontakt-form{background:white;padding:40px;border:1px solid var(--border)}
-.kontakt-form h3{font-size:16px;font-weight:700;margin-bottom:24px;color:var(--dark)}
-.form-group{margin-bottom:20px}
-.form-group label{display:block;font-size:12px;font-weight:600;letter-spacing:0.5px;color:var(--muted);margin-bottom:8px;text-transform:uppercase}
-.form-group input,.form-group textarea{width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--cream);font-family:'Inter',sans-serif;font-size:14px;color:var(--dark);outline:none;transition:border-color 0.2s}
-.form-group input:focus,.form-group textarea:focus{border-color:var(--accent)}
-.form-group textarea{resize:vertical;min-height:120px}
-.form-success{display:none;background:#e8fff5;border:1px solid var(--accent2);padding:16px;color:#00865a;font-size:13px;font-weight:600;margin-top:16px}
-
-/* FOOTER */
-footer{background:var(--black);padding:48px 24px 32px;color:rgba(255,255,255,0.5)}
-.footer-inner{max-width:1100px;margin:0 auto}
-.footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;gap:24px}
-.footer-logo{display:flex;align-items:center;gap:10px}
-.footer-logo img{height:40px}
-.footer-logo-text p{color:white;font-weight:700;font-size:14px;margin-bottom:2px}
-.footer-logo-text span{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px}
-.footer-links{display:flex;gap:24px;flex-wrap:wrap}
-.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;transition:color 0.2s}
-.footer-links a:hover{color:white}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.footer-bottom p{font-size:12px}
-.footer-tagline{font-size:13px;color:rgba(255,255,255,0.3);font-style:italic}
-
-/* TEASER CARDS */
-.teaser-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px}
-.teaser-card{background:white;padding:32px 28px;position:relative;overflow:hidden;cursor:pointer;text-decoration:none;color:var(--dark);display:block;transition:all 0.2s}
-.teaser-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
-.teaser-card:hover::after{transform:scaleX(1)}
-.teaser-card:hover{transform:translateY(-3px)}
-.teaser-number{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;margin-bottom:16px;display:block}
-.teaser-card h3{font-size:16px;font-weight:700;margin-bottom:10px}
-.teaser-card p{font-size:13px;color:var(--muted);line-height:1.65}
-.teaser-card .arrow{color:var(--accent);font-weight:700;font-size:16px;margin-top:16px;display:block}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero-inner,.about-grid,.story-layout,.vm-grid,.kontakt-grid,.cases-grid,.case-feature{grid-template-columns:1fr}
-  .teaser-grid{grid-template-columns:1fr 1fr}
-  .pillars{grid-template-columns:1fr}
-  .arbeitsweise{grid-column:1}
-  .hero-inner{padding-top:100px}
-  .story-img{order:-1}
-  .nav-links,.nav-cta{display:none}
-  .hamburger{display:flex}
-  .hero-stats{flex-wrap:wrap;gap:20px}
-  .vm-manifesto-items{gap:24px}
-  .footer-top{flex-direction:column}
-}
-@media(max-width:600px){
-  section{padding:64px 20px}
-  .teaser-grid{grid-template-columns:1fr}
-  .certs-grid{grid-template-columns:1fr 1fr}
-  .aw-steps{gap:6px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sven Preuß | AI Business Systems Specialist — Marketing mit Sven</title>
+  <meta name="description" content="Portfolio von Sven Preuß — AI Business Systems Specialist & Search Growth Operations. Marketing mit Sven (MMS).">
+  
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Shared Design System CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+  
+  <!-- JSON-LD Structured Data (Schema.org Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sven Preuß",
+    "jobTitle": "AI Business Systems Specialist & Search Growth Operations",
+    "brand": {
+      "@type": "Brand",
+      "name": "Marketing mit Sven (MMS)"
+    },
+    "url": "https://marketingmitsven.de",
+    "email": "marketingmitsven@gmail.com",
+    "telephone": "+49 151 123 68 919",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tettnang",
+      "addressRegion": "Baden-Württemberg",
+      "addressCountry": "DE"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/sven-preuss",
+      "https://github.com/preussdigital-netizen"
+    ],
+    "knowsAbout": [
+      "SEO",
+      "GEO",
+      "AEO",
+      "Performance Marketing",
+      "Google Ads",
+      "Meta Ads",
+      "Google Analytics",
+      "KI-Automatisierung",
+      "Prompt Engineering",
+      "Base44 App Development",
+      "KPI-Management",
+      "Funnel-Optimierung"
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="#home">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS Logo"/>
-      <span>Marketing mit Sven</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#about">Über mich</a></li>
-      <li><a href="#geschichte">Meine Geschichte</a></li>
-      <li><a href="#wofuer">Wofür MMS steht</a></li>
-      <li><a href="#projekte">Projekte</a></li>
-      <li><a href="#zertifikate">Zertifikate</a></li>
-      <li><a href="#vision">Vision & Mission</a></li>
-    </ul>
-    <a href="#kontakt" class="nav-cta btn">KONTAKT</a>
-    <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menü">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="mobile-menu">
-  <a href="#about" onclick="this.parentElement.classList.remove('open')">Über mich</a>
-  <a href="#geschichte" onclick="this.parentElement.classList.remove('open')">Meine Geschichte</a>
-  <a href="#wofuer" onclick="this.parentElement.classList.remove('open')">Wofür MMS steht</a>
-  <a href="#projekte" onclick="this.parentElement.classList.remove('open')">Projekte / Cases</a>
-  <a href="#zertifikate" onclick="this.parentElement.classList.remove('open')">Weiterbildungen & Zertifikate</a>
-  <a href="#vision" onclick="this.parentElement.classList.remove('open')">Vision & Mission</a>
-  <a href="#kontakt" onclick="this.parentElement.classList.remove('open')">Kontakt</a>
-</div>
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" class="nav-brand-logo" alt="Marketing mit Sven Logo">
+        <div class="nav-brand-name">
+          <span class="primary">SVEN PREUSS</span>
+          <span class="secondary">MARKETING MIT SVEN</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Start</a></li>
+        <li><a href="guide.html">Guide</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="projekte.html">Projekte</a></li>
+        <li><a href="ai-business-systems.html">AI Business Systems</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="recruiter-mode.html">Recruiter</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="kontakt.html" class="nav-cta">Kontakt</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="active">Start</a>
+      <a href="guide.html">Guide</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="expertise.html">Expertise</a>
+      <a href="projekte.html">Projekte</a>
+      <a href="ai-business-systems.html">AI Business Systems</a>
+      <a href="career.html">Career</a>
+      <a href="recruiter-mode.html">Recruiter</a>
+            <a href="kontakt.html">Kontakt</a>
+    </div>
+  </header>
 
-<!-- HERO -->
-<section id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-eyebrow">
-        <div class="hero-dot"></div>
-        <span>Personal Brand · Portfolio · Sven Preuß</span>
+  <main>
+        <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section section-dark">
+      <!-- Decorative Circuit Background -->
+      <svg class="hero-circuit" aria-hidden="true" viewBox="0 0 1200 800" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.15;">
+        <defs>
+          <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#06d6a0" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#06d6a0" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- Horizontal lines -->
+        <line x1="0" y1="120" x2="1200" y2="120" stroke="#7c3aed" stroke-width="0.5" opacity="0.3"/>
+        <line x1="0" y1="340" x2="1200" y2="340" stroke="#06d6a0" stroke-width="0.5" opacity="0.2"/>
+        <line x1="0" y1="560" x2="1200" y2="560" stroke="#7c3aed" stroke-width="0.5" opacity="0.25"/>
+        <line x1="0" y1="680" x2="1200" y2="680" stroke="#06d6a0" stroke-width="0.5" opacity="0.2"/>
+        <!-- Vertical lines -->
+        <line x1="200" y1="0" x2="200" y2="800" stroke="#7c3aed" stroke-width="0.5" opacity="0.2"/>
+        <line x1="600" y1="0" x2="600" y2="800" stroke="#06d6a0" stroke-width="0.5" opacity="0.15"/>
+        <line x1="900" y1="0" x2="900" y2="800" stroke="#7c3aed" stroke-width="0.5" opacity="0.2"/>
+        <!-- Nodes -->
+        <circle cx="200" cy="120" r="3" fill="#7c3aed" opacity="0.6"/>
+        <circle cx="600" cy="340" r="3" fill="#06d6a0" opacity="0.5"/>
+        <circle cx="900" cy="120" r="3" fill="#7c3aed" opacity="0.5"/>
+        <circle cx="200" cy="560" r="3" fill="#06d6a0" opacity="0.5"/>
+        <circle cx="900" cy="680" r="3" fill="#7c3aed" opacity="0.5"/>
+        <circle cx="600" cy="560" r="3" fill="#7c3aed" opacity="0.4"/>
+        <!-- Glow nodes -->
+        <circle cx="200" cy="120" r="30" fill="url(#glow1)"/>
+        <circle cx="900" cy="680" r="25" fill="url(#glow1)"/>
+        <circle cx="600" cy="340" r="20" fill="url(#glow2)"/>
+        <!-- Connection paths -->
+        <path d="M200,120 L600,340 L900,680" stroke="#7c3aed" stroke-width="0.5" fill="none" opacity="0.15" stroke-dasharray="4,4"/>
+        <path d="M200,560 L600,340 L900,120" stroke="#06d6a0" stroke-width="0.5" fill="none" opacity="0.12" stroke-dasharray="4,4"/>
+      </svg>
+      <!-- Subtle Background Glows -->
+      <div style="position: absolute; top: 10%; right: 6%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(124,58,237,0.14) 0%, rgba(10,10,11,0) 70%); pointer-events: none;"></div>
+      <div style="position: absolute; bottom: 6%; left: 3%; width: 320px; height: 320px; background: radial-gradient(circle, rgba(6,214,160,0.10) 0%, rgba(10,10,11,0) 70%); pointer-events: none;"></div>
+
+      <div class="container" style="width: 100%; position: relative; z-index: 1;">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <span class="hero-eyebrow">AI Business Systems Specialist · SEO · GEO · AEO · KI</span>
+            <h1 class="hero-title">Sven <span class="grad-text">Preuß</span></h1>
+            <p class="hero-subtitle">
+              Ich verbinde KI, Search, Performance Marketing und Systemdenken zu digitalen Systemen, die Prozesse vereinfachen, Entscheidungen verbessern und systematische Wirkung schaffen.
+            </p>
+
+            <div class="capability-bar">
+              <div class="cap-item"><span class="cap-dot"></span>AI Business Systems</div>
+              <div class="cap-item"><span class="cap-dot"></span>Search &amp; Growth</div>
+              <div class="cap-item"><span class="cap-dot"></span>Performance Marketing</div>
+              <div class="cap-item"><span class="cap-dot"></span>Low-Code &amp; AI Products</div>
+            </div>
+
+            <div class="hero-cta">
+              <a href="projekte.html" class="btn btn-primary">
+                <span>Projekte ansehen</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="recruiter-mode.html" class="btn btn-outline-light">
+                <span>Recruiter Mode</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-portrait">
+            <div class="hero-portrait-glow"></div>
+            <div class="hero-portrait-frame">
+              <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/404e2414e_00177.jpg" alt="Sven Preuß — AI Business Systems Specialist" style="width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 4/5;">
+              <div class="hero-portrait-badge">
+                <div>
+                  <div class="name">Sven Preuß</div>
+                  <div class="role">Marketing &amp; KI-Systeme</div>
+                </div>
+                <span class="location"><span class="dot"></span>Tettnang · Remote</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1 class="hero-h1">
-        Marketing mit Sven<br/>
-        <span class="grad-text">Klar. Praxisnah.<br/>Mit Haltung.</span>
-      </h1>
-      <p class="hero-sub">
-        Kein Buzzword-Bingo, keine Guru-Show und kein glattgebügeltes Business-Gelaber.<br/>
-        Sondern ehrliche Perspektiven, klare Learnings und moderne Gedanken zu KI, Marketing und Performance.
+    </section>
+
+    <!-- ==================== POSITIONIERUNG ==================== -->
+    <section class="section section-surface person-block" id="brand-identity">
+      <span class="person-eyebrow">Die Person hinter den Systemen</span>
+      <h2 class="person-title">Sven Preuß</h2>
+      <p class="person-text">
+        AI Business Systems Specialist mit Fokus auf SEO, GEO, AEO und KI-gestützte Automatisierung. Ich verbinde langjährige operative Erfahrung mit moderner digitaler Systemarchitektur.
       </p>
-      <p class="hero-tagline">— weil gutes Marketing nicht laut sein muss, um zu wirken.</p>
-      <div class="hero-btns">
-        <a href="#about" class="btn btn-primary">Mehr über mich</a>
-        <a href="#projekte" class="btn btn-dark">Projekte ansehen</a>
-        <a href="#kontakt" class="btn btn-outline" style="color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.2)">Kontakt</a>
+      <div class="mms-hint">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <span><strong>Marketing mit Sven</strong> ist meine öffentliche Plattform für Projekte, Learnings und fachliche Arbeit.</span>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><p>14+</p><span>Zertifikate</span></div>
-        <div class="hero-stat"><p>6</p><span>Portfolio-Cases</span></div>
-        <div class="hero-stat"><p>2026</p><span>Abschluss MoD</span></div>
-      </div>
-    </div>
-    <div class="hero-img-wrap">
-      <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/cd81a8437_00167.jpg" alt="Sven Preuß"/>
-      <div class="hero-img-badge">
-        <p>Sven Preuß</p>
-        <span>Marketing mit Sven · MMS</span>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+    <!-- ==================== SYSTEM FLOW ==================== -->
+    <section class="section section-dark" style="padding:48px 24px;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:32px;">
+          <span class="eyebrow eyebrow-accent">Wie ich arbeite</span>
+          <h2 class="h2" style="color:#fff; margin-bottom:12px;">System Flow</h2>
+        </div>
 
-<!-- TEASER CARDS -->
-<section style="background:var(--dark);padding:64px 24px">
-  <div class="container">
-    <div class="teaser-grid">
-      <a href="#about" class="teaser-card" style="background:#1e1e1e">
-        <span class="teaser-number">01</span>
-        <h3 style="color:white">Über mich</h3>
-        <p style="color:rgba(255,255,255,0.4)">Ich mag Marketing lieber klar, verständlich und wirksam als laut, künstlich und überladen.</p>
-        <span class="arrow">→</span>
-      </a>
-      <a href="#geschichte" class="teaser-card" style="background:#1e1e1e">
-        <span class="teaser-number">02</span>
-        <h3 style="color:white">Meine Geschichte</h3>
-        <p style="color:rgba(255,255,255,0.4)">MMS ist nicht aus einem perfekten Plan entstanden, sondern aus echtem Leben, echten Brüchen und echter Entwicklung.</p>
-        <span class="arrow">→</span>
-      </a>
-      <a href="#wofuer" class="teaser-card" style="background:#1e1e1e">
-        <span class="teaser-number">03</span>
-        <h3 style="color:white">Wofür MMS steht</h3>
-        <p style="color:rgba(255,255,255,0.4)">KI, Marketing und Performance – verständlich, praxisnah und mit Haltung statt Hype.</p>
-        <span class="arrow">→</span>
-      </a>
-      <a href="#projekte" class="teaser-card" style="background:#1e1e1e">
-        <span class="teaser-number">04</span>
-        <h3 style="color:white">Projekte / Cases</h3>
-        <p style="color:rgba(255,255,255,0.4)">Echte Arbeitsproben aus KI-Marketing, SEO, Performance und Local SEO – mit dokumentierten Ergebnissen.</p>
-        <span class="arrow">→</span>
-      </a>
-      <a href="#zertifikate" class="teaser-card" style="background:#1e1e1e">
-        <span class="teaser-number">05</span>
-        <h3 style="color:white">Weiterbildungen</h3>
-        <p style="color:rgba(255,255,255,0.4)">Aktuelles Wissen, echte Anwendung und gezielte Weiterentwicklung in modernem Marketing, Search und KI.</p>
-        <span class="arrow">→</span>
-      </a>
-      <a href="#vision" class="teaser-card" style="background:#1e1e1e">
-        <span class="teaser-number">06</span>
-        <h3 style="color:white">Vision & Mission</h3>
-        <p style="color:rgba(255,255,255,0.4)">Eine Marke mit Klarheit, Charakter und Substanz – nicht gebaut auf Lautstärke, sondern auf Haltung.</p>
-        <span class="arrow">→</span>
-      </a>
-    </div>
-    <div style="text-align:center;margin-top:40px;padding:28px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06)">
-      <p style="color:rgba(255,255,255,0.4);font-size:14px;font-style:italic;max-width:640px;margin:0 auto">
-        "Marketing mit Sven ist keine laute Bühne und kein Verkaufsfunnel. Es ist ein ehrlicher Ort für Substanz, Entwicklung, Perspektive und modernes Marketing mit Haltung."
-      </p>
-    </div>
-  </div>
-</section>
+        <div class="system-flow">
+          <svg viewBox="0 0 1000 140" class="flow-desktop" style="width:100%; height:auto; display:block;" aria-label="System Flow: Problem → Analyse → Strategie → AI Workflow → Human-in-the-Loop → Produkt → Messung & Optimierung" role="img">
+            <!-- Horizontal flow -->
+            <defs>
+              <marker id="flowArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M0,0 L10,5 L0,10 z" fill="rgba(255,255,255,0.4)"/>
+              </marker>
+            </defs>
+            <!-- Connection lines -->
+            <line x1="75" y1="50" x2="125" y2="50" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrow)"/>
+            <line x1="205" y1="50" x2="255" y2="50" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrow)"/>
+            <line x1="335" y1="50" x2="385" y2="50" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrow)"/>
+            <line x1="465" y1="50" x2="515" y2="50" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrow)"/>
+            <line x1="595" y1="50" x2="645" y2="50" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrow)"/>
+            <line x1="725" y1="50" x2="775" y2="50" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrow)"/>
+            <!-- Nodes -->
+            <g><rect x="10" y="20" width="65" height="60" rx="8" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/><text x="42" y="45" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9" font-weight="600" font-family="Inter,sans-serif">Problem</text><text x="42" y="58" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="7" font-family="Inter,sans-serif">identify</text></g>
+            <g><rect x="140" y="20" width="65" height="60" rx="8" fill="rgba(6,214,160,0.06)" stroke="#06d6a0" stroke-width="1"/><text x="172" y="45" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9" font-weight="600" font-family="Inter,sans-serif">Analyse</text><text x="172" y="58" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="7" font-family="Inter,sans-serif">research</text></g>
+            <g><rect x="270" y="20" width="65" height="60" rx="8" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/><text x="302" y="45" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9" font-weight="600" font-family="Inter,sans-serif">Strategie</text><text x="302" y="58" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="7" font-family="Inter,sans-serif">plan</text></g>
+            <g><rect x="400" y="20" width="65" height="60" rx="8" fill="rgba(6,214,160,0.06)" stroke="#06d6a0" stroke-width="1"/><text x="432" y="45" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9" font-weight="600" font-family="Inter,sans-serif">AI Flow</text><text x="432" y="58" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="7" font-family="Inter,sans-serif">automate</text></g>
+            <g><rect x="530" y="20" width="65" height="60" rx="8" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/><text x="562" y="42" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8" font-weight="600" font-family="Inter,sans-serif">HITL</text><text x="562" y="54" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8" font-weight="600" font-family="Inter,sans-serif">Review</text><text x="562" y="66" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="7" font-family="Inter,sans-serif">gate</text></g>
+            <g><rect x="660" y="20" width="65" height="60" rx="8" fill="rgba(6,214,160,0.06)" stroke="#06d6a0" stroke-width="1"/><text x="692" y="45" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9" font-weight="600" font-family="Inter,sans-serif">Output</text><text x="692" y="58" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="7" font-family="Inter,sans-serif">product</text></g>
+            <g><rect x="790" y="20" width="80" height="60" rx="8" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/><text x="830" y="42" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9" font-weight="600" font-family="Inter,sans-serif">Messung</text><text x="830" y="54" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9" font-weight="600" font-family="Inter,sans-serif">&amp; Opt.</text></g>
+            <!-- Feedback loop -->
+            <path d="M830,80 Q830,120 500,120 Q170,120 42,80" stroke="rgba(6,214,160,0.2)" stroke-width="0.8" fill="none" stroke-dasharray="3,3" marker-end="url(#flowArrow)"/>
+            <text x="500" y="135" text-anchor="middle" fill="rgba(6,214,160,0.3)" font-size="8" font-family="Inter,sans-serif">feedback loop</text>
+          </svg>
 
-<!-- ÜBER MICH -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div>
-        <span class="label">ÜBER MICH</span>
-        <h2 class="serif" style="font-size:clamp(28px,4vw,44px);margin-bottom:8px">Sven Preuß</h2>
-        <div class="divider"></div>
-        <p style="font-size:15px;color:var(--muted);line-height:1.9;margin-bottom:20px">
-          Ich bin Sven – und hinter Marketing mit Sven steckt der Anspruch, Marketing nicht komplizierter zu machen, als es sein muss.
+          <svg viewBox="0 0 300 420" class="flow-mobile" style="width:100%; max-width:260px; height:auto; display:none;" aria-label="System Flow vertical" role="img">
+            <defs><marker id="flowArrowM" viewBox="0 0 10 10" refX="5" refY="8" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="rgba(255,255,255,0.4)"/></marker></defs>
+            <line x1="150" y1="35" x2="150" y2="60" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrowM)"/>
+            <line x1="150" y1="95" x2="150" y2="120" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrowM)"/>
+            <line x1="150" y1="155" x2="150" y2="180" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrowM)"/>
+            <line x1="150" y1="215" x2="150" y2="240" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrowM)"/>
+            <line x1="150" y1="275" x2="150" y2="300" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrowM)"/>
+            <line x1="150" y1="335" x2="150" y2="360" stroke="rgba(255,255,255,0.2)" stroke-width="1" marker-end="url(#flowArrowM)"/>
+            <g><rect x="80" y="10" width="140" height="25" rx="6" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/><text x="150" y="27" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">Problem</text></g>
+            <g><rect x="80" y="70" width="140" height="25" rx="6" fill="rgba(6,214,160,0.06)" stroke="#06d6a0" stroke-width="1"/><text x="150" y="87" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">Analyse</text></g>
+            <g><rect x="80" y="130" width="140" height="25" rx="6" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/><text x="150" y="147" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">Strategie</text></g>
+            <g><rect x="80" y="190" width="140" height="25" rx="6" fill="rgba(6,214,160,0.06)" stroke="#06d6a0" stroke-width="1"/><text x="150" y="207" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">AI Workflow</text></g>
+            <g><rect x="80" y="250" width="140" height="25" rx="6" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/><text x="150" y="267" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">HITL Review</text></g>
+            <g><rect x="80" y="310" width="140" height="25" rx="6" fill="rgba(6,214,160,0.06)" stroke="#06d6a0" stroke-width="1"/><text x="150" y="327" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">Produkt</text></g>
+            <g><rect x="70" y="370" width="160" height="25" rx="6" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/><text x="150" y="387" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" font-weight="600" font-family="Inter,sans-serif">Messung &amp; Opt.</text></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== AUSGEWÄHLTE PROJEKTE ==================== -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow eyebrow-accent">Ausgewählte Projekte</span>
+          <h2 class="h2" style="color: #fff; margin-bottom: 12px;">Was ich mache</h2>
+          <p>Drei von sechs Projekten — von Eigenentwicklungen bis zu Weiterbildungs-Cases.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="teaser-card">
+            <div class="teaser-badge"><span class="tag tag-accent">Eigenprojekt</span></div>
+            <h3 class="teaser-title">AI Multi-Agent Content System</h3>
+            <p class="teaser-desc">
+              Orchestrierte Pipeline aus spezialisierten AI-Agenten für Recherche, Draft, SEO-Optimierung und Quality Gate.
+            </p>
+            <a href="projekte.html" class="btn btn-ghost teaser-cta">Case ansehen &rarr;</a>
+          </div>
+
+          <div class="teaser-card">
+            <div class="teaser-badge"><span class="tag tag-green">Weiterbildungsprojekt</span></div>
+            <h3 class="teaser-title">NeoTaste</h3>
+            <p class="teaser-desc">
+              Vollständiges Marketing-Konzept mit AARRR-Funnel, Base44-Apps und dokumentierter Prompt-Bibliothek.
+            </p>
+            <a href="projekte.html" class="btn btn-ghost teaser-cta">Case ansehen &rarr;</a>
+          </div>
+
+          <div class="teaser-card">
+            <div class="teaser-badge"><span class="tag tag-accent">Praxis-Case</span></div>
+            <h3 class="teaser-title">ARMEDANGELS</h3>
+            <p class="teaser-desc">
+              SEO- und Content-Analyse für ein nachhaltiges Fashion-Label — mit Empfehlungen zu strukturierter Datenarchitektur und GEO.
+            </p>
+            <a href="projekte.html" class="btn btn-ghost teaser-cta">Case ansehen &rarr;</a>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 32px;">
+          <a href="projekte.html" class="btn btn-primary">Alle 6 Projekte ansehen &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== CTA SECTION ==================== -->
+    <section class="section section-dark" style="position: relative; overflow: hidden;">
+      <div class="container-sm" style="text-align: center; position: relative; z-index: 1;">
+        <span class="eyebrow eyebrow-accent" style="margin-bottom: 16px;">Kontakt &amp; Austausch</span>
+        <h2 class="h2" style="color: #fff; margin-bottom: 20px;">Lass uns sprechen.</h2>
+        <p style="color: var(--text-muted-dark); font-size: 16px; line-height: 1.8; margin-bottom: 36px;">
+          Fragen zu einem Projekt oder Interesse an einer Zusammenarbeit? Schreib mir oder verbinde dich auf LinkedIn.
         </p>
-        <p style="font-size:15px;color:var(--muted);line-height:1.9;margin-bottom:20px">
-          Mich interessieren keine leeren Phrasen, keine künstliche Experten-Sprache und keine Inhalte, die nur gut klingen, aber in der Praxis nichts bringen. Mich interessiert, <strong style="color:var(--dark)">was funktioniert, warum es funktioniert</strong> und wie man daraus echte Learnings ableiten kann.
-        </p>
-        <p style="font-size:15px;color:var(--muted);line-height:1.9;margin-bottom:20px">
-          Mein Stil ist direkt, reduziert und praxisnah. Ich mag Inhalte, die schnell verständlich sind, ohne oberflächlich zu werden. Und ich mag Marken, die nicht versuchen, alles für alle zu sein.
-        </p>
-        <p style="font-size:15px;color:var(--muted);line-height:1.9;margin-bottom:32px">
-          Genau daraus ist MMS entstanden: als persönliche Marke, als Portfolio und als Ort, an dem KI, Marketing und Performance nicht theoretisch behandelt werden, sondern greifbar werden.
-        </p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px">
-          <span class="tag">🤖 KI & Automation</span>
-          <span class="tag">🔍 SEO & GEO</span>
-          <span class="tag">📊 Performance Marketing</span>
-          <span class="tag">📍 Tettnang / Remote</span>
-          <span class="tag">🎯 Systemdenker</span>
-          <span class="tag">👨‍👩‍👦 Familienvater</span>
-        </div>
-        <div class="about-kurzprofil">
-          <h4>Kurzprofil · MMS</h4>
-          <div class="kurzprofil-item">Personal Brand & Portfolio von Sven Preuß</div>
-          <div class="kurzprofil-item">Fokus auf KI, Marketing und Performance</div>
-          <div class="kurzprofil-item">Klare, verständliche und praxisnahe Kommunikation</div>
-          <div class="kurzprofil-item">Interesse an Strategie, Wirkung, Content und moderner Search</div>
-          <div class="kurzprofil-item">Kein Show-Marketing, sondern Substanz mit Handschrift</div>
-        </div>
-      </div>
-      <div>
-        <div class="about-img">
-          <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/404e2414e_00177.jpg" alt="Sven Preuß Portrait" style="object-position:center 15%"/>
-          <div class="about-img-overlay">
-            <p>"Klarheit statt Fassade. Haltung statt Hype. Relevanz statt Lautstärke."</p>
-          </div>
-        </div>
-        <div style="margin-top:36px">
-          <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/6af4fd3bd_20240523_193333.jpg" alt="Sven Preuß" style="width:100%;display:block;filter:grayscale(20%)"/>
-          <div style="background:var(--dark);padding:14px 16px">
-            <p style="color:rgba(255,255,255,0.5);font-size:11px;font-style:italic">Immer auf der Suche nach dem nächsten Blickwinkel.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- MEINE GESCHICHTE -->
-<section id="geschichte">
-  <div class="container">
-    <div class="story-layout">
-      <div class="story-text">
-        <span class="label label-light">MEINE GESCHICHTE</span>
-        <h2 class="serif" style="font-size:clamp(28px,4vw,44px);color:white;margin-bottom:8px">Kein perfekter<br/>Karrierefilm.</h2>
-        <div class="divider"></div>
-        <p>Ich bin Sven – und Marketing mit Sven ist nicht aus einem perfekten Plan entstanden, sondern aus echtem Leben.</p>
-        <p>Mein Weg war nie geschniegelt, nie ganz gerade und sicher nicht so, wie man ihn in klassischen Business-Profilen liest.</p>
-
-        <div class="story-quote">
-          <p>Ein sehr großer Teil davon sind meine Eltern. Ich hatte das Glück, mit zwei besonderen Menschen aufzuwachsen. Zwei freie, warme, eigenwillige und auf ihre eigene Art sehr weise Seelen.</p>
-        </div>
-
-        <p>Mein Vater war für mich Halt, Wegweiser und oft auch Rettungsanker im Alltag. Als er an Weihnachten 2020 an COPD verstorben ist, war das nicht nur ein Abschied. Es war der Moment, in dem ich lernen musste, wirklich auf eigenen Beinen zu stehen.</p>
-        <p>Meine Mutter war auf eine andere Weise mein Zuhause. Sie war das Herz. Sie hat mich nicht nur menschlich, sondern auch spirituell stark geprägt. Im Oktober 2025 habe ich auch sie nach ihrer Lungenkrebserkrankung verloren.</p>
-        <p>Dazwischen lagen weitere Einschnitte. 2020 hat Corona mein künstlerisches Business beendet. Später kam mein Unfall – ein weiterer Moment, der mich gezwungen hat, vieles neu zu betrachten.</p>
-
-        <div class="story-quote">
-          <p>"Es gibt Ereignisse, nach denen das Leben nicht einfach weiterläuft wie vorher. Man schaut anders auf Zeit. Anders auf Arbeit. Anders auf Menschen. Anders auf das, was wirklich zählt."</p>
-        </div>
-
-        <p>Was geblieben ist, ist nicht nur Schmerz. Was geblieben ist, ist auch <strong>Substanz. Haltung. Dankbarkeit.</strong> Und das tiefe Bedürfnis, etwas Echtes aufzubauen.</p>
-        <p>Nach dem Unfall folgte die Kündigung – und mit ihr ein kompletter Neuanfang. Mein erster Weg zurück führte über schnelle Online-Kurse aus der Affiliate-Welt: Marketing, KI, sogar Matched Betting. Doch je tiefer ich drinsteckte, desto klarer wurde, dass vieles davon kurzfristig gedacht war – oft in Grauzonen und ohne echtes Fundament. <strong>Das war nicht mein Weg.</strong> Ich wollte etwas Handfestes mit Zukunft, keine Eintagsfliegen. Genau deshalb die bewusste Entscheidung für eine fundierte Umschulung.</p>
-        <p>Genau daraus ist MMS entstanden. Nicht als laute Marke. Nicht als Fassade. Sondern als ein ehrlicher Raum für meine Gedanken, meine Arbeit und meine Perspektive auf Marketing, KI und Performance.</p>
-
-        <div style="margin-top:32px;padding:24px;background:rgba(6,214,160,0.08);border-left:3px solid var(--accent2)">
-          <p style="color:rgba(255,255,255,0.5);font-size:13px;margin-bottom:8px">Kurz gesagt:</p>
-          <p style="color:white;font-size:15px;font-weight:600;line-height:1.7">Ich baue diese Marke nicht, weil ich eine perfekte Geschichte erzählen will.<br/>Ich baue sie, weil ich eine echte habe.</p>
-        </div>
-      </div>
-      <div class="story-img" style="position:sticky;top:84px">
-        <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/45d73a16f_00167klein.jpg" alt="Sven Preuß"/>
-        <div class="story-img-caption">
-          <p>Tettnang, Bodenseeraum – Digital & ortsunabhängig im DACH-Raum</p>
-        </div>
-        <div style="margin-top:2px;background:rgba(124,58,237,0.12);padding:20px 18px">
-          <p style="color:rgba(255,255,255,0.5);font-size:12px;margin-bottom:12px;letter-spacing:1px;font-weight:600;text-transform:uppercase">Mein Weg</p>
-          <div style="border-left:2px solid rgba(124,58,237,0.3);padding-left:16px">
-            <div style="margin-bottom:14px"><span style="color:var(--accent);font-size:10px;font-weight:700">2010–2013</span><p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px">Ausbildung zum Bäcker</p></div>
-            <div style="margin-bottom:14px"><span style="color:var(--accent);font-size:10px;font-weight:700">2011–2023</span><p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px">FreiGeist – Aufbau & Leitung <span style="color:rgba(255,255,255,0.4)">(ab 2020 nur noch interne Events)</span></p></div>
-            <div style="margin-bottom:14px"><span style="color:var(--accent);font-size:10px;font-weight:700">2016–2024</span><p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px">Lager & Versand · Michael Dewald</p></div>
-            <div style="margin-bottom:14px"><span style="color:var(--accent);font-size:10px;font-weight:700">DEZ. 2020</span><p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px">Verlust meines Vaters</p></div>
-            <div style="margin-bottom:14px"><span style="color:var(--accent);font-size:10px;font-weight:700">2023</span><p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px">Schwerer Unfall · Wendepunkt</p></div>
-            <div style="margin-bottom:14px"><span style="color:var(--accent);font-size:10px;font-weight:700">2024</span><p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px">Ende der Festanstellung</p></div>
-            <div style="margin-bottom:14px"><span style="color:var(--accent);font-size:10px;font-weight:700">2024</span><p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px">Erste Online-Kurse – und die Erkenntnis: nicht mein Weg</p></div>
-            <div style="margin-bottom:14px"><span style="color:var(--accent);font-size:10px;font-weight:700">OKT. 2025</span><p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px">Verlust meiner Mutter</p></div>
-            <div style="margin-bottom:14px"><span style="color:var(--accent2);font-size:10px;font-weight:700">2025</span><p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px">Bewusste Neuausrichtung · Umschulung bei MoD</p></div>
-            <div><span style="color:var(--accent2);font-size:10px;font-weight:700">JUN. 2026</span><p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:2px">Abschluss · MMS startet</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WOFÜR MMS STEHT -->
-<section id="wofuer">
-  <div class="container">
-    <span class="label">WOFÜR MMS STEHT</span>
-    <h2 class="serif" style="font-size:clamp(28px,4vw,44px);margin-bottom:8px">Marketing mit Sven ist<br/>mehr als nur ein Name.</h2>
-    <div class="divider"></div>
-    <p style="font-size:15px;color:var(--muted);max-width:640px;line-height:1.85">
-      Es ist die Art, wie ich auf Marketing schaue — mit dem Willen, Dinge nicht nur zu zeigen, sondern sauber einzuordnen. Und mit dem Anspruch, Trends nicht einfach hinterherzulaufen, sondern herauszufinden, was davon wirklich relevant ist.
-    </p>
-    <div class="pillars">
-      <div class="pillar">
-        <span class="pillar-icon">🤖</span>
-        <h3>KI</h3>
-        <p>Mich interessiert bei KI nicht der oberflächliche Wow-Effekt, sondern der echte Nutzen. Wie verändert KI Marketing, Content und Arbeitsprozesse wirklich? Welche Tools helfen tatsächlich weiter? Wo entsteht echter Mehrwert – und wo sieht nur die Oberfläche kurz beeindruckend aus?</p>
-      </div>
-      <div class="pillar">
-        <span class="pillar-icon">📣</span>
-        <h3>Marketing</h3>
-        <p>Marketing ist für mich nicht Lautstärke, sondern Klarheit. Mich interessiert, welche Inhalte heute wirklich funktionieren, wie man Sichtbarkeit aufbaut ohne austauschbar zu werden, und wie Kommunikation wirkt, wenn sie inhaltlich auch trägt.</p>
-      </div>
-      <div class="pillar">
-        <span class="pillar-icon">📊</span>
-        <h3>Performance</h3>
-        <p>Performance bedeutet für mich nicht nur Zahlen, sondern Verstehen. Was macht Reichweite wertvoll? Wie denkt man Inhalte nicht nur kreativ, sondern auch strategisch? Nicht alles, was messbar ist, ist automatisch gut.</p>
-      </div>
-      <div class="pillar">
-        <span class="pillar-icon">🔍</span>
-        <h3>Search & GEO</h3>
-        <p>Sichtbarkeit in Suchmaschinen und in KI-Antwortmaschinen. SEO ist nicht tot – aber es verändert sich fundamental. GEO, AEO und strukturierte Inhalte sind die nächste Stufe. Genau dort liegt mein Fokus.</p>
-      </div>
-      <div class="arbeitsweise">
-        <h3 style="color:white">Meine Arbeitsweise</h3>
-        <div class="aw-steps">
-          <span class="aw-step">beobachten</span>
-          <span class="aw-arrow">→</span>
-          <span class="aw-step">verstehen</span>
-          <span class="aw-arrow">→</span>
-          <span class="aw-step">testen</span>
-          <span class="aw-arrow">→</span>
-          <span class="aw-step">dokumentieren</span>
-          <span class="aw-arrow">→</span>
-          <span class="aw-step">daraus lernen</span>
-        </div>
-        <p class="aw-text">Mich interessiert nicht nur die Idee selbst, sondern auch ihre Funktion: Warum funktioniert etwas? Für wen? In welchem Format? Mit welchem Angle? MMS steht deshalb für moderne, verständliche und reflektierte Marketingarbeit – mit Haltung, Struktur und Persönlichkeit.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJEKTE / CASES -->
-<section id="projekte">
-  <div class="container">
-    <span class="label">PROJEKTE / CASES</span>
-    <h2 class="serif" style="font-size:clamp(28px,4vw,44px);margin-bottom:8px">Arbeit mit Substanz.</h2>
-    <div class="divider"></div>
-    <p class="cert-intro">
-      Praxis-Cases aus meiner MoD-Weiterbildung – aus KI-Marketing, SEO, Performance Marketing und Local SEO. Jeder Case zeigt, wie ich denke, arbeite und Marketing praktisch einordne: von der Analyse über die Strategie bis zur dokumentierten Umsetzung.
-    </p>
-
-    <div class="cases-grid">
-
-      <!-- FEATURE: NeoTaste -->
-      <div class="case-card case-feature">
-        <div>
-          <div class="case-top">
-            <span class="case-num">CASE 01</span>
-            <span class="case-type">KI-Marketing · Abschlussprojekt</span>
-          </div>
-          <h3>NeoTaste</h3>
-          <div class="case-sub">KI-Abschlussprojekt · Masters of Digital Education (MoD)</div>
-          <p>Vollständige Markt- und Zielgruppenanalyse, eine 90-Tage-Kampagnenstrategie nach AARRR, mehrere per Natural-Language-Prompting gebaute Base44-Apps sowie eine dokumentierte Prompt-Bibliothek inklusive Human-in-the-Loop-Nachweis. Mein bislang umfangreichster Case zur Verbindung von KI, Strategie und Umsetzung.</p>
-          <div class="case-tags">
-            <span class="case-tag">Markt- & Zielgruppenanalyse</span>
-            <span class="case-tag">90-Tage-Strategie (AARRR)</span>
-            <span class="case-tag">Base44-Apps</span>
-            <span class="case-tag">Prompt-Bibliothek</span>
-          </div>
-        </div>
-        <div style="text-align:center">
-          <span class="case-score">★ 90 / 100 Punkte</span>
-        </div>
-      </div>
-
-      <!-- ARMEDANGELS -->
-      <div class="case-card">
-        <div class="case-top">
-          <span class="case-num">CASE 02</span>
-          <span class="case-type">SEO / Content</span>
-        </div>
-        <h3>ARMEDANGELS</h3>
-        <div class="case-sub">SEO-Abschlussprojekt · MoD</div>
-        <p>SEO- und Content-Case mit Fokus auf Suchintention, Content-Struktur und organische Sichtbarkeit – von der Keyword-Logik bis zur sauber aufgebauten Seitenarchitektur.</p>
-        <div class="case-tags">
-          <span class="case-tag">Suchintention</span>
-          <span class="case-tag">Content-Struktur</span>
-          <span class="case-tag">Organische Sichtbarkeit</span>
-        </div>
-      </div>
-
-      <!-- KÄPTN PEPE / HABA -->
-      <div class="case-card">
-        <div class="case-top">
-          <span class="case-num">CASE 03</span>
-          <span class="case-type">Performance Marketing</span>
-        </div>
-        <h3>Käptn PePe / HABA</h3>
-        <div class="case-sub">Performance-Abschlussprojekt · MoD · 02/2026</div>
-        <p>Performance-Marketing-Case mit Fokus auf Funnel, Zielgruppe, Kampagnenlogik und KPI-orientierte Optimierung – inklusive klarer Reporting- und Test-Struktur.</p>
-        <div class="case-tags">
-          <span class="case-tag">Funnel-Logik</span>
-          <span class="case-tag">Kampagnenstruktur</span>
-          <span class="case-tag">KPI-Optimierung</span>
-        </div>
-      </div>
-
-      <!-- HIPS DON'T LIE -->
-      <div class="case-card">
-        <div class="case-top">
-          <span class="case-num">CASE 04</span>
-          <span class="case-type">Local SEO / Website</span>
-        </div>
-        <h3>Hips Don’t Lie</h3>
-        <div class="case-sub">Local-SEO- & Website-Case</div>
-        <p>Local-SEO- und Website-Case mit Fokus auf Positionierung, Nutzerverständnis und lokale Sichtbarkeit – wie eine lokale Marke in der Suche auffindbar und verständlich wird.</p>
-        <div class="case-tags">
-          <span class="case-tag">Local SEO</span>
-          <span class="case-tag">Positionierung</span>
-          <span class="case-tag">Nutzerverständnis</span>
-        </div>
-      </div>
-
-      <!-- KPI-ANALYSE -->
-      <div class="case-card">
-        <div class="case-top">
-          <span class="case-num">CASE 05</span>
-          <span class="case-type">Analytics</span>
-        </div>
-        <h3>KPI- & Funnel-Analyse</h3>
-        <div class="case-sub">Bewertete Praxisaufgabe · MoD</div>
-        <p>Detaillierte KPI-Tabelle mit Funnel-Einordnung und strategischer Ableitung. Im Feedback ausdrücklich für die saubere KPI-Struktur und die strategische Einordnung hervorgehoben.</p>
-        <div class="case-tags">
-          <span class="case-tag">KPI-Tabelle</span>
-          <span class="case-tag">Funnel-Einordnung</span>
-          <span class="case-tag" style="color:var(--accent2)">★ 100 % (1/1)</span>
-        </div>
-      </div>
-
-      <!-- FEATURE: IgniteX -->
-      <div class="case-card case-feature">
-        <div>
-          <div class="case-top">
-            <span class="case-num">CASE 06</span>
-            <span class="case-type">Merchant Growth · Eigenes Konzept</span>
-          </div>
-          <h3>IgniteX – Merchant Growth System</h3>
-          <div class="case-sub">Selbst erstelltes Unternehmens-Beispiel · Konzept & Prototyp</div>
-          <p>Ein eigenes, von Grund auf entwickeltes Growth-System für Merchants und lokale Anbieter: von Sichtbarkeits- und Angebotslogik über Kundenbindung bis zu KI-gestützter Automatisierung und Funnel-Optimierung. Konzeption, Strategie und Systemdenken aus einer Hand – statt Einzelmaßnahme ein durchdachtes Gesamtsystem.</p>
-          <div class="case-tags">
-            <span class="case-tag">Merchant- & Angebotslogik</span>
-            <span class="case-tag">Growth- & Funnel-Konzeption</span>
-            <span class="case-tag">KI-Workflows</span>
-            <span class="case-tag">App-/Web-System</span>
-          </div>
-        </div>
-        <div style="text-align:center">
-          <span class="case-score">★ Konzept als marktreif bewertet</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="case-note">
-      Live-Apps und der vollständige Projekt-Nachweis (Dropbox) zum NeoTaste-Case werden hier verlinkt – Links auf Anfrage oder folgen in Kürze.
-    </div>
-  </div>
-</section>
-
-<!-- ZERTIFIKATE -->
-<section id="zertifikate">
-  <div class="container">
-    <span class="label">WEITERBILDUNGEN & ZERTIFIKATE</span>
-    <h2 class="serif" style="font-size:clamp(28px,4vw,44px);margin-bottom:8px">Mein fachlicher Weg</h2>
-    <div class="divider"></div>
-    <p class="cert-intro">
-      Mein Weg ist nicht klassisch geschniegelt – aber genau deshalb ist er echt. Ich bilde mich gezielt in den Bereichen weiter, in denen modernes Marketing heute wirklich entschieden wird: Search, SEO, Performance, KI, Content und Strategie.
-    </p>
-
-    <div style="background:#f5f0ff;padding:24px 28px;border-left:3px solid var(--accent);margin-bottom:40px">
-      <h4 style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px">AKTUELL IN WEITERBILDUNG</h4>
-      <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:16px">Intensive Umschulung bei <strong style="color:var(--dark)">Masters of Digital Education (MoD)</strong> im Bereich Full Funnel Performance Marketing — mit Fokus auf praxisnahe Anwendung, Tools, Analyse und moderne digitale Strategien. Abschlussprojekt im KI-Bereich mit <strong style="color:var(--dark)">90/100 Punkten</strong> bewertet (siehe Case NeoTaste).</p>
-      <div class="sw-list">
-        <span class="tag">Content & Meta</span><span class="tag">Performance Marketing</span><span class="tag">Google Ads</span><span class="tag">YouTube Ads</span><span class="tag">LinkedIn Ads</span><span class="tag">SEO mit KI</span><span class="tag">UX-Grundlagen</span><span class="tag">SEO-Tools</span><span class="tag">WordPress</span><span class="tag">LLMs & Automatisierung</span>
-      </div>
-    </div>
-
-    <p class="cert-section-title">ABGESCHLOSSENE ZERTIFIKATE</p>
-    <div class="certs-grid">
-      <div class="cert-card"><div class="org">Google / Skillshop</div><div class="name">Google Ads – Suchmaschinenwerbung</div><div class="score">✓ Zertifiziert</div></div>
-      <div class="cert-card"><div class="org">Google / Skillshop</div><div class="name">Google Ads – Displaywerbung</div><div class="score">✓ Zertifiziert</div></div>
-      <div class="cert-card"><div class="org">Google / Skillshop</div><div class="name">Google Ads – Videowerbung</div><div class="score">✓ Zertifiziert</div></div>
-      <div class="cert-card"><div class="org">Google / Skillshop</div><div class="name">Google Analytics</div><div class="score">✓ Zertifiziert</div></div>
-      <div class="cert-card"><div class="org">Google / Skillshop</div><div class="name">Practical AI for Marketing</div><div class="score">✓ Zertifiziert</div></div>
-      <div class="cert-card"><div class="org">BVDW</div><div class="name">SEO Certified Professional</div><div class="score">✓ 80% Ergebnis</div></div>
-      <div class="cert-card"><div class="org">SISTRIX</div><div class="name">Keyword-Recherche</div><div class="score">✓ Abgeschlossen</div></div>
-      <div class="cert-card"><div class="org">SISTRIX</div><div class="name">Wettbewerbsanalyse</div><div class="score">✓ Abgeschlossen</div></div>
-      <div class="cert-card"><div class="org">IBM / KI-Campus</div><div class="name">Grundlagen der KI</div><div class="score">✓ 93,33%</div></div>
-      <div class="cert-card"><div class="org">IBM / KI-Campus</div><div class="name">Maschinelles Lernen & Deep Learning</div><div class="score">✓ 100%</div></div>
-      <div class="cert-card"><div class="org">IBM / KI-Campus</div><div class="name">Die 5 Säulen der KI-Ethik</div><div class="score">✓ 100%</div></div>
-      <div class="cert-card"><div class="org">Canva</div><div class="name">Visual Suite & Design</div><div class="score">✓ Abgeschlossen</div></div>
-      <div class="cert-card"><div class="org">Canva</div><div class="name">Klickstarke Inhalte erstellen</div><div class="score">✓ Abgeschlossen</div></div>
-      <div class="cert-card"><div class="org">Canva</div><div class="name">Smarter arbeiten mit KI</div><div class="score">✓ Abgeschlossen</div></div>
-    </div>
-
-    <div class="certs-wip">
-      <h4>IM AUFBAU</h4>
-      <p class="wip-item">Meta-Zertifizierungen</p>
-      <p class="wip-item">Weitere KI & Search-Vertiefungen</p>
-    </div>
-
-    <div class="cert-note">
-      Ich sehe Weiterbildung nicht als Deko für den Lebenslauf, sondern als Werkzeug. Mir geht es nicht darum, Zertifikate nur zu sammeln, sondern Wissen praktisch anzuwenden, zu testen und daraus echte Ergebnisse und echte Learnings zu entwickeln.
-    </div>
-  </div>
-</section>
-
-<!-- VISION & MISSION -->
-<section id="vision" style="padding:96px 24px">
-  <div class="container">
-    <span class="label label-light">VISION & MISSION</span>
-    <h2 class="serif" style="font-size:clamp(28px,4vw,44px);color:white;margin-bottom:8px">Wofür MMS<br/>langfristig stehen soll.</h2>
-    <div class="divider"></div>
-    <div class="vm-grid">
-      <div class="vm-card mission">
-        <h3>Mission</h3>
-        <p>Meine Mission mit Marketing mit Sven ist es, Marketing, KI und Performance klarer, verständlicher und greifbarer zu machen.</p>
-        <p>Ich möchte Inhalte schaffen, die nicht nur Aufmerksamkeit erzeugen, sondern echten Wert liefern. Ohne unnötige Komplexität. Ohne künstliches Experten-Gehabe. Ohne Hype um des Hypes willen.</p>
-        <p>Ich will zeigen, dass moderne Kommunikation professionell sein kann, ohne steif zu wirken. Dass Strategie verständlich sein darf. Und dass Personal Brand nicht laut sein muss, um Wiedererkennung aufzubauen.</p>
-      </div>
-      <div class="vm-card vision-card">
-        <h3>Vision</h3>
-        <p>Meine Vision ist eine Marke, die nicht durch Lautstärke sichtbar wird, sondern durch Klarheit, Haltung und Substanz.</p>
-        <p>Ich möchte mit MMS einen Raum aufbauen, der modernes Marketing nahbar macht – ehrlich, praxisnah und mit einer Handschrift, die wiedererkennbar ist.</p>
-        <p>Langfristig soll MMS für genau das stehen: für echte Learnings, verständliche Perspektiven, starke Inhalte und modernes Marketing mit Charakter.</p>
-      </div>
-    </div>
-    <div class="vm-manifesto">
-      <p style="color:rgba(255,255,255,0.4);font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:8px">Das MMS-Manifest</p>
-      <div class="vm-manifesto-items">
-        <div class="vm-m-item"><strong>Weniger Fassade.</strong>Mehr Substanz.</div>
-        <span class="vm-m-sep">·</span>
-        <div class="vm-m-item"><strong>Weniger Hype.</strong>Mehr Haltung.</div>
-        <span class="vm-m-sep">·</span>
-        <div class="vm-m-item"><strong>Weniger BlaBla.</strong>Mehr echtes Marketing.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- KONTAKT -->
-<section id="kontakt">
-  <div class="container">
-    <div class="kontakt-grid">
-      <div>
-        <span class="label">KONTAKT</span>
-        <h2 class="serif" style="font-size:clamp(28px,4vw,44px);margin-bottom:8px">Klartext statt<br/>Floskeln.</h2>
-        <div class="divider"></div>
-        <p class="kontakt-text">Du möchtest dich vernetzen, austauschen oder einfach einen besseren Eindruck von meiner Arbeit bekommen?</p>
-        <p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:24px">Dann schreib mir gern. Ganz unkompliziert, ohne steife Förmlichkeit und ohne PowerPoint-Pflicht im Anhang. Ich freue mich über spannende Gespräche rund um Marketing, KI, Search, Content, Performance und digitale Entwicklung.</p>
-        <div class="kontakt-cards">
-          <a href="mailto:marketingmitsven@gmail.com" class="kontakt-card">
-            <div class="kontakt-card-icon">✉️</div>
-            <div class="kontakt-card-text"><strong>E-Mail</strong><span>marketingmitsven@gmail.com</span></div>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px;">
+          <a href="kontakt.html" class="btn btn-primary" style="padding: 16px 36px; font-size: 14px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Kontakt aufnehmen</span>
           </a>
-          <a href="https://linkedin.com/in/preussdigital/" target="_blank" class="kontakt-card">
-            <div class="kontakt-card-icon">💼</div>
-            <div class="kontakt-card-text"><strong>LinkedIn</strong><span>linkedin.com/in/preussdigital/</span></div>
+          <a href="https://linkedin.com/in/sven-preuss" target="_blank" rel="noopener" class="btn btn-outline-light" style="padding: 16px 28px; font-size: 14px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            <span>LinkedIn Profil</span>
           </a>
-          <div class="kontakt-card" style="cursor:default">
-            <div class="kontakt-card-icon">📍</div>
-            <div class="kontakt-card-text"><strong>Standort</strong><span>Tettnang / Bodenseeraum · Remote im DACH-Raum</span></div>
-          </div>
         </div>
-      </div>
-      <div class="kontakt-form">
-        <h3>Direkt schreiben</h3>
-        <div class="form-group">
-          <label>Name</label>
-          <input type="text" id="f-name" placeholder="Dein Name"/>
-        </div>
-        <div class="form-group">
-          <label>E-Mail</label>
-          <input type="email" id="f-email" placeholder="deine@email.de"/>
-        </div>
-        <div class="form-group">
-          <label>Nachricht</label>
-          <textarea id="f-msg" placeholder="Worüber möchtest du reden?"></textarea>
-        </div>
-        <button class="btn btn-primary" onclick="sendForm()" style="width:100%;justify-content:center">NACHRICHT SENDEN →</button>
-        <div class="form-success" id="form-success">✓ Nachricht gesendet! Ich melde mich bald bei dir.</div>
-        <p style="font-size:11px;color:var(--muted);margin-top:12px;text-align:center">Kein Newsletter. Kein Spam. Versprochen.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-logo">
-        <img src="https://media.base44.com/images/public/6a0661365d07c74c883d932d/b0fc7a39a_sfgv.PNG" alt="MMS"/>
-        <div class="footer-logo-text">
-          <p>Marketing mit Sven</p>
-          <span>KLAR · PRAXISNAH · MIT HALTUNG</span>
+        <div style="font-size: 13px; color: var(--text-faint); display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
+          <span>📍 Tettnang (DE) · Remote</span>
+          <span>📧 marketingmitsven@gmail.com</span>
+          <span>📞 +49 151 123 68 919</span>
         </div>
       </div>
-      <div class="footer-links">
-        <a href="#about">Über mich</a>
-        <a href="#geschichte">Meine Geschichte</a>
-        <a href="#wofuer">Wofür MMS steht</a>
-        <a href="#projekte">Projekte / Cases</a>
-        <a href="#zertifikate">Zertifikate</a>
-        <a href="#vision">Vision & Mission</a>
-        <a href="#kontakt">Kontakt</a>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <!-- Col 1: Brand -->
+      <div class="footer-brand">
+        <div>
+          <div class="name">SVEN PREUSS</div>
+          <div class="sub">MARKETING MIT SVEN (MMS)</div>
+        </div>
+        <p>
+          AI Business Systems Specialist · SEO · GEO · AEO · KI-gestützte Automatisierung &amp; Systementwicklung.
+        </p>
+      </div>
+
+      <!-- Col 2: Navigation -->
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <a href="index.html">Start</a>
+        <a href="guide.html">Guide</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="expertise.html">Expertise</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="ai-business-systems.html">AI Business Systems</a>
+        <a href="career.html">Career</a>
+        <a href="recruiter-mode.html">Recruiter</a>
+                <a href="kontakt.html">Kontakt</a>
+      </div>
+
+      <!-- Col 3: Kontakt & Social -->
+      <div class="footer-col">
+        <h5>Kontakt &amp; Links</h5>
+        <a href="mailto:marketingmitsven@gmail.com">marketingmitsven@gmail.com</a>
+        <a href="tel:+4915112368919">+49 151 123 68 919</a>
+        <a href="https://linkedin.com/in/sven-preuss" target="_blank" rel="noopener">LinkedIn Profil</a>
+        <a href="https://github.com/preussdigital-netizen" target="_blank" rel="noopener">GitHub Repository</a>
+      </div>
+
+      <!-- Col 4: Rechtliches & Status -->
+      <div class="footer-col">
+        <h5>Rechtliches</h5>
+        <a href="kontakt.html">Impressum</a>
+        <a href="kontakt.html">Datenschutz</a>
+        <p style="color: var(--text-faint); font-size: 12px; margin-top: 12px; line-height: 1.6;">
+          Standort: Tettnang, Deutschland<br>
+          Remote &amp; Vor-Ort
+        </p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>© 2026 Sven Preuß · Marketing mit Sven · Tettnang</p>
-      <p class="footer-tagline">Klar. Praxisnah. Mit Haltung.</p>
-    </div>
-  </div>
-</footer>
+      <p>© 2026 Sven Preuß — Marketing mit Sven (MMS). Alle Rechte vorbehalten.</p>
 
-<script>
-function sendForm(){
-  var n=document.getElementById('f-name').value;
-  var e=document.getElementById('f-email').value;
-  var m=document.getElementById('f-msg').value;
-  if(!n||!e||!m){alert('Bitte alle Felder ausfüllen.');return;}
-  window.location.href='mailto:marketingmitsven@gmail.com?subject=Kontakt über MMS Website – '+encodeURIComponent(n)+'&body='+encodeURIComponent('Name: '+n+'\nE-Mail: '+e+'\n\nNachricht:\n'+m);
-  document.getElementById('form-success').style.display='block';
-}
-// Smooth scroll & active nav
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    e.preventDefault();
-    var t=document.querySelector(a.getAttribute('href'));
-    if(t)t.scrollIntoView({behavior:'smooth'});
-  });
-});
-</script>
+    </div>
+  </footer>
+
+  <!-- Hamburger Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function() {
+          mobileMenu.classList.toggle('open');
+        });
+      }
+    });
+  </script>
+  <!-- Sven Guide -->
+  <script src="assets/sven-guide.js" defer></script>
 </body>
 </html>
